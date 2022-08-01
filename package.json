@@ -66,7 +66,8 @@
     "yaml": "^1.10.2"
   },
   "scripts": {
-    "start": "npx tailwindcss -i ./src/input.css -o ./dist/login.css --watch"
+   
+    "start": "npx tailwindcss -i ./src/input.css -o ./dist/skilled.css --watch"
   },
   "keywords": [],
   "author": "",

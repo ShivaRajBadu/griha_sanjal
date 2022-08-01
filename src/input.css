@@ -14,4 +14,29 @@
       scrollbar-width: none; /* Firefox */
     }
   }
+  .link-underline {
+    border-bottom-width: 0;
+    background-image: linear-gradient(transparent, transparent),
+      linear-gradient(#fff, #fff);
+    background-size: 0 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s ease-in-out;
+  }
+
+  .link-underline-black {
+    background-image: linear-gradient(transparent, transparent),
+      linear-gradient(#000, #000);
+  }
+
+  .link-underline:hover {
+    background-size: 80% 1px;
+    background-position: 0 100%;
+  }
+  .min-content {
+    width: min-content;
+  }
+  .grid-template-columns {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
 }
