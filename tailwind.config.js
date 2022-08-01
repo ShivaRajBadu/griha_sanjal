@@ -16,7 +16,11 @@ module.exports = {
     "shadow-lg",
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        lg: { min: "768px", max: "1100px" },
+      },
+    },
   },
   plugins: [require("flowbite/plugin")],
 };
