@@ -24,7 +24,6 @@
     "fast-glob": "^3.2.11",
     "fastq": "^1.13.0",
     "fill-range": "^7.0.1",
-    "flowbite": "^1.5.1",
     "function-bind": "^1.1.1",
     "glob-parent": "^6.0.2",
     "has": "^1.0.3",
@@ -66,7 +65,6 @@
     "yaml": "^1.10.2"
   },
   "scripts": {
-   
     "start": "npx tailwindcss -i ./src/input.css -o ./dist/skilled.css --watch"
   },
   "keywords": [],
