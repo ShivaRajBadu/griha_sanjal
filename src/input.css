@@ -36,7 +36,10 @@
   .min-content {
     width: min-content;
   }
-  .grid-template-columns {
+  .grid-template-columns-withPicture {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  .grid-template-columns-for-other {
+    grid-template-columns: repeat(auto-fit, minmax(18%, 1fr));
   }
 }
