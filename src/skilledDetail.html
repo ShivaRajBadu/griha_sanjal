@@ -13,7 +13,110 @@
     rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/dist/skilledDetail.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <!-- swiper css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
   <title>Detail</title>
+  <style>
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
+
+    .swiper {
+      width: 100%;
+      height: 100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .swiper-slide {
+
+      background-size: cover;
+      background-position: center;
+    }
+
+    .mySwiper2 {
+      height: 480px;
+      width: 100%;
+    }
+
+    .mySwiper {
+      height: 160px;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px 0;
+    }
+
+    .mySwiper .swiper-slide {
+      width: 10%;
+      height: 100%;
+      opacity: 0.4;
+    }
+
+    .mySwiper .swiper-slide-thumb-active {
+      opacity: 1;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      /* object-fit: cover; */
+    }
+
+
+
+    @media only screen and (min-width: 768px) {
+
+      .swiper-button-next::after,
+      .swiper-button-prev::after {
+        content: "";
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+
+
+
+      .mySwiper2 {
+        height: calc(50vh - 7rem);
+        width: 100vw;
+      }
+
+
+    }
+  </style>
 </head>
 
 <body>
@@ -100,12 +203,12 @@
       <nav class="w-[75%] hidden md:block">
         <ul class="flex items-center justify-center w-[100%]">
           <li
-            class="w-[114px] bg-[#F15025] py-[1.2rem] px-2 text-center cursor-pointer transition duration-500 ease-out">
-            <a class="text-[18px] font-[600] text-white" href="#">Home</a>
+            class="w-[114px] hover:bg-[#F15025] py-[1.2rem] px-2 text-center cursor-pointer transition duration-500 ease-out">
+            <a class="text-[18px] font-[600] text-[#004492]" href="#">Home</a>
           </li>
           <li
-            class="w-[166px] hover:bg-[#F15025] py-[1.2rem] px-2 group cursor-pointer text-center transition duration-500 ease-out">
-            <a class="text-[18px] font-[600] text-[#004492] block group-hover:text-white" href="">Skilled Service</a>
+            class="w-[166px] bg-[#F15025] py-[1.2rem] px-2 group cursor-pointer text-center transition duration-500 ease-out">
+            <a class="text-[18px] font-[600]  block text-white group-hover:text-white" href="">Skilled Service</a>
           </li>
           <li
             class="w-[166px] hover:bg-[#F15025] py-2 px-2 text-center group cursor-pointer transition duration-500 ease-out">
@@ -240,16 +343,16 @@
 
     <!-- main section -->
 
-    <div>
+    <div class="flex lg:flex-col 2xl:flex-row w-full md:max-w-[95%] mx-auto py-5 mt-5">
 
       <!-- similar items -->
 
-      <div>
-        <h1>Similar Items</h1>
-        <div>
+      <div class="w-[20%] lg:w-full hidden md:block lg:order-2">
+        <h1 class="text-[#434343] text-[15px] font-[Oswald] font-[600]  ml-14 py-4 mt-2">Similar Items</h1>
+        <div class="w-full lg:flex lg:gap-5">
           <!-- first item -->
           <div
-            class="w-[220px] rounded-[5px]  transition duration-300 ease-in-out hover:bg-white hover:shadow-2xl  hover:scale-[1.05] cursor-pointer pb-2 group">
+            class="w-[220px] rounded-[5px] shadow-lg my-4  mb-6transition duration-300 ease-in-out hover:bg-white hover:shadow-2xl  hover:scale-[1.05] cursor-pointer pb-2 group">
             <div class="w-[220px] relative ">
               <img class="group-hover:scale-[1.01] w-full group-hover:shadow-lg  " src="/assets/Rectangle 39 (1).jpg"
                 alt="">
@@ -310,7 +413,7 @@
           </div>
           <!-- second -->
           <div
-            class="w-[220px] rounded-[5px]  transition duration-300 ease-in-out hover:bg-white hover:shadow-2xl  hover:scale-105 cursor-pointer pb-2 group">
+            class="w-[220px] rounded-[5px] shadow-lg my-4  mt-6 transition duration-300 ease-in-out hover:bg-white hover:shadow-2xl  hover:scale-105 cursor-pointer pb-2 group">
             <div class="w-[220px] relative ">
               <img class="w-full group-hover:scale-[1.01] group-hover:shadow-lg  " src="/assets/Rectangle 43.jpg"
                 alt="">
@@ -373,10 +476,614 @@
         </div>
       </div>
       <!-- details -->
-      <div>
+      <div class="md:w-[80%] lg:w-[100%]  lg:order-1 mx-auto w-full">
+        <p class="text-start hidden md:block text-[#626262] text-[16px] font-[700] font-[Lato]">House Maintenance and
+          Construction >
+          Mason</p>
+        <div class=" w-full py-8 flex flex-col md:flex-row  justify-center items-center">
+          <!-- image slider -->
+          <div class="md:w-[60%] lg:w-[60%] w-full grid place-content-start">
+            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+              <div class="swiper-wrapper w-full">
+                <div class="swiper-slide w-full">
+                  <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                </div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+            <div thumbsSlider="" class="swiper mySwiper hidden md:block">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- info of product -->
+          <div class=" md:w-[50%] lg:w-[40%] lg:ml-5   w-full  text-center ">
+            <div class="w-full py-3 md:py-0  ">
+              <h1 class="font-[Lato] text-[#4D4D4D] font-[500] text-[6vw] md:text-[40px]">Painter</h1>
+              <p
+                class="flex items-center justify-center gap-1 md:gap-2 font-[400] text-[3.5vw] md:text-[28px] font-[Raleway] text-[#454545] py-1">
+                <span>
+                  <svg class="md:w-7 w-3 md:h-7 h-3" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.5262 7.47212C12.5262 6.27622 12.0511 5.1293 11.2055 4.28367C10.3599 3.43804 9.21294 2.96297 8.01704 2.96297C6.82114 2.96297 5.67422 3.43804 4.82859 4.28367C3.98296 5.1293 3.50789 6.27622 3.50789 7.47212C3.50789 9.32187 4.98789 11.7328 8.01704 14.6206C11.0462 11.7328 12.5262 9.32187 12.5262 7.47212ZM8.01704 15.9894C4.34258 12.6496 2.50586 9.80986 2.50586 7.47212C2.50586 6.01046 3.0865 4.60867 4.12005 3.57512C5.15359 2.54158 6.55538 1.96094 8.01704 1.96094C9.47869 1.96094 10.8805 2.54158 11.914 3.57512C12.9476 4.60867 13.5282 6.01046 13.5282 7.47212C13.5282 9.80986 11.6915 12.6496 8.01704 15.9894Z"
+                      fill="#5C5C5C" />
+                    <path
+                      d="M8.0168 8.9759C8.41543 8.9759 8.79774 8.81755 9.07962 8.53567C9.36149 8.25379 9.51985 7.87149 9.51985 7.47285C9.51985 7.07422 9.36149 6.69191 9.07962 6.41004C8.79774 6.12816 8.41543 5.96981 8.0168 5.96981C7.61817 5.96981 7.23586 6.12816 6.95398 6.41004C6.67211 6.69191 6.51375 7.07422 6.51375 7.47285C6.51375 7.87149 6.67211 8.25379 6.95398 8.53567C7.23586 8.81755 7.61817 8.9759 8.0168 8.9759V8.9759ZM8.0168 9.97794C7.35241 9.97794 6.71523 9.71401 6.24544 9.24421C5.77565 8.77442 5.51172 8.13724 5.51172 7.47285C5.51172 6.80847 5.77565 6.17129 6.24544 5.70149C6.71523 5.2317 7.35241 4.96777 8.0168 4.96777C8.68119 4.96777 9.31837 5.2317 9.78816 5.70149C10.258 6.17129 10.5219 6.80847 10.5219 7.47285C10.5219 8.13724 10.258 8.77442 9.78816 9.24421C9.31837 9.71401 8.68119 9.97794 8.0168 9.97794Z"
+                      fill="#5C5C5C" />
+                  </svg>
+                </span> Dharan, Nepal
+              </p>
+            </div>
+            <div class="md:hidden w-full flex items-center justify-center gap-8 py-2">
+              <p class="font-[Lato] text-[#4C4C4C] font-[500] flex items-center gap-2 text-[3.5vw]">
+                <span><svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_430_2801)">
+                      <path
+                        d="M4.99991 -0.000488281C3.51358 -0.000488281 2.18155 0.695345 1.26749 1.79535L-9.15527e-05 0.443262V3.99951H3.33389L2.15811 2.74535C2.84366 1.88493 3.85733 1.33285 4.99991 1.33285C7.07022 1.33285 8.74991 3.12243 8.74991 5.33285C8.74991 7.54326 7.07022 9.33285 4.99991 9.33285C3.96475 9.33285 3.02725 8.88493 2.34756 8.16201L1.46475 9.10368C2.371 10.0683 3.621 10.6662 4.99991 10.6662C7.76163 10.6662 9.99991 8.27868 9.99991 5.33285C9.99991 2.38701 7.76163 -0.000488281 4.99991 -0.000488281ZM4.58389 2.22243V5.77868H7.08389V4.8891H5.41788V2.22243H4.58389Z"
+                        fill="#0063D5" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_430_2801">
+                        <rect width="10" height="10.6667" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span> 25 year old
+              </p>
+              <p class="font-[Lato] text-[#4C4C4C] flex items-center gap-2 font-[400] text-[3.5vw]">
+                <span><svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M0.870972 10.4907V5.00188C0.870972 4.62452 1.00545 4.30137 1.2744 4.03241C1.5429 3.76392 1.86582 3.62967 2.24318 3.62967H4.30149V2.25746C4.30149 1.88011 4.43597 1.55718 4.70492 1.28868C4.97342 1.01973 5.29634 0.885254 5.6737 0.885254H9.79033C10.1677 0.885254 10.4908 1.01973 10.7598 1.28868C11.0283 1.55718 11.1625 1.88011 11.1625 2.25746V3.62967H13.2208C13.5982 3.62967 13.9214 3.76392 14.1903 4.03241C14.4588 4.30137 14.5931 4.62452 14.5931 5.00188V10.4907C14.5931 10.8681 14.4588 11.1912 14.1903 11.4602C13.9214 11.7287 13.5982 11.8629 13.2208 11.8629H2.24318C1.86582 11.8629 1.5429 11.7287 1.2744 11.4602C1.00545 11.1912 0.870972 10.8681 0.870972 10.4907ZM2.24318 10.4907H13.2208V8.4324H11.8486C11.8486 8.6268 11.7828 8.78963 11.651 8.92091C11.5198 9.05264 11.3569 9.1185 11.1625 9.1185C10.9681 9.1185 10.8053 9.05264 10.674 8.92091C10.5423 8.78963 10.4764 8.6268 10.4764 8.4324H4.9876C4.9876 8.6268 4.92196 8.78963 4.79069 8.92091C4.65895 9.05264 4.49589 9.1185 4.30149 9.1185C4.1071 9.1185 3.94403 9.05264 3.8123 8.92091C3.68103 8.78963 3.61539 8.6268 3.61539 8.4324H2.24318V10.4907ZM2.24318 5.00188V7.06019H3.61539C3.61539 6.8658 3.68103 6.70273 3.8123 6.571C3.94403 6.43972 4.1071 6.37409 4.30149 6.37409C4.49589 6.37409 4.65895 6.43972 4.79069 6.571C4.92196 6.70273 4.9876 6.8658 4.9876 7.06019H10.4764C10.4764 6.8658 10.5423 6.70273 10.674 6.571C10.8053 6.43972 10.9681 6.37409 11.1625 6.37409C11.3569 6.37409 11.5198 6.43972 11.651 6.571C11.7828 6.70273 11.8486 6.8658 11.8486 7.06019H13.2208V5.00188H2.24318ZM5.6737 3.62967H9.79033V2.25746H5.6737V3.62967Z"
+                      fill="#0063D5" />
+                  </svg>
+                </span> year of expericence
+              </p>
+            </div>
+            <div class="py-6 w-full">
+              <p class="font-[Lato] text-[#454545] font-[500] text-[3.5vw] md:text-[28px]">Rs.1500-2000</p>
+              <p
+                class="flex items-center justify-center text-[#4C4C4C] font-[400] text-[2.5vw] md:text-[20px] font-[Lato]  py-1">
+                <span>
+                  <svg class="md:w-7 w-4 md:h-7 h-4" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M6.73897 1.46597C6.80911 1.32363 6.91771 1.20376 7.05246 1.11994C7.18721 1.03612 7.34273 0.991699 7.50142 0.991699C7.66011 0.991699 7.81563 1.03612 7.95038 1.11994C8.08513 1.20376 8.19372 1.32363 8.26387 1.46597L9.90437 4.78947L13.5738 5.32327C13.7308 5.34607 13.8783 5.41235 13.9996 5.51461C14.1209 5.61687 14.2111 5.75103 14.2601 5.90192C14.3091 6.0528 14.3149 6.21439 14.2768 6.3684C14.2388 6.52241 14.1584 6.66269 14.0447 6.77337L11.3893 9.36077L12.0166 13.0158C12.0434 13.1721 12.0259 13.3328 11.9661 13.4797C11.9064 13.6266 11.8067 13.7538 11.6784 13.847C11.5501 13.9402 11.3982 13.9957 11.24 14.0071C11.0819 14.0185 10.9236 13.9855 10.7833 13.9117L7.50227 12.1862L4.21957 13.9117C4.07915 13.9853 3.92093 14.0182 3.76279 14.0067C3.60466 13.9951 3.45291 13.9395 3.3247 13.8462C3.19648 13.753 3.09692 13.6257 3.03726 13.4788C2.97759 13.3319 2.96021 13.1712 2.98707 13.0149L3.61352 9.36077L0.958118 6.77337C0.844471 6.66269 0.764067 6.52241 0.726002 6.3684C0.687938 6.21439 0.693732 6.0528 0.74273 5.90192C0.791728 5.75103 0.881974 5.61687 1.00326 5.51461C1.12454 5.41235 1.27202 5.34607 1.42902 5.32327L5.09847 4.79032L6.73897 1.46512V1.46597Z"
+                      fill="#FFE903" />
+                  </svg>
+                </span>
+                <span>
+                  <svg class="md:w-7 w-4 md:h-7 h-4" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M6.73897 1.46597C6.80911 1.32363 6.91771 1.20376 7.05246 1.11994C7.18721 1.03612 7.34273 0.991699 7.50142 0.991699C7.66011 0.991699 7.81563 1.03612 7.95038 1.11994C8.08513 1.20376 8.19372 1.32363 8.26387 1.46597L9.90437 4.78947L13.5738 5.32327C13.7308 5.34607 13.8783 5.41235 13.9996 5.51461C14.1209 5.61687 14.2111 5.75103 14.2601 5.90192C14.3091 6.0528 14.3149 6.21439 14.2768 6.3684C14.2388 6.52241 14.1584 6.66269 14.0447 6.77337L11.3893 9.36077L12.0166 13.0158C12.0434 13.1721 12.0259 13.3328 11.9661 13.4797C11.9064 13.6266 11.8067 13.7538 11.6784 13.847C11.5501 13.9402 11.3982 13.9957 11.24 14.0071C11.0819 14.0185 10.9236 13.9855 10.7833 13.9117L7.50227 12.1862L4.21957 13.9117C4.07915 13.9853 3.92093 14.0182 3.76279 14.0067C3.60466 13.9951 3.45291 13.9395 3.3247 13.8462C3.19648 13.753 3.09692 13.6257 3.03726 13.4788C2.97759 13.3319 2.96021 13.1712 2.98707 13.0149L3.61352 9.36077L0.958118 6.77337C0.844471 6.66269 0.764067 6.52241 0.726002 6.3684C0.687938 6.21439 0.693732 6.0528 0.74273 5.90192C0.791728 5.75103 0.881974 5.61687 1.00326 5.51461C1.12454 5.41235 1.27202 5.34607 1.42902 5.32327L5.09847 4.79032L6.73897 1.46512V1.46597Z"
+                      fill="#FFE903" />
+                  </svg>
+                </span>
+                <span>
+                  <svg class="md:w-7 w-4 md:h-7 h-4" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M6.73897 1.46597C6.80911 1.32363 6.91771 1.20376 7.05246 1.11994C7.18721 1.03612 7.34273 0.991699 7.50142 0.991699C7.66011 0.991699 7.81563 1.03612 7.95038 1.11994C8.08513 1.20376 8.19372 1.32363 8.26387 1.46597L9.90437 4.78947L13.5738 5.32327C13.7308 5.34607 13.8783 5.41235 13.9996 5.51461C14.1209 5.61687 14.2111 5.75103 14.2601 5.90192C14.3091 6.0528 14.3149 6.21439 14.2768 6.3684C14.2388 6.52241 14.1584 6.66269 14.0447 6.77337L11.3893 9.36077L12.0166 13.0158C12.0434 13.1721 12.0259 13.3328 11.9661 13.4797C11.9064 13.6266 11.8067 13.7538 11.6784 13.847C11.5501 13.9402 11.3982 13.9957 11.24 14.0071C11.0819 14.0185 10.9236 13.9855 10.7833 13.9117L7.50227 12.1862L4.21957 13.9117C4.07915 13.9853 3.92093 14.0182 3.76279 14.0067C3.60466 13.9951 3.45291 13.9395 3.3247 13.8462C3.19648 13.753 3.09692 13.6257 3.03726 13.4788C2.97759 13.3319 2.96021 13.1712 2.98707 13.0149L3.61352 9.36077L0.958118 6.77337C0.844471 6.66269 0.764067 6.52241 0.726002 6.3684C0.687938 6.21439 0.693732 6.0528 0.74273 5.90192C0.791728 5.75103 0.881974 5.61687 1.00326 5.51461C1.12454 5.41235 1.27202 5.34607 1.42902 5.32327L5.09847 4.79032L6.73897 1.46512V1.46597Z"
+                      fill="#FFE903" />
+                  </svg>
+                </span>
+                <span>
+                  <svg class="md:w-7 w-4 md:h-7 h-4" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M6.73897 1.46597C6.80911 1.32363 6.91771 1.20376 7.05246 1.11994C7.18721 1.03612 7.34273 0.991699 7.50142 0.991699C7.66011 0.991699 7.81563 1.03612 7.95038 1.11994C8.08513 1.20376 8.19372 1.32363 8.26387 1.46597L9.90437 4.78947L13.5738 5.32327C13.7308 5.34607 13.8783 5.41235 13.9996 5.51461C14.1209 5.61687 14.2111 5.75103 14.2601 5.90192C14.3091 6.0528 14.3149 6.21439 14.2768 6.3684C14.2388 6.52241 14.1584 6.66269 14.0447 6.77337L11.3893 9.36077L12.0166 13.0158C12.0434 13.1721 12.0259 13.3328 11.9661 13.4797C11.9064 13.6266 11.8067 13.7538 11.6784 13.847C11.5501 13.9402 11.3982 13.9957 11.24 14.0071C11.0819 14.0185 10.9236 13.9855 10.7833 13.9117L7.50227 12.1862L4.21957 13.9117C4.07915 13.9853 3.92093 14.0182 3.76279 14.0067C3.60466 13.9951 3.45291 13.9395 3.3247 13.8462C3.19648 13.753 3.09692 13.6257 3.03726 13.4788C2.97759 13.3319 2.96021 13.1712 2.98707 13.0149L3.61352 9.36077L0.958118 6.77337C0.844471 6.66269 0.764067 6.52241 0.726002 6.3684C0.687938 6.21439 0.693732 6.0528 0.74273 5.90192C0.791728 5.75103 0.881974 5.61687 1.00326 5.51461C1.12454 5.41235 1.27202 5.34607 1.42902 5.32327L5.09847 4.79032L6.73897 1.46512V1.46597Z"
+                      fill="#FFE903" />
+                  </svg>
+                </span>
+                <span>
+                  <svg class="md:w-7 w-4 md:h-7 h-4" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M6.73897 1.46597C6.80911 1.32363 6.91771 1.20376 7.05246 1.11994C7.18721 1.03612 7.34273 0.991699 7.50142 0.991699C7.66011 0.991699 7.81563 1.03612 7.95038 1.11994C8.08513 1.20376 8.19372 1.32363 8.26387 1.46597L9.90437 4.78947L13.5738 5.32327C13.7308 5.34607 13.8783 5.41235 13.9996 5.51461C14.1209 5.61687 14.2111 5.75103 14.2601 5.90192C14.3091 6.0528 14.3149 6.21439 14.2768 6.3684C14.2388 6.52241 14.1584 6.66269 14.0447 6.77337L11.3893 9.36077L12.0166 13.0158C12.0434 13.1721 12.0259 13.3328 11.9661 13.4797C11.9064 13.6266 11.8067 13.7538 11.6784 13.847C11.5501 13.9402 11.3982 13.9957 11.24 14.0071C11.0819 14.0185 10.9236 13.9855 10.7833 13.9117L7.50227 12.1862L4.21957 13.9117C4.07915 13.9853 3.92093 14.0182 3.76279 14.0067C3.60466 13.9951 3.45291 13.9395 3.3247 13.8462C3.19648 13.753 3.09692 13.6257 3.03726 13.4788C2.97759 13.3319 2.96021 13.1712 2.98707 13.0149L3.61352 9.36077L0.958118 6.77337C0.844471 6.66269 0.764067 6.52241 0.726002 6.3684C0.687938 6.21439 0.693732 6.0528 0.74273 5.90192C0.791728 5.75103 0.881974 5.61687 1.00326 5.51461C1.12454 5.41235 1.27202 5.34607 1.42902 5.32327L5.09847 4.79032L6.73897 1.46512V1.46597Z"
+                      fill="#FFE903" />
+                  </svg>
+                </span>
+                <span class="px-2">4.9/Rating</span>
+              </p>
+            </div>
+            <div class="py-6 mt-2 flex justify-center gap-4">
+              <button
+                class="border-[#F15025] gap-2 flex justify-center items-center rounded-[5px] border px-2  md:px-5 py-2 font-[600] font-[Lato] text-[9px] md:text-[16px] text-[#F15025] w-[115px]  md:w-[194px]">
+                <span>
+                  <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_521_2689)">
+                      <path
+                        d="M5.52532 14.8314C6.03928 14.8314 6.45592 14.4148 6.45592 13.9008C6.45592 13.3869 6.03928 12.9702 5.52532 12.9702C5.01137 12.9702 4.59473 13.3869 4.59473 13.9008C4.59473 14.4148 5.01137 14.8314 5.52532 14.8314Z"
+                        fill="#F15025" />
+                      <path
+                        d="M12.039 14.8314C12.5529 14.8314 12.9696 14.4148 12.9696 13.9008C12.9696 13.3869 12.5529 12.9702 12.039 12.9702C11.525 12.9702 11.1084 13.3869 11.1084 13.9008C11.1084 14.4148 11.525 14.8314 12.039 14.8314Z"
+                        fill="#F15025" />
+                      <path
+                        d="M3.18925 2.17683C3.16818 2.07139 3.11124 1.97651 3.0281 1.9083C2.94497 1.8401 2.84079 1.8028 2.73326 1.80273H0.87207V2.73333H2.35172L4.13846 11.6652C4.15954 11.7706 4.21648 11.8655 4.29961 11.9337C4.38274 12.0019 4.48693 12.0392 4.59445 12.0393H12.9698V11.1087H4.976L4.60376 9.2475H12.9698C13.0757 9.24748 13.1783 9.21138 13.2609 9.14514C13.3435 9.07891 13.401 8.9865 13.4239 8.88317L14.4792 4.12922H13.5268L12.5966 8.31691H4.41764L3.18925 2.17683Z"
+                        fill="#F15025" />
+                      <path
+                        d="M9.24784 3.66393V1.80273H8.31725V3.66393H6.45605V4.59452H8.31725V6.45571H9.24784V4.59452H11.109V3.66393H9.24784Z"
+                        fill="#F15025" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_521_2689">
+                        <rect width="14.8895" height="14.8895" fill="white" transform="translate(0.87207 0.87207)" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span> Add to cart </button>
+              <button
+                class="bg-[#F15025] text-white border border-[#F15025] rounded-[5px] text-[9px] md:text-[16px] font-[600] font-[Lato] py-2 w-[115px]  md:w-[194px]">Book
+                now</button>
+            </div>
+          </div>
+        </div>
+        <!-- description -->
+        <div class="max-w-[80%] mx-auto  py-6 md:mx-0">
+          <div>
+            <h2 class="text-[#004492] md:text-[22px] text-[15px] py-2 font-[Lato] font-[400]">Description</h2>
+            <p class="text-[12px] md:text-[18px] font-[Lato] font-[400] text-[#515151] md:w-[598px]">Do you want to hire
+              an
+              electrician for inverter
+              installation in your office/company? I am available for
+              your service
+              from 9 am to 10 pm so feel free to book my electrical service in Kathmandu Valley. At the given price, you
+              will receive
+              home service from a professional electrician and I will install the inverter at an appropriate area for
+              safety purposes.
+              The inverter will be connected to the power supply board for backup energy.</p>
+          </div>
+          <div class="py-4">
+            <h2 class="text-[#004492] font-[400] font-[Lato] md:text-[22px] text-[15px]">Highlights</h2>
+            <ul class="py-2">
+              <li class="text-[#515151] flex items-center gap-2 font-[Roboto] text-[12px] md:text-[18px] font-[400]">
+                <span>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.6791 0.511755C12.4399 0.378685 12.1769 0.29406 11.905 0.262721C11.6331 0.231382 11.3578 0.253943 11.0946 0.329114C10.8315 0.404285 10.5857 0.530591 10.3714 0.70081C10.1571 0.871028 9.97848 1.08182 9.84572 1.32113L5.97801 8.28155L3.76447 6.06801C3.57229 5.86903 3.3424 5.71031 3.08823 5.60113C2.83405 5.49194 2.56068 5.43447 2.28405 5.43207C2.00743 5.42966 1.7331 5.48238 1.47706 5.58713C1.22103 5.69188 0.988421 5.84657 0.792811 6.04218C0.597202 6.23779 0.442508 6.4704 0.337756 6.72643C0.233004 6.98247 0.180292 7.2568 0.182696 7.53342C0.1851 7.81005 0.242571 8.08342 0.351756 8.3376C0.460942 8.59177 0.619655 8.82166 0.818634 9.01384L4.9853 13.1805C5.37905 13.5753 5.9103 13.792 6.45822 13.792L6.74676 13.7711C7.06608 13.7265 7.37068 13.6083 7.63657 13.4259C7.90246 13.2435 8.12239 13.0019 8.27905 12.7201L13.4874 3.34509C13.6204 3.10598 13.7049 2.84301 13.7363 2.57121C13.7676 2.29941 13.7451 2.0241 13.67 1.761C13.595 1.4979 13.4688 1.25216 13.2988 1.03781C13.1288 0.823466 12.9182 0.644711 12.6791 0.511755Z"
+                      fill="#16CD00" />
+                  </svg>
+                </span>
+                Booking Available for Electrician in Kathmandu
+              </li>
+              <li class="text-[#515151] flex items-center gap-2 font-[Roboto] text-[12px] md:text-[18px] font-[400]">
+                <span>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.6791 0.511755C12.4399 0.378685 12.1769 0.29406 11.905 0.262721C11.6331 0.231382 11.3578 0.253943 11.0946 0.329114C10.8315 0.404285 10.5857 0.530591 10.3714 0.70081C10.1571 0.871028 9.97848 1.08182 9.84572 1.32113L5.97801 8.28155L3.76447 6.06801C3.57229 5.86903 3.3424 5.71031 3.08823 5.60113C2.83405 5.49194 2.56068 5.43447 2.28405 5.43207C2.00743 5.42966 1.7331 5.48238 1.47706 5.58713C1.22103 5.69188 0.988421 5.84657 0.792811 6.04218C0.597202 6.23779 0.442508 6.4704 0.337756 6.72643C0.233004 6.98247 0.180292 7.2568 0.182696 7.53342C0.1851 7.81005 0.242571 8.08342 0.351756 8.3376C0.460942 8.59177 0.619655 8.82166 0.818634 9.01384L4.9853 13.1805C5.37905 13.5753 5.9103 13.792 6.45822 13.792L6.74676 13.7711C7.06608 13.7265 7.37068 13.6083 7.63657 13.4259C7.90246 13.2435 8.12239 13.0019 8.27905 12.7201L13.4874 3.34509C13.6204 3.10598 13.7049 2.84301 13.7363 2.57121C13.7676 2.29941 13.7451 2.0241 13.67 1.761C13.595 1.4979 13.4688 1.25216 13.2988 1.03781C13.1288 0.823466 12.9182 0.644711 12.6791 0.511755Z"
+                      fill="#16CD00" />
+                  </svg>
+                </span>
+                Experienced Electrician
+
+              </li>
+              <li class="text-[#515151] flex items-center gap-2 font-[Roboto] text-[12px] md:text-[18px] font-[400]">
+                <span>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.6791 0.511755C12.4399 0.378685 12.1769 0.29406 11.905 0.262721C11.6331 0.231382 11.3578 0.253943 11.0946 0.329114C10.8315 0.404285 10.5857 0.530591 10.3714 0.70081C10.1571 0.871028 9.97848 1.08182 9.84572 1.32113L5.97801 8.28155L3.76447 6.06801C3.57229 5.86903 3.3424 5.71031 3.08823 5.60113C2.83405 5.49194 2.56068 5.43447 2.28405 5.43207C2.00743 5.42966 1.7331 5.48238 1.47706 5.58713C1.22103 5.69188 0.988421 5.84657 0.792811 6.04218C0.597202 6.23779 0.442508 6.4704 0.337756 6.72643C0.233004 6.98247 0.180292 7.2568 0.182696 7.53342C0.1851 7.81005 0.242571 8.08342 0.351756 8.3376C0.460942 8.59177 0.619655 8.82166 0.818634 9.01384L4.9853 13.1805C5.37905 13.5753 5.9103 13.792 6.45822 13.792L6.74676 13.7711C7.06608 13.7265 7.37068 13.6083 7.63657 13.4259C7.90246 13.2435 8.12239 13.0019 8.27905 12.7201L13.4874 3.34509C13.6204 3.10598 13.7049 2.84301 13.7363 2.57121C13.7676 2.29941 13.7451 2.0241 13.67 1.761C13.595 1.4979 13.4688 1.25216 13.2988 1.03781C13.1288 0.823466 12.9182 0.644711 12.6791 0.511755Z"
+                      fill="#16CD00" />
+                  </svg>
+                </span>
+                +8 Years of Experience
+
+              </li>
+              <li class="text-[#515151] flex items-center gap-2 font-[Roboto] text-[12px] md:text-[18px] font-[400]">
+                <span>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.6791 0.511755C12.4399 0.378685 12.1769 0.29406 11.905 0.262721C11.6331 0.231382 11.3578 0.253943 11.0946 0.329114C10.8315 0.404285 10.5857 0.530591 10.3714 0.70081C10.1571 0.871028 9.97848 1.08182 9.84572 1.32113L5.97801 8.28155L3.76447 6.06801C3.57229 5.86903 3.3424 5.71031 3.08823 5.60113C2.83405 5.49194 2.56068 5.43447 2.28405 5.43207C2.00743 5.42966 1.7331 5.48238 1.47706 5.58713C1.22103 5.69188 0.988421 5.84657 0.792811 6.04218C0.597202 6.23779 0.442508 6.4704 0.337756 6.72643C0.233004 6.98247 0.180292 7.2568 0.182696 7.53342C0.1851 7.81005 0.242571 8.08342 0.351756 8.3376C0.460942 8.59177 0.619655 8.82166 0.818634 9.01384L4.9853 13.1805C5.37905 13.5753 5.9103 13.792 6.45822 13.792L6.74676 13.7711C7.06608 13.7265 7.37068 13.6083 7.63657 13.4259C7.90246 13.2435 8.12239 13.0019 8.27905 12.7201L13.4874 3.34509C13.6204 3.10598 13.7049 2.84301 13.7363 2.57121C13.7676 2.29941 13.7451 2.0241 13.67 1.761C13.595 1.4979 13.4688 1.25216 13.2988 1.03781C13.1288 0.823466 12.9182 0.644711 12.6791 0.511755Z"
+                      fill="#16CD00" />
+                  </svg>
+                </span>
+                +3000 Satisfied Clients
+
+              </li>
+              <li class="text-[#515151] flex items-center gap-2 font-[Roboto] text-[12px] md:text-[18px] font-[400]">
+                <span>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.6791 0.511755C12.4399 0.378685 12.1769 0.29406 11.905 0.262721C11.6331 0.231382 11.3578 0.253943 11.0946 0.329114C10.8315 0.404285 10.5857 0.530591 10.3714 0.70081C10.1571 0.871028 9.97848 1.08182 9.84572 1.32113L5.97801 8.28155L3.76447 6.06801C3.57229 5.86903 3.3424 5.71031 3.08823 5.60113C2.83405 5.49194 2.56068 5.43447 2.28405 5.43207C2.00743 5.42966 1.7331 5.48238 1.47706 5.58713C1.22103 5.69188 0.988421 5.84657 0.792811 6.04218C0.597202 6.23779 0.442508 6.4704 0.337756 6.72643C0.233004 6.98247 0.180292 7.2568 0.182696 7.53342C0.1851 7.81005 0.242571 8.08342 0.351756 8.3376C0.460942 8.59177 0.619655 8.82166 0.818634 9.01384L4.9853 13.1805C5.37905 13.5753 5.9103 13.792 6.45822 13.792L6.74676 13.7711C7.06608 13.7265 7.37068 13.6083 7.63657 13.4259C7.90246 13.2435 8.12239 13.0019 8.27905 12.7201L13.4874 3.34509C13.6204 3.10598 13.7049 2.84301 13.7363 2.57121C13.7676 2.29941 13.7451 2.0241 13.67 1.761C13.595 1.4979 13.4688 1.25216 13.2988 1.03781C13.1288 0.823466 12.9182 0.644711 12.6791 0.511755Z"
+                      fill="#16CD00" />
+                  </svg>
+                </span>
+                Service Available around Kathmandu
+
+              </li>
+              <li class="text-[#515151] flex items-center gap-2 font-[Roboto] text-[12px] md:text-[18px] font-[400]">
+                <span>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.6791 0.511755C12.4399 0.378685 12.1769 0.29406 11.905 0.262721C11.6331 0.231382 11.3578 0.253943 11.0946 0.329114C10.8315 0.404285 10.5857 0.530591 10.3714 0.70081C10.1571 0.871028 9.97848 1.08182 9.84572 1.32113L5.97801 8.28155L3.76447 6.06801C3.57229 5.86903 3.3424 5.71031 3.08823 5.60113C2.83405 5.49194 2.56068 5.43447 2.28405 5.43207C2.00743 5.42966 1.7331 5.48238 1.47706 5.58713C1.22103 5.69188 0.988421 5.84657 0.792811 6.04218C0.597202 6.23779 0.442508 6.4704 0.337756 6.72643C0.233004 6.98247 0.180292 7.2568 0.182696 7.53342C0.1851 7.81005 0.242571 8.08342 0.351756 8.3376C0.460942 8.59177 0.619655 8.82166 0.818634 9.01384L4.9853 13.1805C5.37905 13.5753 5.9103 13.792 6.45822 13.792L6.74676 13.7711C7.06608 13.7265 7.37068 13.6083 7.63657 13.4259C7.90246 13.2435 8.12239 13.0019 8.27905 12.7201L13.4874 3.34509C13.6204 3.10598 13.7049 2.84301 13.7363 2.57121C13.7676 2.29941 13.7451 2.0241 13.67 1.761C13.595 1.4979 13.4688 1.25216 13.2988 1.03781C13.1288 0.823466 12.9182 0.644711 12.6791 0.511755Z"
+                      fill="#16CD00" />
+                  </svg>
+                </span>
+                On-time Service
+
+              </li>
+              <li class="text-[#515151] flex items-center gap-2 font-[Roboto] text-[12px] md:text-[18px] font-[400]">
+                <span>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.6791 0.511755C12.4399 0.378685 12.1769 0.29406 11.905 0.262721C11.6331 0.231382 11.3578 0.253943 11.0946 0.329114C10.8315 0.404285 10.5857 0.530591 10.3714 0.70081C10.1571 0.871028 9.97848 1.08182 9.84572 1.32113L5.97801 8.28155L3.76447 6.06801C3.57229 5.86903 3.3424 5.71031 3.08823 5.60113C2.83405 5.49194 2.56068 5.43447 2.28405 5.43207C2.00743 5.42966 1.7331 5.48238 1.47706 5.58713C1.22103 5.69188 0.988421 5.84657 0.792811 6.04218C0.597202 6.23779 0.442508 6.4704 0.337756 6.72643C0.233004 6.98247 0.180292 7.2568 0.182696 7.53342C0.1851 7.81005 0.242571 8.08342 0.351756 8.3376C0.460942 8.59177 0.619655 8.82166 0.818634 9.01384L4.9853 13.1805C5.37905 13.5753 5.9103 13.792 6.45822 13.792L6.74676 13.7711C7.06608 13.7265 7.37068 13.6083 7.63657 13.4259C7.90246 13.2435 8.12239 13.0019 8.27905 12.7201L13.4874 3.34509C13.6204 3.10598 13.7049 2.84301 13.7363 2.57121C13.7676 2.29941 13.7451 2.0241 13.67 1.761C13.595 1.4979 13.4688 1.25216 13.2988 1.03781C13.1288 0.823466 12.9182 0.644711 12.6791 0.511755Z"
+                      fill="#16CD00" />
+                  </svg>
+                </span>
+                Available from 9 am to 10 pm
+              </li>
+            </ul>
+          </div>
+        </div>
 
       </div>
     </div>
+    <!-- reviews -->
+    <div class="bg-[#ffff] max-w-[90%] mx-auto  relative">
+      <h1 class="text-center text-[#F15025] text-[24px] font-[600] font-[Lato]   ">Reviews
+      </h1>
+      <div class="my-10 py-4  ">
+        <!-- blur -->
+        <div class="absolute right-0 top-20 h-[375px] w-[50px] bg-gradient-to-r from-[#ffffff] to-[#ffffffc1]">
+        </div>
+        <!-- blur div end -->
+        <div class=" flex flex-nowrap overflow-x-auto  overflow-y-hidden no-scrollbar">
+
+          <!-- item 1 -->
+          <div class="flex-none relative  w-[280px] px-6 ">
+            <img class="block mb-0" src=" /assets/Ellipse 2.svg" alt="user_image">
+
+            <div style="background-image: url('/assets/“.svg');"
+              class="bg-[#F2F8FF] py-10 bg-no-repeat bg-[top_2.1rem_left_1.5rem]  rounded-[6px] border-2 border-[#004492]   ">
+              <div class="py-1 text-center">
+                <h4 class="font-[600] text-[1rem] font-[Raleway] text-[#141414] tracking-wide">Andrew Jason</h4>
+                <p class="font-[400] text-[10px] font-[Raleway] tracking-wide text-[#908E8E]">25 August,2022</p>
+              </div>
+              <p class="font-[Raleway] text-[400] text-[12px] px-7 py-2 text-start text-[#4F4F4F]">Lorem Ipsum is
+                simply dummy text
+                of the
+                printing
+                and
+                typesetting industry. Lorem Ipsum has been the
+                industry's standard
+                dummy</p>
+            </div>
+          </div>
+          <!-- item-2 -->
+          <div class="flex-none  w-[280px] px-6">
+            <img class=" block mb-0" src=" /assets/Ellipse 2.svg" alt="user_image">
+
+            <div style="background-image: url('/assets/“.svg');"
+              class="bg-[#F2F8FF] py-10 border-2 border-[#004492] rounded-[6px] bg-no-repeat bg-[top_2.1rem_left_1.5rem] ">
+              <div class="py-1 text-center">
+                <h4 class="font-[600] text-[1rem] font-[Raleway] text-[#141414] tracking-wide">Andrew Jason</h4>
+                <p class="font-[400] text-[10px] font-[Raleway] tracking-wide text-[#908E8E]">25 August,2022</p>
+              </div>
+              <p class="font-[Raleway] text-[400] text-[12px] px-7 py-2 text-start text-[#4F4F4F]">Lorem Ipsum is
+                simply dummy text
+                of the
+                printing
+                and
+                typesetting industry. Lorem Ipsum has been the
+                industry's standard
+                dummy</p>
+            </div>
+          </div>
+          <div class="flex-none  w-[280px] px-6">
+            <img class=" block mb-0" src=" /assets/Ellipse 2.svg" alt="user_image">
+
+            <div style="background-image: url('/assets/“.svg');"
+              class="bg-[#F2F8FF] py-8 bg-no-repeat border-2 border-[#004492]  bg-[top_2.1rem_left_1.5rem] ">
+              <div class="py-1 text-center">
+                <h4 class="font-[600] text-[1rem] font-[Raleway] text-[#141414] tracking-wide">Andrew Jason</h4>
+                <p class="font-[400] text-[10px] font-[Raleway] tracking-wide text-[#908E8E]">25 August,2022</p>
+              </div>
+              <p class="font-[Raleway] text-[400] text-[12px] px-7 py-2 text-start text-[#4F4F4F]">Lorem Ipsum is
+                simply dummy text
+                of the
+                printing
+                and
+                typesetting industry. Lorem Ipsum has been the
+                industry's standard
+                dummy</p>
+            </div>
+          </div>
+          <!-- item-4 -->
+          <div class="flex-none  w-[280px] px-6">
+            <img class=" block mb-0" src=" /assets/Ellipse 2.svg" alt="user_image">
+
+            <div style="background-image: url('/assets/“.svg');"
+              class="bg-[#F2F8FF] py-8 bg-no-repeat border-2 border-[#004492] bg-[top_2.1rem_left_1.5rem] rounded-[6px] ">
+              <div class="py-1 text-center">
+                <h4 class="font-[600] text-[1rem] font-[Raleway] text-[#141414] tracking-wide">Andrew Jason</h4>
+                <p class="font-[400] text-[10px] font-[Raleway] tracking-wide text-[#908E8E]">25 August,2022</p>
+              </div>
+              <p class="font-[Raleway] text-[400] text-[12px] px-7 py-2 text-start text-[#4F4F4F]">Lorem Ipsum is
+                simply dummy text
+                of the
+                printing
+                and
+                typesetting industry. Lorem Ipsum has been the
+                industry's standard
+                dummy</p>
+            </div>
+          </div>
+          <!-- item-5 -->
+          <div class="flex-none  w-[280px] px-6">
+            <img class=" block mb-0" src=" /assets/Ellipse 2.svg" alt="user_image">
+
+            <div style="background-image: url('/assets/“.svg');"
+              class="bg-[#F2F8FF] py-8 bg-no-repeat border-2 border-[#004492] bg-[top_2.1rem_left_1.5rem] rounded-[6px] ">
+              <div class="py-1 text-center">
+                <h4 class="font-[600] text-[1rem] font-[Raleway] text-[#141414] tracking-wide">Andrew Jason</h4>
+                <p class="font-[400] text-[10px] font-[Raleway] tracking-wide text-[#908E8E]">25 August,2022</p>
+              </div>
+              <p class="font-[Raleway] text-[400] text-[12px] px-7 py-2 text-start text-[#4F4F4F]">Lorem Ipsum is
+                simply dummy text
+                of the
+                printing
+                and
+                typesetting industry. Lorem Ipsum has been the
+                industry's standard
+                dummy</p>
+            </div>
+          </div>
+          <!-- item-6 -->
+          <div class="flex-none  w-[280px] px-6">
+            <img class=" block mb-0" src=" /assets/Ellipse 2.svg" alt="user_image">
+
+            <div style="background-image: url('/assets/“.svg');"
+              class="bg-[#F2F8FF] py-8 bg-no-repeat border-2 border-[#004492] bg-[top_2.1rem_left_1.5rem] rounded-[6px] ">
+              <div class="py-1 text-center">
+                <h4 class="font-[600] text-[1rem] font-[Raleway] text-[#141414] tracking-wide">Andrew Jason</h4>
+                <p class="font-[400] text-[10px] font-[Raleway] tracking-wide text-[#908E8E]">25 August,2022</p>
+              </div>
+              <p class="font-[Raleway] text-[400] text-[12px] px-7 py-2 text-start text-[#4F4F4F]">Lorem Ipsum is
+                simply dummy text
+                of the
+                printing
+                and
+                typesetting industry. Lorem Ipsum has been the
+                industry's standard
+                dummy</p>
+            </div>
+          </div>
+          <!-- item-7 -->
+          <div class="flex-none  w-[280px] px-6">
+            <img class=" block mb-0" src=" /assets/Ellipse 2.svg" alt="user_image">
+
+            <div style="background-image: url('/assets/“.svg');"
+              class="bg-[#F2F8FF] py-8 bg-no-repeat border-2 border-[#004492] bg-[top_2.1rem_left_1.5rem] rounded-[6px] ">
+              <div class="py-1 text-center">
+                <h4 class="font-[600] text-[1rem] font-[Raleway] text-[#141414] tracking-wide">Andrew Jason</h4>
+                <p class="font-[400] text-[10px] font-[Raleway] tracking-wide text-[#908E8E]">25 August,2022</p>
+              </div>
+              <p class="font-[Raleway] text-[400] text-[12px] px-7 py-2 text-start text-[#4F4F4F]">Lorem Ipsum is
+                simply dummy text
+                of the
+                printing
+                and
+                typesetting industry. Lorem Ipsum has been the
+                industry's standard
+                dummy</p>
+            </div>
+          </div>
+          <!-- item-8 -->
+          <div class="flex-none  w-[280px] px-6">
+            <img class=" block mb-0" src=" /assets/Ellipse 2.svg" alt="user_image">
+
+            <div style="background-image: url('/assets/“.svg');"
+              class="bg-[#F2F8FF] py-8 bg-no-repeat border-2 border-[#004492] bg-[top_2.1rem_left_1.5rem] rounded-[6px] ">
+              <div class="py-1 text-center">
+                <h4 class="font-[600] text-[1rem] font-[Raleway] text-[#141414] tracking-wide">Andrew Jason</h4>
+                <p class="font-[400] text-[10px] font-[Raleway] tracking-wide text-[#908E8E]">25 August,2022</p>
+              </div>
+              <p class="font-[Raleway] text-[400] text-[12px] px-7 py-2 text-start text-[#4F4F4F]">Lorem Ipsum is
+                simply dummy text
+                of the
+                printing
+                and
+                typesetting industry. Lorem Ipsum has been the
+                industry's standard
+                dummy</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- joining page -->
+    <div class="hidden md:block my-12 max-w-[95%] mx-auto"><a
+        class="font-[Lato] text-[25px] font-[600] text-white bg-gradient-to-r from-[#FF0000] to-[#AF0000]  py-16 w-full block  text-center h-full rounded-[7px] shadow-2xl"
+        href="">Do
+        You Want To Work With Us? Please Submit Your
+        Details</a></div>
+  </main>
+  <footer style="background-image: url('/assets/image\ 14.svg');"
+    class="bg-[#00000033] text-white bg-no-repeat bg-cover   py-10">
+    <div class="flex    flex-col md:flex-row  items-start gap-5   w-[90%] mx-auto  ">
+      <div class="flex justify-around md:w-[60%]  ">
+        <div class="w-[50%] md:w-[40%] ">
+          <h1 class="font-[700] md:text-[25px] text-[14px] tracking-[0.06em] font-[Oswald]">ABOUT US</h1>
+          <p class="font-[400] font-[Raleway] text-[12px] md:text-[1.4rem] py-2 ">
+            Safest Way F&W tiling works Establishment is a reactive Maintenance Solutions company serving residents,
+            businesses,
+            schools, retail outlets across the United Arab Emirates. We provide first class, high quality, reliable and
+            affordable
+            building contract services, and repairs throughout the UAE.
+          </p>
+        </div>
+        <div class=" flex flex-col    ">
+          <div>
+            <h1 class="font-[Oswald] font-[700] md:text-[25px] text-[12px]  tracking-[0.06]">CONTACT US</h1>
+            <p class="font-[400] md:text-[20px] text-[12px]  py-3">
+              <span class="block">Bur Dubai</span>
+              <span class="block">Dubai</span>
+              <span class="block">United Arab Emirates</span>
+              <span class="block">+971 4 351 9038</span>
+              <span class="block">+971 55 830 3909</span>
+            </p>
+          </div>
+          <div class="md:py-2">
+            <h1 class="font-[Oswald] font-[700] md:text-[25px]  text-[12px] tracking-[0.06]">Sales</h1>
+            <p class="font-[Raleway] md:text-[20px] text-[12px] font-[400] py-1">+971 55 526 6347</p>
+          </div>
+          <div class="md:py-2">
+            <h1 class="font-[Oswald] font-[700] md:text-[25px]  text-[12px] tracking-[0.06]">Operation</h1>
+            <p class="font-[Raleway] md:text-[20px] text-[12px] font-[400] py-1">+971 50 535 3471
+              <span class="block">info@Grihasanjal.com</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-around w-full   md:w-[40%]  md:justify-between  gap-3">
+        <div class=" w-[50%]">
+          <h1 class="font-[Oswald] font-[700] md:text-[25px] uppercase text-[12px] tracking-[0.06]">Section</h1>
+          <ul class="py-1 min-w-[150px]">
+            <li class="md:py-1"><a
+                class="text-[#FFE900] font-[Raleway] md:text-[20px] text-[12px] font-[400] py-2 hover:text-[#0063D5]"
+                href="#">Skilled Services</a></li>
+            <li class="md:py-1"><a
+                class="text-[#FFE900] font-[Raleway] md:text-[20px] text-[12px] font-[400] py-2 hover:text-[#0063D5]"
+                href="#">Terms
+            <li class="md:py-1"><a
+                class="text-[#FFE900] font-[Raleway] md:text-[20px] text-[12px] font-[400] py-2 hover:text-[#0063D5]"
+                href="#">Tool
+                & Machinery
+                Rental</a>
+            </li>
+            <li class="md:py-1"><a
+                class="text-[#FFE900] font-[Raleway] md:text-[20px] text-[12px] font-[400] py-2 hover:text-[#0063D5]"
+                href="#">House
+                & Land Buy/Sell</a>
+            </li>
+            <li class="md:py-1"><a
+                class="text-[#FFE900] font-[Raleway] md:text-[20px] text-[12px] font-[400] py-2 hover:text-[#0063D5]"
+                href="#">House
+                & Land Rental</a>
+            </li>
+            <li class="md:py-1">
+              <a class="text-[#FFE900] font-[Raleway] md:text-[20px] text-[12px] font-[400] py-2 hover:text-[#0063D5] "
+                href="#">2nd
+                Hand Shop</a>
+            </li>
+          </ul>
+        </div>
+        <div class="  ">
+          <h1 class="font-[Oswald] font-[700] md:text-[25px]  text-[12px] tracking-[0.06]">QUICK LINKS</h1>
+          <ul class="md:py-1">
+            <li class="md:py-1 "><a
+                class="text-[#FFE900] font-[Raleway] md:text-[20px] text-[12px] font-[400] md:py-1 hover:text-[#0063D5]"
+                href="#">Home</a></li>
+            <li class="md:py-1"><a
+                class="text-[#FFE900] font-[Raleway] md:text-[20px] text-[12px] font-[400] md:py-1 hover:text-[#0063D5]"
+                href="#">About
+                Us</a></li>
+            <li class="md:py-1"><a
+                class="text-[#FFE900] font-[Raleway] md:text-[20px] text-[12px] font-[400] md:py-1 hover:text-[#0063D5]"
+                href="#">Contact Us</a></li>
+            <li class="md:py-1"><a
+                class="text-[#FFE900] font-[Raleway] md:text-[20px] text-[12px] font-[400] md:py-1 hover:text-[#0063D5]"
+                href="#">Careers</a></li>
+            <li class="md:py-1"><a
+                class="text-[#FFE900] font-[Raleway] md:text-[20px] text-[12px] font-[400] md:py-1 hover:text-[#0063D5]"
+                href="#">Gallery</a></li>
+            <li class="md:py-1"><a
+                class="text-[#FFE900] font-[Raleway] md:text-[20px] text-[12px] font-[400] md:py-1 hover:text-[#0063D5]"
+                href="#">Privacy Policy</a></li>
+            <li class="md:py-1"><a
+                class="text-[#FFE900] font-[Raleway] md:text-[20px] text-[12px] font-[400] md:py-1 hover:text-[#0063D5]"
+                href="#">Terms
+                & Condition</a></li>
+            <li class="md:py-1"><a
+                class="text-[#FFE900] font-[Raleway] md:text-[20px]  text-[12px] font-[400] md:py-1 hover:text-[#0063D5]"
+                href="#">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="text-center font-[400] text-[18px] py-5 my-4">&copy; Copyright 2022 <span
+        class="block text-[12px] font-[500]">All rights
+        reserved</span></div>
+  </footer>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper( ".mySwiper", {
+      loop: true,
+      spaceBetween: 10,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesProgress: true,
+    } );
+    var swiper2 = new Swiper( ".mySwiper2", {
+      loop: true,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      thumbs: {
+        swiper: swiper,
+      },
+    } );
+  </script>
 </body>
 
 </html>
