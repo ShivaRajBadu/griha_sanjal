@@ -17,7 +17,7 @@
 </head>
 
 <body>
-  <header class="py-1 w-[90%] md:w-[95%] mx-auto font-[Oswald] bg-[#FFFEFE]">
+  <header class="py-1 w-[90%] md:w-[95%] mx-auto font-[Oswald] bg-[#f6f3f34a]">
     <div class="flex justify-between items-end md:items-center px-4">
       <div class="flex gap-4 justify-center items-center text-[0.8rem]">
         <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/4000/svg">
@@ -39,12 +39,20 @@
                 fill="white" />
             </svg>
           </div>
-          <div class="  py-2 flex justify-center items-center rounded-[50%]  cursor-pointer">
-            <svg class="fill-[#C2C2C2] hover:fill-[#F15025]" width="41" height="41" viewBox="0 0 41 41" fill="none"
+          <div class=" relative  py-2 rounded-[50%]  cursor-pointer">
+            <svg class="fill-[#C2C2C2] peer hover:fill-[#F15025]" width="41" height="41" viewBox="0 0 41 41" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M20.4997 0.0834961C9.4318 0.0834961 0.0830078 9.43229 0.0830078 20.5002C0.0830078 31.568 9.4318 40.9168 20.4997 40.9168C31.5675 40.9168 40.9163 31.568 40.9163 20.5002C40.9163 9.43229 31.5675 0.0834961 20.4997 0.0834961ZM20.4997 10.2918C24.0256 10.2918 26.6247 12.8888 26.6247 16.4168C26.6247 19.9448 24.0256 22.5418 20.4997 22.5418C16.9758 22.5418 14.3747 19.9448 14.3747 16.4168C14.3747 12.8888 16.9758 10.2918 20.4997 10.2918ZM10.0749 30.243C11.9063 27.548 14.9606 25.7513 18.458 25.7513H22.5413C26.0408 25.7513 29.093 27.548 30.9244 30.243C28.3152 33.036 24.6136 34.7918 20.4997 34.7918C16.3857 34.7918 12.6842 33.036 10.0749 30.243Z" />
             </svg>
+            <div
+              class="z-50 hidden peer-hover:block peer-focus:block  shadow-2xl absolute top-[4.6rem] -left-24 py-3 bg-white px-8 w-[179px] h-[139px] after:content-[''] after:absolute after:right-8  after:-top-12 after:rotate-180  after:border-[28px] after:border-x-transparent after     after:border-b-transparent after:border-t-[#ffffff]">
+              <ul class="w-full h-full">
+                <li class="text-[#353535] font-[Lato] font-[500] text-[17px] py-2 pt-1">User's Account</li>
+                <li class="text-[#353535] font-[Lato] font-[500] text-[17px] py-2">My order</li>
+                <li class="text-[#353535] font-[Lato] font-[500] text-[17px] py-2">My Property</li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="flex gap-8 justify-center items-center">
@@ -87,7 +95,7 @@
         </div>
       </div>
     </div>
-    <div class="md:flex flex justify-between items-center my-5 py-3 w-[100%] gap-4">
+    <div class="md:flex flex justify-between items-center my-5 mt-0 py-3 w-[100%] gap-4">
       <div class="min-w-[100px] flex items-center gap-4 w-[5%]">
         <img class="block w-[100%]" src="/assets/image 2.svg" alt="" />
         <div class="md:hidden mt-1">
@@ -133,8 +141,9 @@
         </ul>
       </nav>
       <div
-        class="max-w-[292px] md:w-[30%] xl:w-[22%] py-2 bg-[#0063D5] text-center hidden md:block rounded-[4px] cursor-pointer hover:bg-[#FFC107] transition duration-100 ease-in-out">
-        <a class=" md:text-[1.1vw] xl:text-[1.05vw] font-[700] font-[Oswald] text-white" href=""> Leave Us Message </a>
+        class="max-w-[292px] md:w-[30%] xl:w-[22%] py-2 bg-[#0063D5] text-center hidden md:block  cursor-pointer hover:bg-[#FFC107]  md:px-1 transition duration-100 ease-in-out">
+        <a class=" md:text-[12px]  xl:text-[18px] font-[700] font-[Oswald] text-white" href=""> Leave Us Message
+        </a>
       </div>
       <div class="md:hidden">
         <img class="w-12" src="/assets/square.svg" alt="" />
@@ -165,39 +174,39 @@
         <ul
           class="flex flex-nowrap  overflow-x-auto overflow-y-hidden justify-between max-w-[90%] mx-auto py-6 my-3 no-scrollbar gap-3">
           <li class="flex-none pr-3 w-[300px] "><a
-              class="text-[#BABABA] text-[0.9rem] font-[700] font-[Raleway] hover:text-[#2c2b2b] link-underline link-underline-black py-1"
+              class="text-[#BABABA] text-[0.9rem] font-[700] font-[Raleway] hover:text-[#525252] link-underline link-underline-black py-1"
               href="#">House
               Maintenance and
               Construction</a></li>
           <li class="flex-none w-[150px]  "><a
-              class="text-[#BABABA] text-[0.9rem] font-[700] font-[Raleway] hover:text-[#2c2b2b] link-underline link-underline-black py-1"
+              class="text-[#BABABA] text-[0.9rem] font-[700] font-[Raleway] hover:text-[#525252] link-underline link-underline-black py-1"
               href="">Legal Services</a></li>
           <li class="flex-none  w-[100px]"><a
-              class="text-[#BABABA] text-[0.9rem] font-[700] font-[Raleway] hover:text-[#2c2b2b] link-underline link-underline-black py-1"
+              class="text-[#BABABA] text-[0.9rem] font-[700] font-[Raleway] hover:text-[#525252] link-underline link-underline-black py-1"
               href="">Automobile</a></li>
           <li class="flex-none w-[100px] "><a
-              class="text-[#BABABA] text-[0.9rem] font-[700] font-[Raleway] hover:text-[#2c2b2b] link-underline link-underline-black py-1"
+              class="text-[#BABABA] text-[0.9rem] font-[700] font-[Raleway] hover:text-[#525252] link-underline link-underline-black py-1"
               href="">Others</a></li>
           <li class="flex-none w-[150px] "><a
-              class="text-[#BABABA] text-[0.9rem] font-[700] font-[Raleway] hover:text-[#2c2b2b] link-underline link-underline-black py-1"
+              class="text-[#BABABA] text-[0.9rem] font-[700] font-[Raleway] hover:text-[#525252] link-underline link-underline-black py-1"
               href="">Home Appliance</a></li>
           <li class="flex-none w-[100px]"><a
-              class="text-[#BABABA] text-[0.9rem] font-[700] font-[Raleway] hover:text-[#2c2b2b] link-underline link-underline-black py-1"
+              class="text-[#BABABA] text-[0.9rem] font-[700] font-[Raleway] hover:text-[#525252] link-underline link-underline-black py-1"
               href="">Cosmetic</a></li>
           <li class="flex-none w-[110px]"><a
-              class="text-[#BABABA] text-[0.9rem] font-[700] font-[Raleway] hover:text-[#2c2b2b] link-underline link-underline-black py-1"
+              class="text-[#BABABA] text-[0.9rem] font-[700] font-[Raleway] hover:text-[#525252] link-underline link-underline-black py-1"
               href="">Transportation</a></li>
           <li class="flex-none w-[100px]"><a
-              class="text-[#BABABA] text-[0.9rem] font-[700] font-[Raleway] hover:text-[#2c2b2b] link-underline link-underline-black py-1"
+              class="text-[#BABABA] text-[0.9rem] font-[700] font-[Raleway] hover:text-[#525252] link-underline link-underline-black py-1"
               href="">Cosmetic</a></li>
           <li class="flex-none w-[110px]"><a
-              class="text-[#BABABA] text-[0.9rem] font-[700] font-[Raleway] hover:text-[#2c2b2b] link-underline link-underline-black py-1"
+              class="text-[#BABABA] text-[0.9rem] font-[700] font-[Raleway] hover:text-[#525252] link-underline link-underline-black py-1"
               href="">Transportation</a></li>
           <li class="flex-none w-[100px]"><a
-              class="text-[#BABABA] text-[0.9rem] font-[700] font-[Raleway] hover:text-[#2c2b2b] link-underline link-underline-black py-1"
+              class="text-[#BABABA] text-[0.9rem] font-[700] font-[Raleway] hover:text-[#525252] link-underline link-underline-black py-1"
               href="">Cosmetic</a></li>
           <li class="flex-none w-[100px]"><a
-              class="text-[#BABABA] text-[0.9rem] font-[700] font-[Raleway] hover:text-[#2c2b2b] link-underline link-underline-black py-1"
+              class="text-[#BABABA] text-[0.9rem] font-[700] font-[Raleway] hover:text-[#525252] link-underline link-underline-black py-1"
               href="">Transportation</a></li>
         </ul>
       </div>
@@ -659,9 +668,9 @@
         <div class="py-4 grid grid-template-columns-withPicture gap-5 bg-[#F8F8F8] place-items-center">
           <!-- item 1 -->
           <div
-            class="w-[220px] rounded-[5px]  transition duration-200 ease-in-out hover:bg-white hover:shadow-2xl  hover:scale-105 cursor-pointer pb-2 group">
+            class="w-[220px] rounded-[5px]  transition duration-200 ease-in-out hover:bg-white hover:shadow-2xl  hover:scale-[1.04]  cursor-pointer  group">
             <div class="w-[220px] relative ">
-              <img class="w-full group-hover:shadow-lg  " src="/assets/Rectangle 39 (1).jpg" alt="">
+              <img class="w-full     group-hover:shadow-lg  " src="/assets/Rectangle 39 (1).jpg" alt="">
               <h3 class="absolute bottom-3 left-0 font-[Raleway] font-[700] text-[0.9rem] text-[#fff] w-[100px] pl-3">
                 (Septic
                 Tank
@@ -675,9 +684,10 @@
           </div>
           <!-- item-2-->
           <div
-            class="w-[220px] rounded-[5px]  transition duration-200 ease-in-out hover:bg-white hover:shadow-2xl  hover:scale-105 cursor-pointer pb-2 group">
+            class="w-[220px] rounded-[5px]  transition duration-200 ease-in-out hover:bg-white hover:shadow-2xl hover:scale-[1.04]   cursor-pointer  group">
             <div class="w-[220px] relative ">
-              <img class="w-full group-hover:shadow-lg  " src="/assets/Rectangle 43.jpg" alt="">
+              <img class="w-full  transition duration-300 ease-in-out  group-hover:shadow-lg  "
+                src="/assets/Rectangle 43.jpg" alt="">
               <h3 class="absolute bottom-3 left-0 font-[Raleway] font-[700] text-[0.9rem] text-[#fff] w-[100px] pl-3">
                 (Septic
                 Tank
@@ -691,7 +701,7 @@
           </div>
           <!-- item 3 -->
           <div
-            class="w-[220px] rounded-[5px]  transition duration-200 ease-in-out hover:bg-white hover:shadow-2xl  hover:scale-105 cursor-pointer pb-2 group">
+            class="w-[220px] rounded-[5px]  transition duration-200 ease-in-out hover:bg-white hover:shadow-2xl  hover:scale-[1.04] cursor-pointer group">
             <div class="w-[220px] relative ">
               <img class="w-full group-hover:shadow-lg  " src="/assets/Rectangle 40.jpg" alt="">
               <h3 class="absolute bottom-3 left-0 font-[Raleway] font-[700] text-[0.9rem] text-[#fff] w-[100px] pl-3">
@@ -707,7 +717,7 @@
           </div>
           <!-- item-4 -->
           <div
-            class="w-[220px] rounded-[5px]  transition duration-200 ease-in-out hover:bg-white hover:shadow-2xl  hover:scale-105 cursor-pointer pb-2 group">
+            class="w-[220px] rounded-[5px]  transition duration-200 ease-in-out hover:bg-white hover:shadow-2xl  hover:scale-105 cursor-pointer  group">
             <div class="w-[220px] relative ">
               <img class="w-full group-hover:shadow-lg  " src="/assets/Rectangle 42.jpg" alt="">
               <h3 class="absolute bottom-3 left-0 font-[Raleway] font-[700] text-[0.9rem] text-[#fff] w-[100px] pl-3">
@@ -723,7 +733,7 @@
           </div>
           <!-- item-5 -->
           <div
-            class="w-[220px] rounded-[5px]  transition duration-200 ease-in-out hover:bg-white hover:shadow-2xl  hover:scale-105 cursor-pointer pb-2 group">
+            class="w-[220px] rounded-[5px]  transition duration-200 ease-in-out hover:bg-white hover:shadow-2xl  hover:scale-[1.04] cursor-pointer  group">
             <div class="w-[220px] relative ">
               <img class="w-full group-hover:shadow-lg  " src="/assets/Rectangle 41.jpg" alt="">
               <h3 class="absolute bottom-3 left-0 font-[Raleway] font-[700] text-[0.9rem] text-[#fff] w-[100px] pl-3">
@@ -739,7 +749,7 @@
           </div>
           <!-- item-6 -->
           <div
-            class="w-[220px] rounded-[5px]  transition duration-200 ease-in-out hover:bg-white hover:shadow-2xl  hover:scale-105 cursor-pointer pb-2 group">
+            class="w-[220px] rounded-[5px]  transition duration-200 ease-in-out hover:bg-white hover:shadow-2xl   hover:scale-[1.04] cursor-pointer  group">
             <div class="w-[220px] relative ">
               <img class="w-full group-hover:shadow-lg  " src="/assets/Rectangle 43.jpg" alt="">
               <h3 class="absolute bottom-3 left-0 font-[Raleway] font-[700] text-[0.9rem] text-[#fff] w-[100px] pl-3">
@@ -1220,7 +1230,7 @@
         <!-- Want to work  -->
         <div class="hidden md:block my-12 max-w-[95%] mx-auto"><a
             class="font-[Lato] text-[25px] font-[600] text-white background  py-16 w-full block  text-center h-full rounded-[7px] shadow-2xl"
-            href="">Do
+            href="service_provider.html">Do
             You Want To Work With Us? Please Submit Your
             Details</a></div>
 

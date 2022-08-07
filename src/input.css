@@ -45,4 +45,47 @@
   .background {
     background: linear-gradient(180deg, #ff0000 0%, #af0000 100%);
   }
+  .grid-container {
+    display: grid;
+
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    gap: 5px;
+  }
+  .first {
+    grid-row-start: 1;
+    grid-column-start: 3;
+
+    grid-row-end: 3;
+    grid-column-end: 7;
+  }
+  .second {
+    grid-row-start: 1;
+    grid-column-start: 2;
+
+    grid-row-end: 2;
+    grid-column-end: 3;
+  }
+  .third {
+    grid-row-start: 1;
+    grid-column-start: 1;
+
+    grid-row-end: 2;
+    grid-column-end: 2;
+  }
+  .four {
+    grid-row-start: 2;
+    grid-column-start: 1;
+
+    grid-row-end: 3;
+    grid-column-end: 2;
+  }
+  .five {
+    grid-row-start: 2;
+    grid-column-start: 2;
+
+    grid-row-end: 3;
+    grid-column-end: 3;
+  }
 }
