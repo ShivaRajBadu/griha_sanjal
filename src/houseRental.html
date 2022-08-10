@@ -14,6 +14,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <!-- leaflet css -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin="" />
+  <!-- leaflet javascripts -->
+  <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
   <link rel="stylesheet" href="/dist/houseRental.css">
   <title>House Land Rental</title>
 </head>
@@ -399,10 +407,10 @@
         </div>
       </div>
       <!-- second section -->
-      <div class="flex">
-        <div class="w-[60%]">
+      <div class="flex gap-8 py-3">
+        <div class="w-[70%]">
           <!-- highlight features -->
-          <div class="bg-white my-4 justify-between  rounded-[7px] flex items-center   py-5 px-5">
+          <div class="bg-white my-4 mb-8 justify-between  rounded-[7px] flex items-center   py-5 px-5">
             <h1 class="text-[#004492] text-center text-[20px] font-[400] font-[Lato]  px-2 w-[30%]">Highlighted
               features
             </h1>
@@ -427,7 +435,7 @@
             </ul>
           </div>
           <!-- overviews -->
-          <div class="bg-white rounded-[7px] py-5 px-10">
+          <div class="bg-white rounded-[7px] py-5 mb-8 px-10">
             <h1 class="text-[#004492] font-[400] font-[Lato] text-[20px]  py-3 border-b-2 px-5">Overview</h1>
             <div class="flex justify-between items-center py-4 px-5">
               <ul class="py-3">
@@ -445,7 +453,7 @@
             </div>
           </div>
           <!-- description -->
-          <div class="bg-white py-5 px-10 my-5">
+          <div class="bg-white py-5 mb-8 px-10 my-5">
             <h1 class="text-[#004492] font-[400] font-[Lato] text-[20px]  py-3 border-b-2 px-5">Description</h1>
             <p class="text-[19px] text-[#000] py-4 font-[400] font-[Lato]">This house was built 2 months ago. It has 2.5
               floors with garage that can park upto 3 cars.</p>
@@ -453,7 +461,7 @@
           <!-- Amenities -->
           <div class="bg-white py-5 px-10 my-5 rounded-[7px]">
             <h1 class="text-[#004492] font-[400] font-[Lato] text-[20px]  py-5 border-b-2 px-5">Amenities</h1>
-            <div class="grid grid-cols-4 py-8 gap-y-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-4 py-8 gap-y-10">
               <div class="text-center">
                 <img class="mx-auto" src="/assets/image 36.svg" alt="garage_image">
                 <p class="font-[Lato] text-[18px] font-[300] py-2">Garage</p>
@@ -491,12 +499,66 @@
           </div>
         </div>
         <!-- aside section -->
-        <div class="w-[40%]">
+        <div class="w-[30%] py-5  rounded-[7px]">
+          <!-- contact -->
+          <div class="bg-white text-center py-3 mb-8">
+            <h3 class="text-[#F15025] text-[20px] font-[Lato] font-[400]py-1">Contact</h3>
+            <div class="py-2">
+              <h2 class="text-[#004492] text-[20px] font-[Lato] font-[400] py-1">Grihasanjal</h2>
+              <p class="text-[13px] font-[Lato]  font-[300]">contactus@grihasanjal.com</p>
+              <p class="text-[#5A5A5A] text-[15px] font-[Lato] font-[400]">9861724928</p>
+            </div>
+          </div>
+          <!-- contact information -->
+          <div class="bg-white rounded-[7px] py-5 mb-8 text-center mt-5">
+            <h2 class="text-[#F15025] text-[20px] font-[Lato] font-[400]">Contact Information</h2>
+            <form action="" class="px-8">
+              <input
+                class="block text-[#AAAAAA] text-[15px] font-[Lato] font-[400] border-[#B4B4B4] border w-full rounded-[4px] px-4 py-1 my-6"
+                type="text" placeholder="Your Name">
+              <input
+                class="block text-[#AAAAAA] text-[15px] font-[Lato] font-[400] border-[#B4B4B4] border w-full rounded-[4px] px-4  py-1 my-6"
+                type="text" placeholder="Your Email Address">
+              <input
+                class="block text-[#AAAAAA] text-[15px] font-[Lato] font-[400] border-[#B4B4B4] border w-full rounded-[4px] px-4  py-1 my-6"
+                type="tel" placeholder="Your Mobile Number">
+              <input
+                class="bg-[#0063D5] rounded-[4px] text-white font-[Lato] font-[600] cursor-pointer text-[13px] block w-full py-2 mb-2 "
+                type="submit" value="SUBMIT INFROMATION">
+            </form>
+            <p
+              class="text-[10px] text-[#F15025] font-[Lato] font-[400] flex items-center gap-1 justify-center my-7 underline">
+              <span><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M1.27979 9.7207V1.67695C1.27979 1.67695 2.74229 0.580078 4.20479 0.580078C5.66729 0.580078 6.03291 1.67695 7.49541 1.67695C8.95791 1.67695 10.4204 0.580078 10.4204 0.580078V5.69883C10.4204 5.69883 8.95791 6.7957 7.49541 6.7957C6.03291 6.7957 5.66729 5.69883 4.20479 5.69883C2.74229 5.69883 1.27979 6.7957 1.27979 6.7957"
+                    stroke="#F15025" stroke-width="1.09688" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              Report this property
+            </p>
+          </div>
+          <!-- video -->
+          <div class="h-[260px] my-8 mb-8">
+            <iframe class="h-full w-full" src="https://www.youtube.com/embed/AEp08vVYreg"
+              title="Coldplay - Fix You (Live In São Paulo)" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+          <!-- map -->
+          <div class="h-[190px] py-8" id="map">
 
+          </div>
         </div>
       </div>
 
-
+      <!-- need to rent your property -->
+      <div class="bg-[#CA0000] text-white text-center py-4 pb-2 rounded-[7px]">
+        <h1 class="text-[20px] font-[Lato] font-[600]">Need To Rent Your Property Too?</h1>
+        <p class="font-[Lato] font-[700] text-[16px] py-1">We Will Help You</p>
+        <button
+          class="bg-[#FFE903] rounded-[6px] box-shadow text-[#B70000] font-[Lato] font-[700] text-[13px] px-12 py-1 my-6">Post
+          Your Property</button>
+      </div>
     </div>
   </main>
   <script>
@@ -505,6 +567,19 @@
       var imageSlider = document.querySelector( ".image-slider" );
       imageSlider.parentNode.style.display = "block";
     }
+  </script>
+  <script>
+
+    var mapOptions = {
+      center: [ 28.3949, 84.1240 ],
+      zoom: 6
+    }
+    var map = new L.map( 'map', mapOptions );
+    var layer = new L.TileLayer( 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' );
+    map.addLayer( layer );
+
+
+
   </script>
 </body>
 
