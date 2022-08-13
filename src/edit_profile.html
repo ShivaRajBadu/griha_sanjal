@@ -5,8 +5,59 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/dist/edit_profile.css">
   <title>Edit Profile</title>
+  <style>
+    .custom-file-input {
+      color: transparent;
+    }
+
+
+
+
+    .custom-file-input::-webkit-file-upload-button {
+      visibility: hidden;
+    }
+
+    .custom-file-input::before {
+      content: 'Choose a file';
+      color: white;
+      display: inline-block;
+      background: #0063D5;
+      font-family: 'Lato';
+      font-size: 18px;
+      font-weight: 700;
+      width: 224px;
+      padding: .5rem 0;
+      text-align: center;
+      outline: none;
+      white-space: nowrap;
+
+      margin-top: 1.5rem;
+      cursor: pointer;
+    }
+
+
+
+    @media (max-width:768px) {
+      .custom-file-input::before {
+        width: 150px;
+        font-size: 14px;
+        padding: .4rem 0;
+        margin-left: 25vw;
+
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -186,9 +237,216 @@
           class="text-[#BABABA] text-[0.9rem] font-[700] font-[Raleway] hover:text-[#525252] link-underline link-underline-black py-1"
           href="">Transportation</a></li>
     </ul>
-  </div>
-  <div>
 
+  </div>
+  <div class="w-[90%] mx-auto">
+    <form action="">
+      <div class="flex md:justify-between gap-3  justify-center flex-col md:flex-row  my-10 ">
+        <!-- choose image -->
+        <div class="w-full md:w-[30%]  ">
+          <div class="h-[200px] sm:h-[298px] md:w-[352px]  bg-[#00006636] ">
+            <img class="w-full h-full" id="output" alt="">
+          </div>
+          <div class="  sm:ml-[3rem]  md:ml-[4rem] xl:ml-[3rem]">
+            <input type="file" class="custom-file-input " onchange="loadFile(event)">
+          </div>
+
+
+        </div>
+        <!-- other info fields -->
+        <div class="md:w-[70%] w-full">
+          <!-- name -->
+          <div class=" xl:w-full lg:w-[90%] md:w-[75%]   ml-auto mr-0 flex flex-col md:flex-row gap-1  md:py-3 py-1">
+            <div class=" w-[10%] min-w-[100px] md:text-end text-start">
+              <label class="text-[#0063D5]  w-full  text-[18px] font-[Lato] font-[400] " for="name">Full
+                Name:</label>
+            </div>
+
+            <div class="w-[90%] md:pl-3">
+              <input
+                class="text-[#5E5E5E] w-full font-[18px] font-[Lato] font-[400] border-[#AFAFAF] border px-3 py-1 outline-none"
+                type="text" placeholder="samyog rai" id="name" autocomplete="off">
+            </div>
+
+          </div>
+          <!-- work -->
+          <div class="xl:w-full lg:w-[90%] md:w-[75%]   ml-auto mr-0 flex flex-col md:flex-row gap-2 py-3">
+            <div class="w-[10%] min-w-[100px] md:text-end text-start">
+              <label class="text-[#0063D5] w-full text-[18px] font-[Lato] font-[400]  " for="work">work:</label>
+            </div>
+            <div class="w-[90%] md:pl-2">
+              <input
+                class="text-[#5E5E5E] font-[18px] w-full font-[Lato] font-[400] border-[#AFAFAF] border px-3 py-1 outline-none"
+                type="text" placeholder="Painter" id="work">
+            </div>
+
+          </div>
+          <!-- price and loacation -->
+          <div class="flex flex-col xl:flex-row xl:w-full lg:w-[85%] md:w-[72%]   ml-auto mr-0 md:py-3 py-2">
+            <div class=" xl:w-[50%] w-full flex-col md:flex-row flex  xl:gap-2">
+              <div class="xl:w-[20%] md:min-w-[60px] lg:min-w-[60px] md:w-[10%] md:text-end text-start ">
+                <label class="text-[#0063D5] w-full text-[18px] font-[Lato] font-[400]  " for="price">Price:</label>
+              </div>
+              <div class="xl:w-[80%] md:w-full w-[90%] md:ml-4 xl:ml-0 md:pl-2 ">
+                <input
+                  class="text-[#5E5E5E] font-[18px] font-[Lato] font-[400] border-[#AFAFAF] border xl:w-[90%] w-full  py-1 px-3"
+                  type="text" placeholder="Rs.1500-2000" id="price">
+              </div>
+
+            </div>
+            <div
+              class=" xl:w-[50%] w-full flex-col md:flex-row py-3 md:py-0  flex xl:gap-2  justify-end md:my-4  xl:my-0">
+              <div class="xl:w-[16%] md:w-[12%] md:min-w-[70px] lg:min-w-[70px]  text-start">
+                <label class="text-[#0063D5] w-full text-[18px] font-[Lato] font-[400]  "
+                  for="loacation">Location:</label>
+              </div>
+              <div class="xl:w-[80%] md:w-full   w-[90%] md:ml-3 xl:ml-0 ">
+                <input
+                  class="text-[#5E5E5E] font-[18px] w-full font-[Lato] font-[400] border-[#AFAFAF] border py-1 px-3"
+                  type="text" placeholder="Dharan, Nepal" id="location">
+              </div>
+
+            </div>
+          </div>
+          <!-- age and exprericence -->
+          <div class="flex flex-col xl:flex-row xl:w-full lg:w-[85%] md:w-[72%]   ml-auto mr-0 md:py-3 py-2">
+            <div class=" xl:w-[50%] w-full flex-col md:flex-row flex  xl:gap-2">
+              <div class="xl:w-[20%] w-[12%] md:min-w-[60px] lg:min-w-[60px] md:w-[10%] md:text-end text-start ">
+                <label class="text-[#0063D5] w-full text-[18px] font-[Lato] font-[400]" for="age">Age:</label>
+              </div>
+              <div class="xl:w-[80%] md:w-full w-[90%] md:ml-4 xl:ml-0 md:pl-2 ">
+                <input
+                  class="text-[#5E5E5E] font-[18px] font-[Lato] font-[400] border-[#AFAFAF] border xl:w-[90%] w-full py-1 px-3"
+                  type="text" placeholder="25 years" id="age">
+              </div>
+
+            </div>
+            <div
+              class=" xl:w-[50%] w-full flex-col md:flex-row py-3 md:py-0  flex xl:gap-2  justify-start md:my-4  xl:my-0">
+              <div class="xl:w-[25%] lg:w-[20%] md:w-[25%]  lg:min-w-[70px]  text-start">
+                <label class="text-[#0063D5] w-full text-[18px] font-[Lato] font-[400]"
+                  for="expericence">Expericence:</label>
+              </div>
+              <div class="xl:w-[78%] md:w-full   w-[90%] md:ml-3 xl:ml-0 ">
+                <input
+                  class="text-[#5E5E5E] py-1 px-3 font-[18px] font-[Lato] font-[400] border-[#AFAFAF] border w-full"
+                  type="text" placeholder="5 Years" id="expericence">
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- email and phone -->
+          <div class="flex flex-col xl:flex-row xl:w-full lg:w-[85%] md:w-[72%]   ml-auto mr-0 md:py-3 py-2">
+            <div class=" xl:w-[55%] w-full flex-col md:flex-row flex  xl:gap-2">
+              <div class="xl:w-[20%] md:min-w-[60px] lg:min-w-[60px] md:w-[10%] md:text-end text-start ">
+                <label class="text-[#0063D5] w-full text-[18px] font-[Lato] font-[400]" for="email">Email:</label>
+              </div>
+              <div class="xl:w-[80%] md:w-full w-[90%] md:ml-4 xl:ml-0 md:pl-2 ">
+                <input
+                  class="text-[#5E5E5E] font-[18px] md:w-[90%] w-full py-1 px-3 font-[Lato] font-[400] border-[#AFAFAF] border"
+                  type="email" placeholder="samyog@gmail.com" id="email">
+              </div>
+
+            </div>
+            <div
+              class=" xl:w-[50%] w-full flex-col md:flex-row py-3 md:py-0  flex xl:gap-2  justify-end md:my-4  xl:my-0">
+              <div class="xl:w-[16%] md:w-[12%] md:min-w-[70px] lg:min-w-[70px]  text-start">
+                <label class="text-[#0063D5] w-full text-[18px] font-[Lato] font-[400]  " for="loacation">Phone:</label>
+              </div>
+              <div class="xl:w-[80%] md:w-full   w-[90%] md:ml-3 xl:ml-0 ">
+                <input
+                  class="text-[#5E5E5E] w-full py-1 px-3 font-[18px] font-[Lato] font-[400] border-[#AFAFAF] border"
+                  type="tel" placeholder="9874563214" id="phone">
+              </div>
+
+            </div>
+          </div>
+
+          <!-- description -->
+          <div class="xl:w-full lg:w-[80%]   ml-auto mr-0 flex flex-col md:flex-row gap-2 py-5 my-5">
+            <div class="w-[10%] min-w-[100px] md:text-end">
+              <label class="text-[#0063D5] text-[18px] font-[Lato] font-[400]" for="description">Description:</label>
+            </div>
+            <div class="w-[90%] md:pl-2 ">
+              <textarea
+                class="text-[#5E5E5E] w-full font-[18px] font-[Lato] font-[400] border-[#AFAFAF] border p-2 outline-none text-start"
+                name="description" id="description" rows="10">
+              Do you want to hire an electrician for inverter installation in your office/company? I am available for your service
+              from 9 am to 10 pm so feel free to book my electrical service in Kathmandu Valley. At the given price, you will receive
+              home service from a professional electrician and I will install the inverter at an appropriate area for safety purposes.
+              The inverter will be connected to the power supply board for backup energy.
+              </textarea>
+            </div>
+
+          </div>
+          <!-- highlight -->
+          <div class="xl:w-full lg:w-[80%]   ml-auto mr-0 flex flex-col md:flex-row gap-2 py-3">
+            <div class="w-[10%] min-w-[100px] md:text-end"><label
+                class="text-[#0063D5] text-[18px] font-[Lato] font-[400]" for="highlights">Highlights:</label>
+            </div>
+            <div class="w-[90%] md:pl-2 ">
+              <textarea
+                class="text-[#5E5E5E] font-[18px] font-[Roboto] font-[400] border-[#AFAFAF] border w-full p-2 outline-none text-start"
+                name="highlights" id="highlights" rows="10">
+            Booking Available for Electrician in Kathmandu
+            Experienced Electrician
+            +8 Years of Experience
+            +3000 Satisfied Clients
+            Service Available around Kathmandu
+            On-time Service
+          </textarea>
+            </div>
+
+          </div>
+          <!-- showcase image -->
+          <div class="xl:w-full lg:w-[70%]  flex-col md:flex-row  ml-auto mr-0 flex  py-2">
+            <div class="w-[10%] min-w-[120px] text-start">
+              <label class="text-[#0063D5] text-[16px] font-[Lato] font-[400]" for="Showcase Image">Showcase
+                Image:</label>
+            </div>
+            <div
+              class="w-[90%]  border-4 rounded-[25px] flex flex-col justify-center items-center p-8 border-dashed border-[#AFAFAF] h-[277px] text-[20px] mt-8  ml-5 ">
+              <span>
+                <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M21.409 37.1635C13.337 39.0832 7.33325 46.3404 7.33325 55C7.33325 65.1251 15.5414 73.3333 25.6666 73.3333C27.4035 73.3333 29.0839 73.0919 30.6762 72.6405"
+                    stroke="#AAAAAA" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M66.1001 37.1635C74.1723 39.0832 80.1759 46.3404 80.1759 55C80.1759 65.1251 71.9679 73.3333 61.8426 73.3333C60.1057 73.3333 58.4253 73.0919 56.833 72.6405"
+                    stroke="#AAAAAA" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M66 36.6667C66 24.5165 56.1502 14.6667 44 14.6667C31.8498 14.6667 22 24.5165 22 36.6667"
+                    stroke="#AAAAAA" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M31.2864 51.1155L43.9996 38.3603L57.0748 51.3337" stroke="#AAAAAA" stroke-width="2.08333"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M44 69.6669V44.8469" stroke="#AAAAAA" stroke-width="2.08333" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+              <span class="py-3">Drag and Drop or <span class="text-[#0063D5] font-[Roboto] font-[400]">Browse</span>
+                your
+                files</span>
+            </div>
+
+          </div>
+          <div class=" my-5">
+            <input type="submit" value="Update"
+              class=" bg-[#0063D5] rounded-[6px] w-[192px] h-[44px] text-[20px] font-[Lato] font-[400]  text-white  md:ml-28">
+          </div>
+        </div>
+
+      </div>
+
+
+    </form>
+    <script>
+      function loadFile ( event )
+      {
+        var image = document.getElementById( 'output' );
+        image.src = URL.createObjectURL( event.target.files[ 0 ] );
+      };
+    </script>
   </div>
 </body>
 
