@@ -38,6 +38,8 @@
     }
 
     .swiper-slide {
+      height: 100%;
+      width: 100%;
       text-align: center;
       font-size: 18px;
       background: #fff;
@@ -70,7 +72,10 @@
       content: "";
     }
 
-
+    .swiper-wrapper {
+      height: 625px;
+      width: 1440px;
+    }
 
     @media only screen and (max-width:768px) {
       .swiper-button-next {
@@ -81,21 +86,35 @@
         margin-top: 0rem
       }
 
-      .swiper {
+      .swiper-slide {
+        height: 100%;
+        width: 100%;
+      }
+
+      .swiper-wrapper {
         height: 300px;
+        width: 100%;
       }
     }
 
-    @media only screen and (max-width:576px) {
-      .swiper {
-        height: 190px;
+    @media (min-width:768px) and (max-width:1200px) {
+      .swiper-wrapper {
+        height: 450px;
+        width: 100%;
+      }
+    }
+
+    @media (min-width:360px) and (max-width:568px) {
+      .swiper-wrapper {
+        height: 200px;
+        width: 100%;
       }
     }
   </style>
 </head>
 
 <body>
-  <header class="py-1 w-[90%] md:w-[95%] mx-auto font-[Oswald] bg-[#f6f3f34a]">
+  <header class=" w-[90%] md:w-[95%] mx-auto font-[Oswald] bg-[#f6f3f34a]">
     <div class="flex justify-between items-end md:items-center px-4">
       <div class="flex gap-4 justify-center items-center text-[0.8rem]">
         <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/4000/svg">
@@ -174,7 +193,7 @@
       </div>
     </div>
 
-    <div class="md:flex flex justify-between items-center my-5 mt-0 py-3 w-[100%] gap-4">
+    <div class="md:flex flex justify-between items-center my-5 mt-0 py-3 mb-0 w-[100%] gap-4">
       <div class="min-w-[100px] flex items-center gap-4 w-[5%]">
         <img class="block w-[100%]" src="/assets/image 2.svg" alt="" />
 
@@ -237,11 +256,20 @@
       <div class="relative h-full w-full">
         <!-- carsousel starts.. -->
 
-        <div class="swiper mySwiper z-0 h-[621px] w-full">
+        <div class="swiper mySwiper z-0 ">
           <div class="swiper-wrapper z-0  ">
-            <div class="swiper-slide"><img class="" src="/assets/Property 1=Frame 6.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="/assets/Property 1=Frame 7.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="/assets/Property 1=Frame 8.jpg" alt=""></div>
+            <div class="swiper-slide">
+              <img class="" src="/assets/Property 1=Frame 6.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="/assets/Property 1=Frame 7.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="/assets/Property 1=Frame 8.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="/assets/big-image.jpg" alt="">
+            </div>
 
 
           </div>
