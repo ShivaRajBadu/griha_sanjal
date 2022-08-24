@@ -254,7 +254,7 @@
             <button
               class="bg-[#0063D5] font-[Lato] font-[400] md:text-[17px] text-[13px] text-white md:py-2 py-1 px-4 md:px-6 rounded-[4px] my-2 hover:bg-[#F15025] peer  ">Share</button>
             <div
-              class="w-[295px] hidden   peer-hover:block  absolute top-[4.9rem]  py-2 rounded-[2px] bg-white px-4  after:content-[''] after:absolute after:left-3  after:-top-12 after:rotate-180  after:border-[28px] after:border-x-transparent after     after:border-b-transparent after:border-t-[#ffffff] ">
+              class="w-[295px] hidden   peer-hover:block  absolute top-[4.9rem]  py-2 rounded-[2px] bg-white px-4  after:content-[''] after:absolute after:left-3  after:-top-12 after:rotate-180  after:border-[28px] after:border-x-transparent after z-50     after:border-b-transparent after:border-t-[#ffffff] ">
               <ul class="flex items-center justify-between">
                 <li class="pl-2 pr-3">
                   <a href="">
@@ -352,7 +352,7 @@
         </div>
       </div>
       <!-- gallery -->
-      <div class="w-full ">
+      <div class="w-full relative">
         <div class=" grid-container ">
           <div class="third">
             <img class="block w-full  h-full  object-cover   " src="/assets/Rectangle 139.jpg" alt="">
@@ -367,7 +367,7 @@
             <img class="  block w-full  h-full  object-cover" src="/assets/Rectangle 141.jpg" alt="">
           </div>
 
-          <div class="five relative " onclick="imageSlider()">
+          <div class="five relative  cursor-pointer" onclick="imageSlider()">
             <!-- add the number of image we have -->
             <span
               class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  text-white text-3xl ">+4</span>
@@ -378,35 +378,35 @@
           </div>
         </div>
         <!-- image show in pop up -->
-        <div class="hidden">
-          <div class="image-slider flex overflow-x-auto">
+        <div class="hidden absolute inset-0 h-screen w-screen overflow-hidden  bg-gray-200 ">
+          <div class="image-slider  flex overflow-x-auto">
             <div class="w-[600px]">
-              <img class="w-full" src="https://picsum.photos/200/300" alt="">
+              <img class="w-full h-full" src="https://picsum.photos/200/300" alt="">
             </div>
             <div class="w-[600px]">
-              <img class="w-full" src="https://picsum.photos/200/300" alt="">
+              <img class="w-full h-full" src="https://picsum.photos/200/300" alt="">
+            </div>
+            <!-- <div class="w-[600px]">
+              <img class="w-full h-full" src="https://picsum.photos/200/300" alt="">
             </div>
             <div class="w-[600px]">
-              <img class="w-full" src="https://picsum.photos/200/300" alt="">
+              <img class="w-full h-full" src="https://picsum.photos/200/300" alt="">
             </div>
             <div class="w-[600px]">
-              <img class="w-full" src="https://picsum.photos/200/300" alt="">
+              <img class="w-full h-full" src="https://picsum.photos/200/300" alt="">
             </div>
             <div class="w-[600px]">
-              <img class="w-full" src="https://picsum.photos/200/300" alt="">
+              <img class="w-full h-full" src="https://picsum.photos/200/300" alt="">
             </div>
             <div class="w-[600px]">
-              <img class="w-full" src="https://picsum.photos/200/300" alt="">
+              <img class="w-full h-full" src="https://picsum.photos/200/300" alt="">
             </div>
             <div class="w-[600px]">
-              <img class="w-full" src="https://picsum.photos/200/300" alt="">
+              <img class="w-full h-full" src="https://picsum.photos/200/300" alt="">
             </div>
             <div class="w-[600px]">
-              <img class="w-full" src="https://picsum.photos/200/300" alt="">
-            </div>
-            <div class="w-[600px]">
-              <img class="w-full" src="https://picsum.photos/200/300" alt="">
-            </div>
+              <img class="w-full h-full" src="https://picsum.photos/200/300" alt="">
+            </div> -->
           </div>
 
         </div>
@@ -1379,7 +1379,13 @@
       imageSlider.parentNode.style.display = "block";
     }
   </script>
+
+
+
+
+  <!-- map -->
   <script>
+
 
     var mapOptions = {
       center: [ 28.3949, 84.1240 ],
