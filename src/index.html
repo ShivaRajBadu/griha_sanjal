@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/dist/output.css" />
+  <!-- fonts -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
     integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -114,8 +115,11 @@
 </head>
 
 <body>
-  <header class=" w-[90%] md:w-[95%] mx-auto font-[Oswald] bg-[#f6f3f34a]">
-    <div class="flex justify-between items-end md:items-center px-4 mb-2">
+  <header class=" w-[90%] md:w-[95%] mx-auto font-[Oswald] bg-[#f6f3f34a] relative  ">
+
+    <div class="flex justify-between items-end md:items-center px-4 mb-2  w-[100%] ">
+
+
       <div class="flex gap-4 justify-center items-center text-[0.8rem]">
         <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/4000/svg">
           <path
@@ -177,7 +181,7 @@
 
               </button>
               <button
-                class="  dropdown-menu absolute hidden pt-[.3rem] group-hover:block border-2 rounded md:px-[1.1rem] px-5">
+                class="  dropdown-menu absolute hidden pt-[.3rem] group-hover:block border-2 rounded md:px-[1.1rem] px-5 z-40 bg-white">
                 <p class="flex items-center justify-start gap-1 w-full  py-[.25rem] ">
                   <img class="px-2 h-5 w-15" src="/assets/nepali_flag.svg" alt="" />
                   <span class="text-[#848484] font-[500] text-[15px] font-[Raleway] hidden md:block  pr-3">Nepali</span>
@@ -193,9 +197,9 @@
       </div>
     </div>
 
-    <div style=" box-shadow: 0 0 0 100vmax rgba(255, 255, 255, 0.900);
-  clip-path: inset(0 -100vmax); background-color: rgba(255, 255, 255, 0.900);"
-      class="md:flex absolute me_sticky   md:top-[3.5rem] z-40   flex justify-between items-center md:my-5 py-1 md:mt-0 md:py-3 mb-0 md:w-[95%] w-[90%] mx-auto gap-4">
+    <div style=" box-shadow: 0 0 0 100vmax rgba(255, 255, 255, 0.8);
+      clip-path: inset(0 -100vmax); background-color: rgba(255, 255, 255, 0.8);"
+      class="md:flex md:absolute me_sticky   md:top-[3.5rem] z-50   flex justify-between items-center md:my-5 py-1 md:mt-0 md:py-3 mb-0 md:w-[95%] w-[90%] mx-auto gap-4">
       <div class="md:min-w-[100px] min-w-[60px] flex items-center gap-4 w-[5%]">
         <img class="block w-[100%]" src="/assets/image 2.svg" alt="" />
 
@@ -240,26 +244,130 @@
         <a class=" md:text-[12px]  xl:text-[18px] font-[700] font-[Oswald] text-white" href=""> Leave Us Message
         </a>
       </div>
-      <div class="md:hidden">
+      <div class="md:hidden  cursor-pointer" id="icon">
         <img class="w-10" src="/assets/square.svg" alt="" />
       </div>
+
+
+
+
     </div>
   </header>
-  <main class="w-full relative">
+  <main class="w-full relative z-20 overflow-hidden">
+    <!-- overlay  -->
+    <div class=" bg-[#ffffff8c] hidden h-screen w-screen  fixed inset-0 z-10 " id="overlay"></div>
+    <!-- burger_menu -->
+    <div
+      style="background-image: url('/assets/burger_menu.svg'); z-index:100; transform: translateX(52rem); transition-duration: 1s;"
+      class="md:hidden W-[300px]  sm:w-[500px] h-screen px-5 fixed top-0 z-50  right-0  py-5 " id="burder_menu">
+      <div class="w-full flex justify-end py-4 ">
+        <svg id="close_btn" class="cursor-pointer" width="25" height="25" viewBox="0 0 25 25" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.5781 7.42188L7.42188 17.5781M7.42188 7.42188L17.5781 17.5781" stroke="#575757"
+            stroke-width="2.34375" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+      <ul class="text-center w-[90%] mx-auto">
+        <li class="w-full "><a
+            class="bg-[#0A1045] text-white text-[15px] font-[Raleway] font-[600] block w-full py-2 my-1"
+            href="#">Home</a></li>
+        <li class="w-full "><a class=" text-[#303030] text-[15px] font-[Raleway] font-[600] block w-full py-2 my-1"
+            href="#">Skilled Services</a></li>
+        <li class="w-full "><a class=" my-1 text-[#303030] text-[15px] font-[Raleway] font-[600] block w-full py-2"
+            href="#">House
+            Land Rental</a></li>
+        <li class="w-full "><a class=" my-1 text-[#303030] text-[15px] font-[Raleway] font-[600] block w-full py-2"
+            href="#">House
+            Land Buy/Sell</a></li>
+        <li class="w-full "><a class=" my-1 text-[#303030] text-[15px] font-[Raleway] font-[600] block w-full py-2"
+            href="#">Tools
+            & Machinery Rental</a></li>
+        <li class="w-full "><a class=" my-1 text-[#303030] text-[15px] font-[Raleway] font-[600] block w-full py-2"
+            href="#">Rojgari</a></li>
+
+      </ul>
+      <div class="w-[90%] mx-auto">
+        <button
+          class="bg-[#F15025] text-[#fff]  w-full text-center py-2 text-[15px] font-[Raleway] font-[700] my-8 ">Request
+          An
+          Appointment</button>
+      </div>
+
+      <ul class="flex w-[95%] sm:w-[50%] mx-auto justify-between px-5  my-8 ">
+        <li class="w-[26px] h-[27px] cursor-pointer">
+          <img class="w-full h-full" src="/assets/logos_facebook.svg" alt="">
+        </li>
+        <li class="w-[26px] h-[27px] cursor-pointer">
+          <img class="w-full h-full" src="/assets/whatsapp-01 1.svg" alt="">
+        </li>
+        <li class="w-[26px] h-[27px] cursor-pointer">
+          <img class="w-full h-full" src="/assets/1161953_instagram_icon.svg" alt="">
+        </li>
+        <li class="w-[26px] h-[27px] cursor-pointer">
+          <img class="w-full h-full" src="/assets/image 5.svg" alt="">
+        </li>
+        <li class="w-[26px] h-[27px] cursor-pointer">
+          <img class="w-full h-full" src="/assets/image 6.svg" alt="">
+        </li>
+      </ul>
+      <div class="flex items-center gap-5 w-full justify-center my-2">
+        <p class="flex gap-2 items-center text-[#4A4A4A] text-[15px]">
+          <span class="block">
+            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M15.2604 20.9167C15.537 20.9183 15.8112 20.8647 16.067 20.7592C16.3227 20.6537 16.5549 20.4983 16.75 20.3021L19.5729 17.4792C19.7669 17.284 19.8758 17.02 19.8758 16.7448C19.8758 16.4696 19.7669 16.2056 19.5729 16.0104L15.4062 11.8437C15.211 11.6497 14.947 11.5408 14.6718 11.5408C14.3966 11.5408 14.1326 11.6497 13.9375 11.8437L12.2708 13.5C11.1169 13.1923 10.0482 12.6259 9.14579 11.8437C8.3657 10.9399 7.79957 9.87172 7.48954 8.71874L9.14579 7.05208C9.3398 6.85691 9.4487 6.5929 9.4487 6.3177C9.4487 6.04251 9.3398 5.7785 9.14579 5.58333L4.97912 1.41666C4.78395 1.22265 4.51994 1.11375 4.24474 1.11375C3.96955 1.11375 3.70554 1.22265 3.51037 1.41666L0.69787 4.24999C0.501653 4.44504 0.34625 4.67721 0.240731 4.93296C0.135211 5.18871 0.0816887 5.46292 0.0832867 5.73958C0.17779 9.74197 1.77711 13.5617 4.56245 16.4375C7.4382 19.2228 11.258 20.8222 15.2604 20.9167ZM4.24995 3.63541L6.94787 6.33333L5.60412 7.67708C5.47685 7.79629 5.38154 7.94555 5.32695 8.11117C5.27235 8.27679 5.2602 8.45346 5.29162 8.62499C5.68096 10.365 6.50528 11.9778 7.68745 13.3125C9.02116 14.4962 10.6344 15.3207 12.375 15.7083C12.5439 15.7436 12.719 15.7364 12.8844 15.6873C13.0499 15.6382 13.2005 15.5488 13.3229 15.4271L14.6666 14.0521L17.3645 16.75L15.2812 18.8333C11.8268 18.7444 8.53069 17.3658 6.04162 14.9687C3.6384 12.4787 2.2558 9.17823 2.16662 5.71874L4.24995 3.63541ZM18.8333 9.45833H20.9166C20.9436 8.21978 20.7196 6.9886 20.258 5.83896C19.7964 4.68932 19.1069 3.64504 18.2309 2.76905C17.3549 1.89306 16.3106 1.2035 15.161 0.741925C14.0114 0.280349 12.7802 0.0563164 11.5416 0.0833281V2.16666C12.5082 2.13323 13.4713 2.29896 14.3711 2.65357C15.2709 3.00818 16.0881 3.54408 16.772 4.22795C17.4559 4.91183 17.9918 5.72906 18.3464 6.62885C18.701 7.52865 18.8667 8.49176 18.8333 9.45833Z"
+                fill="#28C215" />
+            </svg>
+          </span>
+          9840223777
+        </p>
+        <p class="text-[15px] text-[#4A4A4A]">
+          9845214255
+        </p>
+      </div>
+      <div class="flex items-center justify-center gap-1">
+        <span><svg width="14" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_66_111)">
+              <path
+                d="M3.63754 11.9409V5.79109L1.7209 4.04624L0.00219727 3.07797V10.8557C0.00219727 11.4561 0.491122 11.9409 1.09283 11.9409H3.63754Z"
+                fill="#4285F4" />
+              <path
+                d="M12.3623 11.9409H14.907C15.5105 11.9409 15.9977 11.4543 15.9977 10.8556V3.07803L14.051 4.18707L12.3623 5.79109V11.9409Z"
+                fill="#34A853" />
+              <path
+                d="M3.63751 5.79107L3.37671 3.38815L3.63751 1.08832L7.9999 4.34411L12.3623 1.08832L12.654 3.26399L12.3623 5.79107L7.9999 9.04687L3.63751 5.79107Z"
+                fill="#EA4335" />
+              <path
+                d="M12.3623 1.08834V5.7911L15.9977 3.07798V1.63095C15.9977 0.288882 14.4581 -0.476196 13.3803 0.328674L12.3623 1.08834Z"
+                fill="#FBBC04" />
+              <path
+                d="M0.00219727 3.07798L1.67416 4.32585L3.63754 5.7911V1.08834L2.61958 0.328672C1.53989 -0.47626 0.00219727 0.28888 0.00219727 1.63089V3.07798Z"
+                fill="#C5221F" />
+            </g>
+            <defs>
+              <clipPath id="clip0_66_111">
+                <rect width="16" height="12" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </span>
+        <p class="text-[#535353] font-[Raleway] font-[500] text-[13px]">info@Grihasanjal.com</p>
+      </div>
+    </div>
 
     <!--fixed social links  -->
-    <div class="  flex gap-6 fixed  right-8 bottom-16 z-50  ">
+    <div class="  flex gap-6 fixed  right-8 bottom-16 z-30  ">
       <img src="/assets/image 45.svg" alt="call">
       <img src="/assets/whatsapp-01 1.svg" alt="whatapp">
       <img src="/assets/image 46.svg" alt="messenger">
     </div>
-    <div class="relative w-[100%] ">
+    <div class="relative w-[100%] z-0 ">
       <!-- full home page with social links -->
-      <div class="relative h-full w-full">
+      <div class="relative h-full w-full -z-10">
         <!-- carsousel starts.. -->
 
-        <div class="swiper mySwiper z-0 ">
-          <div class="swiper-wrapper z-0  ">
+        <div class="swiper mySwiper -z-20 ">
+          <div class="swiper-wrapper -z-20  ">
             <div class="swiper-slide">
               <img class="" src="/assets/Property 1=Frame 6.jpg" alt="">
             </div>
@@ -918,23 +1026,51 @@
   </script>
   <!-- sticky navbar  js -->
   <script>
-    var stickyEl = document.querySelector( '.me_sticky' )
+    var stickyEl = document.querySelector( '.me_sticky' );
+    var close_btn = document.getElementById( 'close_btn' );
+    var icon = document.getElementById( 'icon' );
+    const overlay = document.getElementById( 'overlay' );
+    var menu = document.getElementById( 'burder_menu' )
+    icon.addEventListener( 'click', () =>
+    {
+      overlay.style.display = 'block'
+      menu.style.transform = "translateX(0)";
+    } )
+    close_btn.addEventListener( 'click', () =>
+    {
+      overlay.style.display = 'none'
+      menu.style.transform = "translateX(52rem)"
+    } )
     var stickyPosition = stickyEl.getBoundingClientRect().top;
     var offset = -20
 
+    var width;
+    window.onresize = window.onload = function ()
+    {
+      width = this.innerWidth;
+    }
+    window.addEventListener( 'resize', () =>
+    {
+      if ( width <= 768 )
+      {
+        stickyEl.style.position = "static"
+      }
+    } )
+
     window.addEventListener( 'scroll', function ()
     {
-      if ( window.pageYOffset >= stickyPosition + offset )
+      if ( window.pageYOffset >= stickyPosition + offset && width > 768 )
       {
 
         stickyEl.style.position = 'fixed';
         stickyEl.style.top = '0px';
       } else
       {
-        stickyEl.style.position = 'absolute';
+        stickyEl.style.position = 'static';
         stickyEl.style.top = '3.9rem';
       }
     } );
+
   </script>
 </body>
 
