@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/dist/add_to_cart.css">
+  <title>Add To Cart</title>
+  <style>
+    input[type="checkbox"] {
+      appearance: none;
+      -webkit-appearance: none;
+    }
+
+    input[type="checkbox"]:checked {
+      background-color: gray;
+    }
+  </style>
+</head>
+
+<body class="bg-[#F2F2F2]">
+  <header class="py-1  font-[Oswald] bg-white  mb-4">
+    <div class="w-[90%] md:w-[95%] mx-auto ">
+      <div class="flex justify-between items-end md:items-center px-4">
+        <div class="flex gap-4 justify-center items-center text-[0.8rem]">
+          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/4000/svg">
+            <path
+              d="M15.2606 20.9166C15.5373 20.9182 15.8115 20.8646 16.0672 20.7591C16.323 20.6536 16.5552 20.4982 16.7502 20.302L19.5731 17.4791C19.7671 17.2839 19.876 17.0199 19.876 16.7447C19.876 16.4695 19.7671 16.2055 19.5731 16.0103L15.4064 11.8437C15.2113 11.6496 14.9473 11.5407 14.6721 11.5407C14.3969 11.5407 14.1329 11.6496 13.9377 11.8437L12.271 13.4999C11.1171 13.1922 10.0484 12.6258 9.14603 11.8437C8.36595 10.9398 7.79981 9.87163 7.48978 8.71865L9.14603 7.05199C9.34004 6.85682 9.44894 6.5928 9.44894 6.31761C9.44894 6.04242 9.34004 5.77841 9.14603 5.58324L4.97936 1.41657C4.78419 1.22256 4.52018 1.11366 4.24499 1.11366C3.9698 1.11366 3.70578 1.22256 3.51061 1.41657L0.698114 4.2499C0.501897 4.44495 0.346495 4.67712 0.240975 4.93287C0.135455 5.18862 0.0819328 5.46283 0.0835309 5.73949C0.178034 9.74187 1.77736 13.5617 4.5627 16.4374C7.43845 19.2227 11.2582 20.8221 15.2606 20.9166ZM4.2502 3.63532L6.94811 6.33324L5.60436 7.67699C5.47709 7.7962 5.38179 7.94546 5.32719 8.11108C5.27259 8.2767 5.26044 8.45337 5.29186 8.6249C5.68121 10.3649 6.50552 11.9777 7.6877 13.3124C9.0214 14.4961 10.6346 15.3206 12.3752 15.7082C12.5441 15.7436 12.7192 15.7363 12.8847 15.6872C13.0501 15.6382 13.4008 15.5487 13.3231 15.427L14.6669 14.052L17.3648 16.7499L15.2814 18.8332C11.827 18.7443 8.53093 17.3657 6.04186 14.9687C3.63865 12.4786 2.25604 9.17814 2.16686 5.71865L4.2502 3.63532ZM18.8335 9.45824H20.9169C20.9439 8.21969 20.7198 6.9885 20.2583 5.83887C19.7967 4.68923 19.1071 3.64495 18.2311 2.76896C17.3551 1.89297 16.3109 1.20341 15.1612 0.741833C14.0116 0.280258 12.7804 0.0562248 11.5419 0.0832366V2.16657C12.5084 2.13313 13.4715 2.29887 14.3713 2.65348C15.2711 3.00809 16.0884 3.54399 16.7722 4.22786C17.4561 4.91174 17.992 5.72897 18.3466 6.62876C18.7012 7.52855 18.867 8.49167 18.8335 9.45824Z"
+              fill="#28C215" />
+          </svg>
+
+          <span>9840223777 9845214255</span>
+        </div>
+        <div class="flex flex-col md:flex-row items-end md:items-center justify-center gap-4">
+          <div class="flex gap-3 py-2 md:order-2">
+            <div class=" py-[0.6rem] rounded-[50%]  cursor-pointer flex justify-center items-center">
+              <svg class=" fill-[#C2C2C2] hover:fill-[#F15025]" width="41" height="41" viewBox="0 0 41 41" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20.5" cy="20.5" r="20.5" />
+                <path
+                  d="M17.2596 30.3114C16.6787 30.3114 16.1216 30.0807 15.7109 29.6699C15.3001 29.2592 15.0694 28.7021 15.0694 28.1212C15.0694 27.5404 15.3001 26.9833 15.7109 26.5725C16.1216 26.1618 16.6787 25.9311 17.2596 25.9311C17.8404 25.9311 18.3975 26.1618 18.8082 26.5725C19.219 26.9833 19.4497 27.5404 19.4497 28.1212C19.4497 28.7021 19.219 29.2592 18.8082 29.6699C18.3975 30.0807 17.8404 30.3114 17.2596 30.3114ZM24.9252 30.3114C24.3443 30.3114 23.7872 30.0807 23.3765 29.6699C22.9657 29.2592 22.735 28.7021 22.735 28.1212C22.735 27.5404 22.9657 26.9833 23.3765 26.5725C23.7872 26.1618 24.3443 25.9311 24.9252 25.9311C25.506 25.9311 26.0631 26.1618 26.4738 26.5725C26.8846 26.9833 27.1153 27.5404 27.1153 28.1212C27.1153 28.7021 26.8846 29.2592 26.4738 29.6699C26.0631 30.0807 25.506 30.3114 24.9252 30.3114ZM10.6474 14.8959C10.3741 14.8871 10.1148 14.7723 9.92457 14.5758C9.73431 14.3793 9.62793 14.1165 9.62793 13.843C9.62793 13.5694 9.73431 13.3067 9.92457 13.1102C10.1148 12.9137 10.3741 12.7989 10.6474 12.79H11.9079C12.8957 12.79 13.7498 13.4756 13.9645 14.4392L15.3366 20.6177C15.5512 21.5814 16.4054 22.2669 17.3932 22.2669H25.6194L27.1986 15.9483H16.965C16.6942 15.9359 16.4386 15.8196 16.2513 15.6236C16.064 15.4276 15.9595 15.167 15.9595 14.8959C15.9595 14.6248 16.064 14.3642 16.2513 14.1681C16.4386 13.9721 16.6942 13.8559 16.965 13.8435H27.1986C27.5187 13.8434 27.8346 13.9163 28.1224 14.0567C28.4101 14.197 28.662 14.4011 28.859 14.6534C29.056 14.9058 29.1929 15.1997 29.2593 15.5129C29.3257 15.826 29.3197 16.1502 29.242 16.4608L27.6629 22.7772C27.549 23.233 27.2861 23.6376 26.9158 23.9267C26.5455 24.2158 26.0892 24.3728 25.6194 24.3728H17.3932C16.4347 24.3729 15.5049 24.0461 14.7573 23.4464C14.0097 22.8467 13.489 22.01 13.2811 21.0744L11.9079 14.8959H10.6474Z"
+                  fill="white" />
+              </svg>
+            </div>
+            <div class=" relative  py-2 rounded-[50%]  cursor-pointer">
+              <svg class="fill-[#C2C2C2] peer hover:fill-[#F15025]" width="41" height="41" viewBox="0 0 41 41"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20.4997 0.0834961C9.4318 0.0834961 0.0830078 9.43229 0.0830078 20.5002C0.0830078 31.568 9.4318 40.9168 20.4997 40.9168C31.5675 40.9168 40.9163 31.568 40.9163 20.5002C40.9163 9.43229 31.5675 0.0834961 20.4997 0.0834961ZM20.4997 10.2918C24.0256 10.2918 26.6247 12.8888 26.6247 16.4168C26.6247 19.9448 24.0256 22.5418 20.4997 22.5418C16.9758 22.5418 14.3747 19.9448 14.3747 16.4168C14.3747 12.8888 16.9758 10.2918 20.4997 10.2918ZM10.0749 30.243C11.9063 27.548 14.9606 25.7513 18.458 25.7513H22.5413C26.0408 25.7513 29.093 27.548 30.9244 30.243C28.3152 33.036 24.6136 34.7918 20.4997 34.7918C16.3857 34.7918 12.6842 33.036 10.0749 30.243Z" />
+              </svg>
+              <div
+                class="z-50 hidden peer-hover:block peer-focus:block  shadow-2xl absolute top-[4.6rem] -left-24 py-3 bg-white px-8 w-[179px] h-[139px] after:content-[''] after:absolute after:right-8  after:-top-12 after:rotate-180  after:border-[28px] after:border-x-transparent after     after:border-b-transparent after:border-t-[#ffffff]">
+                <ul class="w-full h-full">
+                  <li class="text-[#353535] font-[Lato] font-[500] text-[17px] py-2 pt-1">User's Account</li>
+                  <li class="text-[#353535] font-[Lato] font-[500] text-[17px] py-2">My order</li>
+                  <li class="text-[#353535] font-[Lato] font-[500] text-[17px] py-2">My Property</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-8 justify-center items-center">
+            <div class="max-w-[132px]  text-center">
+              <a class="font-[Raleway] py-3 px-5  md:py-[0.35rem] md:px-12 bg-[#0063D5] md:rounded-[6px] rounded-[2px]  w-[45px]  md:[132px] font-[500] text-[#FFFFFF] text-md"
+                href="#">
+                Login</a>
+            </div>
+
+
+            <div
+              class="flex rounded-[4px] max-w-[132px] w-[50%] border-2 text-md justify-center items-center md:py-[0.1rem]">
+              <div class="dropdown inline-block relative group">
+                <button
+                  class=" text-gray-700 font-semibold  md:px-2 px-5 rounded inline-flex items-center py-3 md:py-0">
+                  <img class="md:px-1 h-5 w-12 block" src="/assets/image 1.svg" alt="" />
+                  <span
+                    class="text-[#848484] font-[500] text-[15px] font-[Raleway] mr-1 md:px-1 hidden md:block">English</span>
+                  <span class="px-2   border-l-2 border-">
+                    <svg class="w-3 " width="15" height="18" viewBox="0 0 10 7" fill="none"
+                      xmlns="http://www.w3.org/4000/svg">
+                      <path
+                        d="M0.226914 0.96959C0.36756 0.828987 0.558291 0.75 0.757164 0.75C0.956037 0.75 1.14677 0.828987 1.28741 0.96959L4.99991 4.68209L8.71241 0.96959C8.85387 0.832971 9.04332 0.757375 9.23997 0.759084C9.43661 0.760793 9.62472 0.83967 9.76378 0.978726C9.90283 1.11778 9.98171 1.30589 9.98342 1.50254C9.98513 1.69919 9.90953 1.88864 9.77291 2.03009L5.53016 6.27284C5.38952 6.41344 5.19879 6.49243 4.99991 6.49243C4.80104 6.49243 4.61031 6.41344 4.46966 6.27284L0.226914 2.03009C0.0863108 1.88944 0.00732422 1.69871 0.00732422 1.49984C0.00732422 1.30097 0.0863108 1.11024 0.226914 0.96959V0.96959Z"
+                        fill="#848484" />
+                    </svg></span>
+
+                </button>
+                <button
+                  class="  dropdown-menu absolute hidden pt-[.3rem] group-hover:block border-2 rounded md:px-[1.1rem] px-5">
+                  <p class="flex items-center justify-start gap-1 w-full  py-[.25rem] ">
+                    <img class="px-2 h-5 w-15" src="/assets/nepali_flag.svg" alt="" />
+                    <span
+                      class="text-[#848484] font-[500] text-[15px] font-[Raleway] hidden md:block  pr-3">Nepali</span>
+                  </p>
+
+
+                </button>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="md:flex flex justify-between items-center my-5 mt-0 py-3 w-[100%] gap-4">
+        <div class="min-w-[100px] flex items-center gap-4 w-[5%]">
+          <img class="block w-[100%]" src="/assets/image 2.svg" alt="" />
+          <div class="md:hidden mt-1">
+            <h1 class=" text-[5vw] font-[900] font-[Oswald] tracking-[.0.5em]  "><span
+                class="text-[#023570]">GRIHA</span>SANJAL
+            </h1>
+            <p class="text-[#023570] text-[2.1vw] font-[500] font-[Raleway]">The E-commerce Website</p>
+          </div>
+        </div>
+
+        <nav class="w-[75%] hidden md:block">
+          <ul class="flex items-center justify-center w-[100%]">
+            <li
+              class="w-[114px] bg-[#F15025] py-[1.2rem] px-2 text-center cursor-pointer transition duration-500 ease-out">
+              <a class="text-[18px] font-[600] text-white" href="#">Home</a>
+            </li>
+            <li
+              class="w-[166px] hover:bg-[#F15025] py-[1.2rem] px-2 group cursor-pointer text-center transition duration-500 ease-out">
+              <a class="text-[18px] font-[600] text-[#004492] block group-hover:text-white" href="">Skilled Service</a>
+            </li>
+            <li
+              class="w-[166px] hover:bg-[#F15025] py-2 px-2 text-center group cursor-pointer transition duration-500 ease-out">
+              <a class="text-[18px] font-[600] text-[#004492] flex flex-col text-center group-hover:text-white"
+                href="">House Land <span class="block text-center"></span>Rental</a>
+            </li>
+            <li
+              class="w-[166px] hover:bg-[#F15025] py-2 px-2 text-center group cursor-pointer transition duration-500 ease-out">
+              <a class="text-[18px] font-[600] text-[#004492] flex flex-col text-center group-hover:text-white"
+                href="">House Land <span class="block"></span>Buy/Sell
+              </a>
+            </li>
+            <li
+              class="w-[166px] hover:bg-[#F15025] py-2 px-2 text-center group cursor-pointer transition duration-500 ease-out">
+              <a class="text-[18px] font-[600] text-[#004492] flex flex-col text-center group-hover:text-white"
+                href="">Tools & Machinery <span class="block"></span>Rental</a>
+            </li>
+            <li
+              class="w-[160px] hover:bg-[#F15025] py-2 px-2 pr-0 text-center group cursor-pointer transition duration-500 ease-out">
+              <a class="text-[18px] font-[600] text-[#004492] flex flex-col text-center group-hover:text-white"
+                href="">2nd
+                Hand <span class="block">Shop</span></a>
+            </li>
+          </ul>
+        </nav>
+        <div
+          class="max-w-[292px] md:w-[30%] xl:w-[22%] py-2 bg-[#0063D5] text-center hidden md:block  cursor-pointer hover:bg-[#FFC107]  md:px-1 transition duration-100 ease-in-out">
+          <a class=" md:text-[12px]  xl:text-[18px] font-[700] font-[Oswald] text-white" href=""> Leave Us Message
+          </a>
+        </div>
+        <div class="md:hidden">
+          <img class="w-12" src="/assets/square.svg" alt="" />
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <!-- cart items -->
+  <div class="md:max-w-[90%] max-w-[100%] mx-auto flex justify-end shadow-sm md:px-8 px-4 bg-white py-3">
+
+
+    <div class="flex items-center gap-1 justify-center">
+
+      <p class="block text-[#2c2a2a] text-[20px] font-[Raleway] font-[600]">Date: <span>2023/12/24</span></p>
+    </div>
+  </div>
+  <!-- items section -->
+  <div class="md:max-w-[90%] max-w-[100%] mx-auto my-4 py-3  ">
+    <!-- skilled items -->
+    <div class="py-6 pb-8  bg-white md:px-8 px-4 ">
+      <div class="flex items-center gap-2 py-2 border-b-2 pb-3">
+        <p class="text-[#020202] text-[22px] font-[Lato] font-[500]">Services</p>
+      </div>
+      <!-- First item -->
+      <div class="flex items-center gap-2  shadow-md py-3 mt-3">
+
+        <div class="flex w-[96%] justify-between items-center  py-4 pt-3 pb-5 border-[#D4D4D4]">
+          <div class="flex justify-between xl:gap-8 gap-3 sm:gap-4 lg:gap-5">
+            <div
+              class="xl:min-w-[176px] md:h-[140px] h-[100px] min-w-[110px]  w-[110px] sm:w-[110px] xl:w-[176px] md:w-[170px]">
+              <img class="w-full h-full" src="/assets/Rectangle 39 (1).jpg" alt="">
+            </div>
+            <div>
+              <!-- name -->
+              <h1
+                class="text-[#454545] font-[400] font-[Oswald] xl:text-[24px] md:text-[22px] text-[10px] sm:text-[12px] py-1 ">
+                Shiva Raj Badu</h1>
+              <!-- price -->
+              <h3
+                class="text-[#454545] font-[500] font-[Raleway] xl:text-[20px] md:text-[18px] text-[10px] sm:text-[12px] py-1 ">
+                Rs.1500-2000
+              </h3>
+
+              <!-- location -->
+              <p
+                class="flex items-center gap-1 font-[400] xl:text-[18px] md:text-[16px] text-[10px] font-[Raleway] text-[#454545] ">
+                <span>
+                  <svg class=" w-3  h-3" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.5262 7.47212C12.5262 6.27622 12.0511 5.1293 11.2055 4.28367C10.3599 3.43804 9.21294 2.96297 8.01704 2.96297C6.82114 2.96297 5.67422 3.43804 4.82859 4.28367C3.98296 5.1293 3.50789 6.27622 3.50789 7.47212C3.50789 9.32187 4.98789 11.7328 8.01704 14.6206C11.0462 11.7328 12.5262 9.32187 12.5262 7.47212ZM8.01704 15.9894C4.34258 12.6496 2.50586 9.80986 2.50586 7.47212C2.50586 6.01046 3.0865 4.60867 4.12005 3.57512C5.15359 2.54158 6.55538 1.96094 8.01704 1.96094C9.47869 1.96094 10.8805 2.54158 11.914 3.57512C12.9476 4.60867 13.5282 6.01046 13.5282 7.47212C13.5282 9.80986 11.6915 12.6496 8.01704 15.9894Z"
+                      fill="#5C5C5C" />
+                    <path
+                      d="M8.0168 8.9759C8.41543 8.9759 8.79774 8.81755 9.07962 8.53567C9.36149 8.25379 9.51985 7.87149 9.51985 7.47285C9.51985 7.07422 9.36149 6.69191 9.07962 6.41004C8.79774 6.12816 8.41543 5.96981 8.0168 5.96981C7.61817 5.96981 7.23586 6.12816 6.95398 6.41004C6.67211 6.69191 6.51375 7.07422 6.51375 7.47285C6.51375 7.87149 6.67211 8.25379 6.95398 8.53567C7.23586 8.81755 7.61817 8.9759 8.0168 8.9759V8.9759ZM8.0168 9.97794C7.35241 9.97794 6.71523 9.71401 6.24544 9.24421C5.77565 8.77442 5.51172 8.13724 5.51172 7.47285C5.51172 6.80847 5.77565 6.17129 6.24544 5.70149C6.71523 5.2317 7.35241 4.96777 8.0168 4.96777C8.68119 4.96777 9.31837 5.2317 9.78816 5.70149C10.258 6.17129 10.5219 6.80847 10.5219 7.47285C10.5219 8.13724 10.258 8.77442 9.78816 9.24421C9.31837 9.71401 8.68119 9.97794 8.0168 9.97794Z"
+                      fill="#5C5C5C" />
+                  </svg>
+                </span> Dharan, Nepal
+              </p>
+
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+      <!-- second item -->
+      <div class="flex items-center gap-2  shadow-md py-3 mt-3">
+
+        <div class="flex w-[96%] justify-between items-center  py-4 pt-3 pb-5 border-[#D4D4D4]">
+          <div class="flex justify-between xl:gap-8 gap-3 sm:gap-4 lg:gap-5">
+            <div
+              class="xl:min-w-[176px] md:h-[140px] h-[100px] min-w-[110px]  w-[110px] sm:w-[110px] xl:w-[176px] md:w-[170px]">
+              <img class="w-full h-full" src="/assets/Rectangle 39 (1).jpg" alt="">
+            </div>
+            <div>
+              <!-- name -->
+              <h1
+                class="text-[#454545] font-[400] font-[Oswald] xl:text-[24px] md:text-[22px] text-[10px] sm:text-[12px] py-1 ">
+                Shiva Raj Badu</h1>
+              <!-- price -->
+              <h3
+                class="text-[#454545] font-[500] font-[Raleway] xl:text-[20px] md:text-[18px] text-[10px] sm:text-[12px] py-1 ">
+                Rs.1500-2000
+              </h3>
+
+              <!-- location -->
+              <p
+                class="flex items-center gap-1 font-[400] xl:text-[18px] md:text-[16px] text-[10px] font-[Raleway] text-[#454545] ">
+                <span>
+                  <svg class=" w-3  h-3" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.5262 7.47212C12.5262 6.27622 12.0511 5.1293 11.2055 4.28367C10.3599 3.43804 9.21294 2.96297 8.01704 2.96297C6.82114 2.96297 5.67422 3.43804 4.82859 4.28367C3.98296 5.1293 3.50789 6.27622 3.50789 7.47212C3.50789 9.32187 4.98789 11.7328 8.01704 14.6206C11.0462 11.7328 12.5262 9.32187 12.5262 7.47212ZM8.01704 15.9894C4.34258 12.6496 2.50586 9.80986 2.50586 7.47212C2.50586 6.01046 3.0865 4.60867 4.12005 3.57512C5.15359 2.54158 6.55538 1.96094 8.01704 1.96094C9.47869 1.96094 10.8805 2.54158 11.914 3.57512C12.9476 4.60867 13.5282 6.01046 13.5282 7.47212C13.5282 9.80986 11.6915 12.6496 8.01704 15.9894Z"
+                      fill="#5C5C5C" />
+                    <path
+                      d="M8.0168 8.9759C8.41543 8.9759 8.79774 8.81755 9.07962 8.53567C9.36149 8.25379 9.51985 7.87149 9.51985 7.47285C9.51985 7.07422 9.36149 6.69191 9.07962 6.41004C8.79774 6.12816 8.41543 5.96981 8.0168 5.96981C7.61817 5.96981 7.23586 6.12816 6.95398 6.41004C6.67211 6.69191 6.51375 7.07422 6.51375 7.47285C6.51375 7.87149 6.67211 8.25379 6.95398 8.53567C7.23586 8.81755 7.61817 8.9759 8.0168 8.9759V8.9759ZM8.0168 9.97794C7.35241 9.97794 6.71523 9.71401 6.24544 9.24421C5.77565 8.77442 5.51172 8.13724 5.51172 7.47285C5.51172 6.80847 5.77565 6.17129 6.24544 5.70149C6.71523 5.2317 7.35241 4.96777 8.0168 4.96777C8.68119 4.96777 9.31837 5.2317 9.78816 5.70149C10.258 6.17129 10.5219 6.80847 10.5219 7.47285C10.5219 8.13724 10.258 8.77442 9.78816 9.24421C9.31837 9.71401 8.68119 9.97794 8.0168 9.97794Z"
+                      fill="#5C5C5C" />
+                  </svg>
+                </span> Dharan, Nepal
+              </p>
+
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+      <!-- thrid -->
+      <div class="flex items-center gap-2  shadow-md py-3 mt-3">
+
+        <div class="flex w-[96%] justify-between items-center  py-4 pt-3 pb-5 border-[#D4D4D4]">
+          <div class="flex justify-between xl:gap-8 gap-3 sm:gap-4 lg:gap-5">
+            <div
+              class="xl:min-w-[176px] md:h-[140px] h-[100px] min-w-[110px]  w-[110px] sm:w-[110px] xl:w-[176px] md:w-[170px]">
+              <img class="w-full h-full" src="/assets/Rectangle 39 (1).jpg" alt="">
+            </div>
+            <div>
+              <!-- name -->
+              <h1
+                class="text-[#454545] font-[400] font-[Oswald] xl:text-[24px] md:text-[22px] text-[10px] sm:text-[12px] py-1 ">
+                Shiva Raj Badu</h1>
+              <!-- price -->
+              <h3
+                class="text-[#454545] font-[500] font-[Raleway] xl:text-[20px] md:text-[18px] text-[10px] sm:text-[12px] py-1 ">
+                Rs.1500-2000
+              </h3>
+
+              <!-- location -->
+              <p
+                class="flex items-center gap-1 font-[400] xl:text-[18px] md:text-[16px] text-[10px] font-[Raleway] text-[#454545] ">
+                <span>
+                  <svg class=" w-3  h-3" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.5262 7.47212C12.5262 6.27622 12.0511 5.1293 11.2055 4.28367C10.3599 3.43804 9.21294 2.96297 8.01704 2.96297C6.82114 2.96297 5.67422 3.43804 4.82859 4.28367C3.98296 5.1293 3.50789 6.27622 3.50789 7.47212C3.50789 9.32187 4.98789 11.7328 8.01704 14.6206C11.0462 11.7328 12.5262 9.32187 12.5262 7.47212ZM8.01704 15.9894C4.34258 12.6496 2.50586 9.80986 2.50586 7.47212C2.50586 6.01046 3.0865 4.60867 4.12005 3.57512C5.15359 2.54158 6.55538 1.96094 8.01704 1.96094C9.47869 1.96094 10.8805 2.54158 11.914 3.57512C12.9476 4.60867 13.5282 6.01046 13.5282 7.47212C13.5282 9.80986 11.6915 12.6496 8.01704 15.9894Z"
+                      fill="#5C5C5C" />
+                    <path
+                      d="M8.0168 8.9759C8.41543 8.9759 8.79774 8.81755 9.07962 8.53567C9.36149 8.25379 9.51985 7.87149 9.51985 7.47285C9.51985 7.07422 9.36149 6.69191 9.07962 6.41004C8.79774 6.12816 8.41543 5.96981 8.0168 5.96981C7.61817 5.96981 7.23586 6.12816 6.95398 6.41004C6.67211 6.69191 6.51375 7.07422 6.51375 7.47285C6.51375 7.87149 6.67211 8.25379 6.95398 8.53567C7.23586 8.81755 7.61817 8.9759 8.0168 8.9759V8.9759ZM8.0168 9.97794C7.35241 9.97794 6.71523 9.71401 6.24544 9.24421C5.77565 8.77442 5.51172 8.13724 5.51172 7.47285C5.51172 6.80847 5.77565 6.17129 6.24544 5.70149C6.71523 5.2317 7.35241 4.96777 8.0168 4.96777C8.68119 4.96777 9.31837 5.2317 9.78816 5.70149C10.258 6.17129 10.5219 6.80847 10.5219 7.47285C10.5219 8.13724 10.258 8.77442 9.78816 9.24421C9.31837 9.71401 8.68119 9.97794 8.0168 9.97794Z"
+                      fill="#5C5C5C" />
+                  </svg>
+                </span> Dharan, Nepal
+              </p>
+
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+      <!-- fourth -->
+      <div class="flex items-center gap-2  shadow-md py-3 mt-3">
+
+        <div class="flex w-[96%] justify-between items-center  py-4 pt-3 pb-5 border-[#D4D4D4]">
+          <div class="flex justify-between xl:gap-8 gap-3 sm:gap-4 lg:gap-5">
+            <div
+              class="xl:min-w-[176px] md:h-[140px] h-[100px] min-w-[110px]  w-[110px] sm:w-[110px] xl:w-[176px] md:w-[170px]">
+              <img class="w-full h-full" src="/assets/Rectangle 39 (1).jpg" alt="">
+            </div>
+            <div>
+              <!-- name -->
+              <h1
+                class="text-[#454545] font-[400] font-[Oswald] xl:text-[24px] md:text-[22px] text-[10px] sm:text-[12px] py-1 ">
+                Shiva Raj Badu</h1>
+              <!-- price -->
+              <h3
+                class="text-[#454545] font-[500] font-[Raleway] xl:text-[20px] md:text-[18px] text-[10px] sm:text-[12px] py-1 ">
+                Rs.1500-2000
+              </h3>
+
+              <!-- location -->
+              <p
+                class="flex items-center gap-1 font-[400] xl:text-[18px] md:text-[16px] text-[10px] font-[Raleway] text-[#454545] ">
+                <span>
+                  <svg class=" w-3  h-3" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.5262 7.47212C12.5262 6.27622 12.0511 5.1293 11.2055 4.28367C10.3599 3.43804 9.21294 2.96297 8.01704 2.96297C6.82114 2.96297 5.67422 3.43804 4.82859 4.28367C3.98296 5.1293 3.50789 6.27622 3.50789 7.47212C3.50789 9.32187 4.98789 11.7328 8.01704 14.6206C11.0462 11.7328 12.5262 9.32187 12.5262 7.47212ZM8.01704 15.9894C4.34258 12.6496 2.50586 9.80986 2.50586 7.47212C2.50586 6.01046 3.0865 4.60867 4.12005 3.57512C5.15359 2.54158 6.55538 1.96094 8.01704 1.96094C9.47869 1.96094 10.8805 2.54158 11.914 3.57512C12.9476 4.60867 13.5282 6.01046 13.5282 7.47212C13.5282 9.80986 11.6915 12.6496 8.01704 15.9894Z"
+                      fill="#5C5C5C" />
+                    <path
+                      d="M8.0168 8.9759C8.41543 8.9759 8.79774 8.81755 9.07962 8.53567C9.36149 8.25379 9.51985 7.87149 9.51985 7.47285C9.51985 7.07422 9.36149 6.69191 9.07962 6.41004C8.79774 6.12816 8.41543 5.96981 8.0168 5.96981C7.61817 5.96981 7.23586 6.12816 6.95398 6.41004C6.67211 6.69191 6.51375 7.07422 6.51375 7.47285C6.51375 7.87149 6.67211 8.25379 6.95398 8.53567C7.23586 8.81755 7.61817 8.9759 8.0168 8.9759V8.9759ZM8.0168 9.97794C7.35241 9.97794 6.71523 9.71401 6.24544 9.24421C5.77565 8.77442 5.51172 8.13724 5.51172 7.47285C5.51172 6.80847 5.77565 6.17129 6.24544 5.70149C6.71523 5.2317 7.35241 4.96777 8.0168 4.96777C8.68119 4.96777 9.31837 5.2317 9.78816 5.70149C10.258 6.17129 10.5219 6.80847 10.5219 7.47285C10.5219 8.13724 10.258 8.77442 9.78816 9.24421C9.31837 9.71401 8.68119 9.97794 8.0168 9.97794Z"
+                      fill="#5C5C5C" />
+                  </svg>
+                </span> Dharan, Nepal
+              </p>
+
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <!-- house and rental-->
+    <div class="py-6 pb-8  bg-white md:px-8 px-4 my-8">
+      <div class="flex items-center gap-2 py-2 border-b-2 pb-3">
+        <p class="text-[#020202] text-[22px] font-[Lato] font-[500]">House and Rental</p>
+      </div>
+      <!-- First item -->
+      <div class="flex items-center gap-2  shadow-md py-3 mt-3">
+
+        <div class="flex w-[96%] justify-between items-center  py-4 pt-3 pb-5 border-[#D4D4D4]">
+          <div class="flex justify-between xl:gap-8 gap-3 sm:gap-4 lg:gap-5">
+            <div
+              class="xl:min-w-[176px] md:h-[140px] h-[100px] min-w-[110px]  w-[110px] sm:w-[110px] xl:w-[176px] md:w-[170px]">
+              <img class="w-full h-full" src="/assets/Rectangle 39 (1).jpg" alt="">
+            </div>
+            <div>
+              <!-- name -->
+              <h1
+                class="text-[#454545] font-[400] font-[Oswald] xl:text-[24px] md:text-[22px] text-[10px] sm:text-[12px] py-1 ">
+                Shiva Raj Badu</h1>
+              <!-- price -->
+              <h3
+                class="text-[#454545] font-[500] font-[Raleway] xl:text-[20px] md:text-[18px] text-[10px] sm:text-[12px] py-1 ">
+                Rs.1500-2000
+              </h3>
+
+              <!-- location -->
+              <p
+                class="flex items-center gap-1 font-[400] xl:text-[18px] md:text-[16px] text-[10px] font-[Raleway] text-[#454545] ">
+                <span>
+                  <svg class=" w-3  h-3" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.5262 7.47212C12.5262 6.27622 12.0511 5.1293 11.2055 4.28367C10.3599 3.43804 9.21294 2.96297 8.01704 2.96297C6.82114 2.96297 5.67422 3.43804 4.82859 4.28367C3.98296 5.1293 3.50789 6.27622 3.50789 7.47212C3.50789 9.32187 4.98789 11.7328 8.01704 14.6206C11.0462 11.7328 12.5262 9.32187 12.5262 7.47212ZM8.01704 15.9894C4.34258 12.6496 2.50586 9.80986 2.50586 7.47212C2.50586 6.01046 3.0865 4.60867 4.12005 3.57512C5.15359 2.54158 6.55538 1.96094 8.01704 1.96094C9.47869 1.96094 10.8805 2.54158 11.914 3.57512C12.9476 4.60867 13.5282 6.01046 13.5282 7.47212C13.5282 9.80986 11.6915 12.6496 8.01704 15.9894Z"
+                      fill="#5C5C5C" />
+                    <path
+                      d="M8.0168 8.9759C8.41543 8.9759 8.79774 8.81755 9.07962 8.53567C9.36149 8.25379 9.51985 7.87149 9.51985 7.47285C9.51985 7.07422 9.36149 6.69191 9.07962 6.41004C8.79774 6.12816 8.41543 5.96981 8.0168 5.96981C7.61817 5.96981 7.23586 6.12816 6.95398 6.41004C6.67211 6.69191 6.51375 7.07422 6.51375 7.47285C6.51375 7.87149 6.67211 8.25379 6.95398 8.53567C7.23586 8.81755 7.61817 8.9759 8.0168 8.9759V8.9759ZM8.0168 9.97794C7.35241 9.97794 6.71523 9.71401 6.24544 9.24421C5.77565 8.77442 5.51172 8.13724 5.51172 7.47285C5.51172 6.80847 5.77565 6.17129 6.24544 5.70149C6.71523 5.2317 7.35241 4.96777 8.0168 4.96777C8.68119 4.96777 9.31837 5.2317 9.78816 5.70149C10.258 6.17129 10.5219 6.80847 10.5219 7.47285C10.5219 8.13724 10.258 8.77442 9.78816 9.24421C9.31837 9.71401 8.68119 9.97794 8.0168 9.97794Z"
+                      fill="#5C5C5C" />
+                  </svg>
+                </span> Dharan, Nepal
+              </p>
+
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+      <!-- second item -->
+      <div class="flex items-center gap-2  shadow-md py-3 mt-3">
+
+        <div class="flex w-[96%] justify-between items-center  py-4 pt-3 pb-5 border-[#D4D4D4]">
+          <div class="flex justify-between xl:gap-8 gap-3 sm:gap-4 lg:gap-5">
+            <div
+              class="xl:min-w-[176px] md:h-[140px] h-[100px] min-w-[110px]  w-[110px] sm:w-[110px] xl:w-[176px] md:w-[170px]">
+              <img class="w-full h-full" src="/assets/Rectangle 39 (1).jpg" alt="">
+            </div>
+            <div>
+              <!-- name -->
+              <h1
+                class="text-[#454545] font-[400] font-[Oswald] xl:text-[24px] md:text-[22px] text-[10px] sm:text-[12px] py-1 ">
+                Shiva Raj Badu</h1>
+              <!-- price -->
+              <h3
+                class="text-[#454545] font-[500] font-[Raleway] xl:text-[20px] md:text-[18px] text-[10px] sm:text-[12px] py-1 ">
+                Rs.1500-2000
+              </h3>
+
+              <!-- location -->
+              <p
+                class="flex items-center gap-1 font-[400] xl:text-[18px] md:text-[16px] text-[10px] font-[Raleway] text-[#454545] ">
+                <span>
+                  <svg class=" w-3  h-3" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.5262 7.47212C12.5262 6.27622 12.0511 5.1293 11.2055 4.28367C10.3599 3.43804 9.21294 2.96297 8.01704 2.96297C6.82114 2.96297 5.67422 3.43804 4.82859 4.28367C3.98296 5.1293 3.50789 6.27622 3.50789 7.47212C3.50789 9.32187 4.98789 11.7328 8.01704 14.6206C11.0462 11.7328 12.5262 9.32187 12.5262 7.47212ZM8.01704 15.9894C4.34258 12.6496 2.50586 9.80986 2.50586 7.47212C2.50586 6.01046 3.0865 4.60867 4.12005 3.57512C5.15359 2.54158 6.55538 1.96094 8.01704 1.96094C9.47869 1.96094 10.8805 2.54158 11.914 3.57512C12.9476 4.60867 13.5282 6.01046 13.5282 7.47212C13.5282 9.80986 11.6915 12.6496 8.01704 15.9894Z"
+                      fill="#5C5C5C" />
+                    <path
+                      d="M8.0168 8.9759C8.41543 8.9759 8.79774 8.81755 9.07962 8.53567C9.36149 8.25379 9.51985 7.87149 9.51985 7.47285C9.51985 7.07422 9.36149 6.69191 9.07962 6.41004C8.79774 6.12816 8.41543 5.96981 8.0168 5.96981C7.61817 5.96981 7.23586 6.12816 6.95398 6.41004C6.67211 6.69191 6.51375 7.07422 6.51375 7.47285C6.51375 7.87149 6.67211 8.25379 6.95398 8.53567C7.23586 8.81755 7.61817 8.9759 8.0168 8.9759V8.9759ZM8.0168 9.97794C7.35241 9.97794 6.71523 9.71401 6.24544 9.24421C5.77565 8.77442 5.51172 8.13724 5.51172 7.47285C5.51172 6.80847 5.77565 6.17129 6.24544 5.70149C6.71523 5.2317 7.35241 4.96777 8.0168 4.96777C8.68119 4.96777 9.31837 5.2317 9.78816 5.70149C10.258 6.17129 10.5219 6.80847 10.5219 7.47285C10.5219 8.13724 10.258 8.77442 9.78816 9.24421C9.31837 9.71401 8.68119 9.97794 8.0168 9.97794Z"
+                      fill="#5C5C5C" />
+                  </svg>
+                </span> Dharan, Nepal
+              </p>
+
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+      <!-- thrid -->
+      <div class="flex items-center gap-2  shadow-md py-3 mt-3">
+
+        <div class="flex w-[96%] justify-between items-center  py-4 pt-3 pb-5 border-[#D4D4D4]">
+          <div class="flex justify-between xl:gap-8 gap-3 sm:gap-4 lg:gap-5">
+            <div
+              class="xl:min-w-[176px] md:h-[140px] h-[100px] min-w-[110px]  w-[110px] sm:w-[110px] xl:w-[176px] md:w-[170px]">
+              <img class="w-full h-full" src="/assets/Rectangle 39 (1).jpg" alt="">
+            </div>
+            <div>
+              <!-- name -->
+              <h1
+                class="text-[#454545] font-[400] font-[Oswald] xl:text-[24px] md:text-[22px] text-[10px] sm:text-[12px] py-1 ">
+                Shiva Raj Badu</h1>
+              <!-- price -->
+              <h3
+                class="text-[#454545] font-[500] font-[Raleway] xl:text-[20px] md:text-[18px] text-[10px] sm:text-[12px] py-1 ">
+                Rs.1500-2000
+              </h3>
+
+              <!-- location -->
+              <p
+                class="flex items-center gap-1 font-[400] xl:text-[18px] md:text-[16px] text-[10px] font-[Raleway] text-[#454545] ">
+                <span>
+                  <svg class=" w-3  h-3" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.5262 7.47212C12.5262 6.27622 12.0511 5.1293 11.2055 4.28367C10.3599 3.43804 9.21294 2.96297 8.01704 2.96297C6.82114 2.96297 5.67422 3.43804 4.82859 4.28367C3.98296 5.1293 3.50789 6.27622 3.50789 7.47212C3.50789 9.32187 4.98789 11.7328 8.01704 14.6206C11.0462 11.7328 12.5262 9.32187 12.5262 7.47212ZM8.01704 15.9894C4.34258 12.6496 2.50586 9.80986 2.50586 7.47212C2.50586 6.01046 3.0865 4.60867 4.12005 3.57512C5.15359 2.54158 6.55538 1.96094 8.01704 1.96094C9.47869 1.96094 10.8805 2.54158 11.914 3.57512C12.9476 4.60867 13.5282 6.01046 13.5282 7.47212C13.5282 9.80986 11.6915 12.6496 8.01704 15.9894Z"
+                      fill="#5C5C5C" />
+                    <path
+                      d="M8.0168 8.9759C8.41543 8.9759 8.79774 8.81755 9.07962 8.53567C9.36149 8.25379 9.51985 7.87149 9.51985 7.47285C9.51985 7.07422 9.36149 6.69191 9.07962 6.41004C8.79774 6.12816 8.41543 5.96981 8.0168 5.96981C7.61817 5.96981 7.23586 6.12816 6.95398 6.41004C6.67211 6.69191 6.51375 7.07422 6.51375 7.47285C6.51375 7.87149 6.67211 8.25379 6.95398 8.53567C7.23586 8.81755 7.61817 8.9759 8.0168 8.9759V8.9759ZM8.0168 9.97794C7.35241 9.97794 6.71523 9.71401 6.24544 9.24421C5.77565 8.77442 5.51172 8.13724 5.51172 7.47285C5.51172 6.80847 5.77565 6.17129 6.24544 5.70149C6.71523 5.2317 7.35241 4.96777 8.0168 4.96777C8.68119 4.96777 9.31837 5.2317 9.78816 5.70149C10.258 6.17129 10.5219 6.80847 10.5219 7.47285C10.5219 8.13724 10.258 8.77442 9.78816 9.24421C9.31837 9.71401 8.68119 9.97794 8.0168 9.97794Z"
+                      fill="#5C5C5C" />
+                  </svg>
+                </span> Dharan, Nepal
+              </p>
+
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+      <!-- fourth -->
+      <div class="flex items-center gap-2  shadow-md py-3 mt-3">
+
+        <div class="flex w-[96%] justify-between items-center  py-4 pt-3 pb-5 border-[#D4D4D4]">
+          <div class="flex justify-between xl:gap-8 gap-3 sm:gap-4 lg:gap-5">
+            <div
+              class="xl:min-w-[176px] md:h-[140px] h-[100px] min-w-[110px]  w-[110px] sm:w-[110px] xl:w-[176px] md:w-[170px]">
+              <img class="w-full h-full" src="/assets/Rectangle 39 (1).jpg" alt="">
+            </div>
+            <div>
+              <!-- name -->
+              <h1
+                class="text-[#454545] font-[400] font-[Oswald] xl:text-[24px] md:text-[22px] text-[10px] sm:text-[12px] py-1 ">
+                Shiva Raj Badu</h1>
+              <!-- price -->
+              <h3
+                class="text-[#454545] font-[500] font-[Raleway] xl:text-[20px] md:text-[18px] text-[10px] sm:text-[12px] py-1 ">
+                Rs.1500-2000
+              </h3>
+
+              <!-- location -->
+              <p
+                class="flex items-center gap-1 font-[400] xl:text-[18px] md:text-[16px] text-[10px] font-[Raleway] text-[#454545] ">
+                <span>
+                  <svg class=" w-3  h-3" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.5262 7.47212C12.5262 6.27622 12.0511 5.1293 11.2055 4.28367C10.3599 3.43804 9.21294 2.96297 8.01704 2.96297C6.82114 2.96297 5.67422 3.43804 4.82859 4.28367C3.98296 5.1293 3.50789 6.27622 3.50789 7.47212C3.50789 9.32187 4.98789 11.7328 8.01704 14.6206C11.0462 11.7328 12.5262 9.32187 12.5262 7.47212ZM8.01704 15.9894C4.34258 12.6496 2.50586 9.80986 2.50586 7.47212C2.50586 6.01046 3.0865 4.60867 4.12005 3.57512C5.15359 2.54158 6.55538 1.96094 8.01704 1.96094C9.47869 1.96094 10.8805 2.54158 11.914 3.57512C12.9476 4.60867 13.5282 6.01046 13.5282 7.47212C13.5282 9.80986 11.6915 12.6496 8.01704 15.9894Z"
+                      fill="#5C5C5C" />
+                    <path
+                      d="M8.0168 8.9759C8.41543 8.9759 8.79774 8.81755 9.07962 8.53567C9.36149 8.25379 9.51985 7.87149 9.51985 7.47285C9.51985 7.07422 9.36149 6.69191 9.07962 6.41004C8.79774 6.12816 8.41543 5.96981 8.0168 5.96981C7.61817 5.96981 7.23586 6.12816 6.95398 6.41004C6.67211 6.69191 6.51375 7.07422 6.51375 7.47285C6.51375 7.87149 6.67211 8.25379 6.95398 8.53567C7.23586 8.81755 7.61817 8.9759 8.0168 8.9759V8.9759ZM8.0168 9.97794C7.35241 9.97794 6.71523 9.71401 6.24544 9.24421C5.77565 8.77442 5.51172 8.13724 5.51172 7.47285C5.51172 6.80847 5.77565 6.17129 6.24544 5.70149C6.71523 5.2317 7.35241 4.96777 8.0168 4.96777C8.68119 4.96777 9.31837 5.2317 9.78816 5.70149C10.258 6.17129 10.5219 6.80847 10.5219 7.47285C10.5219 8.13724 10.258 8.77442 9.78816 9.24421C9.31837 9.71401 8.68119 9.97794 8.0168 9.97794Z"
+                      fill="#5C5C5C" />
+                  </svg>
+                </span> Dharan, Nepal
+              </p>
+
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+    <!-- left arrow -->
+    <div class="py-6 pl-16 md:px-8 px-4 bg-white">
+      <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M39.1718 21.293H12.888L28.6197 7.63672C28.8712 7.4166 28.7185 7.00781 28.3861 7.00781H24.4105C24.2353 7.00781 24.0691 7.0707 23.9388 7.18301L6.96285 21.9129C6.80737 22.0477 6.68268 22.2143 6.59722 22.4015C6.51176 22.5886 6.46753 22.792 6.46753 22.9978C6.46753 23.2035 6.51176 23.4069 6.59722 23.594C6.68268 23.7812 6.80737 23.9478 6.96285 24.0826L24.0377 38.9023C24.105 38.9607 24.1859 38.9922 24.2712 38.9922H28.3816C28.714 38.9922 28.8668 38.5789 28.6152 38.3633L12.888 24.707H39.1718C39.3695 24.707 39.5312 24.5453 39.5312 24.3477V21.6523C39.5312 21.4547 39.3695 21.293 39.1718 21.293Z"
+          fill="black" />
+      </svg>
+
+    </div>
+  </div>
+</body>
+
+</html>
