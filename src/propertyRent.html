@@ -16,6 +16,42 @@
   <title>Rent Property</title>
   <link rel="stylesheet" href="/dist/output.css">
 </head>
+<style>
+  .relative select {
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    background-color: white;
+    padding: 0 1em 0 0;
+    margin: 0;
+    width: 100%;
+    z-index: 1;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .select {
+    width: 271px;
+    background-color: white;
+    border: 1px solid #83BBFC;
+    border-radius: 5px;
+    padding: 0.5rem 0 .5rem 1.2rem;
+
+
+    display: grid;
+    grid-template-areas: "select";
+    align-items: center;
+    position: relative;
+
+
+  }
+
+  .active {
+    border: 1px dashed #0063D5;
+  }
+</style>
 
 <body>
   <header class="py-1 w-[90%] md:w-[95%] mx-auto font-[Oswald] bg-[#f6f3f34a]">
@@ -248,12 +284,12 @@
                 </span> Residental
               </p>
               <p
-                class="flex items-center gap-5 border-[#83BBFC] text-[#656565] text-[18px] font-[Lato] font-[400] border px-6 py-2">
+                class="flex items-center gap-5 border-[#83BBFC] text-[#83BBFC] text-[18px] font-[Lato] font-[400] border px-6 py-2">
                 <span>
-                  <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg style="fill:#83BBFC" width="21" height="21" viewBox="0 0 21 21"
+                    xmlns="http://www.w3.org/2000/svg">
                     <path
-                      d="M17.9396 0.0834961H7.52289C6.37393 0.0834961 5.43956 1.01787 5.43956 2.16683V7.98558L0.536432 12.8887C0.390797 13.0344 0.291623 13.22 0.251449 13.422C0.211274 13.624 0.231903 13.8334 0.310726 14.0238C0.389548 14.2141 0.523027 14.3767 0.694287 14.4912C0.865548 14.6057 1.0669 14.6668 1.27289 14.6668V19.8752C1.27289 20.1514 1.38264 20.4164 1.57799 20.6117C1.77334 20.8071 2.03829 20.9168 2.31456 20.9168H18.9812C19.2575 20.9168 19.5224 20.8071 19.7178 20.6117C19.9131 20.4164 20.0229 20.1514 20.0229 19.8752V2.16683C20.0229 1.01787 19.0885 0.0834961 17.9396 0.0834961ZM9.60622 18.8335H3.35622V13.0147L6.48122 9.88975L9.60622 13.0147V18.8335ZM17.9396 18.8335H11.6896V14.6668C11.8958 14.6673 12.0975 14.6065 12.2691 14.4921C12.4406 14.3777 12.5744 14.2149 12.6533 14.0244C12.7322 13.8339 12.7527 13.6242 12.7122 13.422C12.6718 13.2198 12.5722 13.0342 12.426 12.8887L7.52289 7.98558V2.16683H17.9396V18.8335Z"
-                      fill="#656565" />
+                      d="M17.9396 0.0834961H7.52289C6.37393 0.0834961 5.43956 1.01787 5.43956 2.16683V7.98558L0.536432 12.8887C0.390797 13.0344 0.291623 13.22 0.251449 13.422C0.211274 13.624 0.231903 13.8334 0.310726 14.0238C0.389548 14.2141 0.523027 14.3767 0.694287 14.4912C0.865548 14.6057 1.0669 14.6668 1.27289 14.6668V19.8752C1.27289 20.1514 1.38264 20.4164 1.57799 20.6117C1.77334 20.8071 2.03829 20.9168 2.31456 20.9168H18.9812C19.2575 20.9168 19.5224 20.8071 19.7178 20.6117C19.9131 20.4164 20.0229 20.1514 20.0229 19.8752V2.16683C20.0229 1.01787 19.0885 0.0834961 17.9396 0.0834961ZM9.60622 18.8335H3.35622V13.0147L6.48122 9.88975L9.60622 13.0147V18.8335ZM17.9396 18.8335H11.6896V14.6668C11.8958 14.6673 12.0975 14.6065 12.2691 14.4921C12.4406 14.3777 12.5744 14.2149 12.6533 14.0244C12.7322 13.8339 12.7527 13.6242 12.7122 13.422C12.6718 13.2198 12.5722 13.0342 12.426 12.8887L7.52289 7.98558V2.16683H17.9396V18.8335Z" />
                   </svg>
                 </span> Commercial
               </p>
@@ -312,13 +348,13 @@
                 </p>
               </div>
               <div
-                class=" w-[141px] h-[82px] gap-2 border text-[#656565] border-[#83BBFC] flex justify-center items-center flex-col rounded-[5px]">
+                class=" w-[141px] h-[82px] gap-2 border text-[#83BBFC] border-[#83BBFC] flex justify-center items-center flex-col rounded-[5px]">
 
                 <span>
-                  <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg style="fill:#83BBFC" width="26" height="25" viewBox="0 0 26 25" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
                     <path
-                      d="M3.27279 19.7919V5.93772C3.27272 5.72389 3.33846 5.51523 3.46109 5.34005C3.58371 5.16488 3.75727 5.03168 3.9582 4.95855L14.0322 1.29605C14.1109 1.26742 14.1953 1.25817 14.2783 1.26911C14.3613 1.28005 14.4405 1.31084 14.5091 1.35889C14.5777 1.40693 14.6337 1.47081 14.6723 1.54509C14.711 1.61938 14.7311 1.7019 14.7311 1.78564V6.94501L21.3103 9.13772C21.5178 9.20683 21.6983 9.33951 21.8262 9.51694C21.954 9.69437 22.0228 9.90755 22.0228 10.1263V19.7919H24.1061V21.8752H1.18945V19.7919H3.27279ZM5.35612 19.7919H12.6478V4.01585L5.35612 6.66793V19.7919ZM19.9395 19.7919V10.8773L14.7311 9.14085V19.7919H19.9395Z"
-                      fill="#656565" />
+                      d="M3.27279 19.7919V5.93772C3.27272 5.72389 3.33846 5.51523 3.46109 5.34005C3.58371 5.16488 3.75727 5.03168 3.9582 4.95855L14.0322 1.29605C14.1109 1.26742 14.1953 1.25817 14.2783 1.26911C14.3613 1.28005 14.4405 1.31084 14.5091 1.35889C14.5777 1.40693 14.6337 1.47081 14.6723 1.54509C14.711 1.61938 14.7311 1.7019 14.7311 1.78564V6.94501L21.3103 9.13772C21.5178 9.20683 21.6983 9.33951 21.8262 9.51694C21.954 9.69437 22.0228 9.90755 22.0228 10.1263V19.7919H24.1061V21.8752H1.18945V19.7919H3.27279ZM5.35612 19.7919H12.6478V4.01585L5.35612 6.66793V19.7919ZM19.9395 19.7919V10.8773L14.7311 9.14085V19.7919H19.9395Z" />
                   </svg>
 
                 </span>
@@ -380,8 +416,8 @@
           </div>
         </div>
         <!-- third section -->
-        <div class="bg-white my-6 px-8 py-3 rounded-[10px]">
-          <div class="mb-10">
+        <div class="bg-white mt-6 pb-6  px-8 py-3 rounded-[10px]">
+          <div class="">
             <p class="font-[Lato] font-[600] text-[20px] my-5" for="proptery_type">
               Address
               <span class="text-[#FF3600] text-[15px] ">*</span> :
@@ -428,18 +464,24 @@
 
         </div>
         <!-- fourth section -->
-        <div class="bg-white">
+        <div class="bg-white  px-8 py-3 rounded-[10px] flex  gap-8">
 
           <div>
-            <label class="font-[Lato] font-[600] text-[20px] my-5" for="proptery_type">
+            <label class="font-[Lato] font-[600] text-[20px] block" for="proptery_type">
               Total Area
               <span class="text-[#FF3600] text-[15px] ">*</span> :
             </label>
-            <div>
-              <div><input type="text" placeholder="eg. 0-1-2-4 / 325"></div>
+            <div class="flex gap-3 mt-2">
               <div>
-                <input type="text" placeholder="Anna" class="border border-[#83BBFC]">
-                <span class="absolute top-2 right-3 cursor-pointer border-l pl-2 border-[#83BBFC]"><svg width="18"
+                <input
+                  class="text-[#656565] max-w-[250px] font-[Lato] font-[400] text-[18px] rounded-[5px] border border-[#83BBFC] px-6 py-1 outline-none "
+                  type="text" placeholder="eg. 0-1-2-4 / 325">
+              </div>
+              <div class="relative">
+                <input
+                  class="text-[#656565] max-w-[250px] font-[Lato] font-[400] text-[18px] rounded-[5px] border border-[#83BBFC] px-6 py-1 outline-none "
+                  type="text" placeholder="Anna">
+                <span class="absolute top-2 right-3 border-l cursor-pointer pl-2 border-[#83BBFC]"><svg width="18"
                     height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M16.4144 4.152C16.3507 4.03083 16.2552 3.92935 16.1381 3.85851C16.021 3.78766 15.8867 3.75014 15.7499 3.75H2.24986C2.11324 3.75056 1.97936 3.78836 1.86262 3.85932C1.74588 3.93028 1.65069 4.03173 1.58729 4.15274C1.52389 4.27376 1.49467 4.40977 1.50279 4.54615C1.51091 4.68253 1.55605 4.81411 1.63336 4.92675L8.38336 14.6767C8.45217 14.7767 8.54423 14.8584 8.65163 14.9148C8.75903 14.9713 8.87853 15.0008 8.99986 15.0008C9.12119 15.0008 9.2407 14.9713 9.34809 14.9148C9.45549 14.8584 9.54756 14.7767 9.61636 14.6767L16.3664 4.92675C16.4444 4.81434 16.4902 4.68268 16.4986 4.54608C16.5071 4.40949 16.478 4.27319 16.4144 4.152ZM8.99986 12.9322L3.68086 5.25H14.3189L8.99986 12.9322Z"
@@ -447,11 +489,405 @@
                   </svg>
                 </span>
               </div>
+            </div>
+          </div>
+          <div>
+            <label class="font-[Lato] block font-[600] text-[20px] " for="proptery_type">
+              Total Area
+              <span class="text-[#FF3600] text-[15px] ">*</span> :
+            </label>
+            <div class="flex gap-3 mt-2">
+              <div>
+                <input
+                  class="text-[#656565] font-[Lato] font-[400] text-[18px] rounded-[5px] border border-[#83BBFC] px-6 py-1 outline-none max-w-[250px]"
+                  type="text" placeholder="eg. 0-1-2-4 / 325">
+              </div>
+              <div class="relative">
+                <input
+                  class="text-[#656565] font-[Lato] max-w-[250px] font-[400] text-[18px] rounded-[5px] border border-[#83BBFC] px-6 py-1 outline-none "
+                  type="text" placeholder="Anna">
+                <span class="absolute top-2 right-3 border-l cursor-pointer pl-2 border-[#83BBFC]"><svg width="18"
+                    height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M16.4144 4.152C16.3507 4.03083 16.2552 3.92935 16.1381 3.85851C16.021 3.78766 15.8867 3.75014 15.7499 3.75H2.24986C2.11324 3.75056 1.97936 3.78836 1.86262 3.85932C1.74588 3.93028 1.65069 4.03173 1.58729 4.15274C1.52389 4.27376 1.49467 4.40977 1.50279 4.54615C1.51091 4.68253 1.55605 4.81411 1.63336 4.92675L8.38336 14.6767C8.45217 14.7767 8.54423 14.8584 8.65163 14.9148C8.75903 14.9713 8.87853 15.0008 8.99986 15.0008C9.12119 15.0008 9.2407 14.9713 9.34809 14.9148C9.45549 14.8584 9.54756 14.7767 9.61636 14.6767L16.3664 4.92675C16.4444 4.81434 16.4902 4.68268 16.4986 4.54608C16.5071 4.40949 16.478 4.27319 16.4144 4.152ZM8.99986 12.9322L3.68086 5.25H14.3189L8.99986 12.9322Z"
+                      fill="#83BBFC" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- property face -->
+        <div class="bg-white  px-8 py-3 rounded-[10px] ">
+          <label class="font-[Lato] block font-[600] text-[20px] my-5" for="proptery_face">
+            Property Face
+            <span class="text-[#FF3600] text-[15px] ">*</span> :
+          </label>
+          <div class="relative select ">
 
+            <select class="bg-white border border-[#83BBFC] py-2 px-14" name="property_face" id="property_face">
+              <option class="" value="East">East</option>
+              <option value="West">West</option>
+              <option value="North">North</option>
+              <option value="South">South </option>
+            </select>
+          </div>
+
+        </div>
+        <!-- Road -->
+        <div class="bg-white  px-8 py-5 rounded-[10px] ">
+          <p class="font-[Lato] block pb-4 font-[600] text-[20px]" for="option">Road
+            :
+          </p>
+          <div class="flex gap-5">
+            <input
+              class="text-[#656565] font-[Lato] font-[400] text-[18px] rounded-[5px] border border-[#83BBFC] px-6 py-1 outline-none "
+              type="text" placeholder="Road Access (e.g. 14, 26)">
+            <div class="relative">
+              <input
+                class="text-[#656565]  font-[Lato] font-[400] text-[18px] rounded-[5px] border border-[#83BBFC] px-6 py-1 outline-none "
+                type="text" placeholder="Anna">
+              <span class="absolute top-2 right-3 border-l cursor-pointer pl-2 border-[#83BBFC]"><svg width="18"
+                  height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.4144 4.152C16.3507 4.03083 16.2552 3.92935 16.1381 3.85851C16.021 3.78766 15.8867 3.75014 15.7499 3.75H2.24986C2.11324 3.75056 1.97936 3.78836 1.86262 3.85932C1.74588 3.93028 1.65069 4.03173 1.58729 4.15274C1.52389 4.27376 1.49467 4.40977 1.50279 4.54615C1.51091 4.68253 1.55605 4.81411 1.63336 4.92675L8.38336 14.6767C8.45217 14.7767 8.54423 14.8584 8.65163 14.9148C8.75903 14.9713 8.87853 15.0008 8.99986 15.0008C9.12119 15.0008 9.2407 14.9713 9.34809 14.9148C9.45549 14.8584 9.54756 14.7767 9.61636 14.6767L16.3664 4.92675C16.4444 4.81434 16.4902 4.68268 16.4986 4.54608C16.5071 4.40949 16.478 4.27319 16.4144 4.152ZM8.99986 12.9322L3.68086 5.25H14.3189L8.99986 12.9322Z"
+                    fill="#83BBFC" />
+                </svg>
+              </span>
+            </div>
+            <div class="relative">
+              <input
+                class="text-[#656565]  font-[Lato] font-[400] text-[18px] rounded-[5px] border border-[#83BBFC] px-6 py-1 outline-none "
+                type="text" placeholder="Anna">
+              <span class="absolute top-2 right-3 border-l cursor-pointer pl-2 border-[#83BBFC]"><svg width="18"
+                  height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.4144 4.152C16.3507 4.03083 16.2552 3.92935 16.1381 3.85851C16.021 3.78766 15.8867 3.75014 15.7499 3.75H2.24986C2.11324 3.75056 1.97936 3.78836 1.86262 3.85932C1.74588 3.93028 1.65069 4.03173 1.58729 4.15274C1.52389 4.27376 1.49467 4.40977 1.50279 4.54615C1.51091 4.68253 1.55605 4.81411 1.63336 4.92675L8.38336 14.6767C8.45217 14.7767 8.54423 14.8584 8.65163 14.9148C8.75903 14.9713 8.87853 15.0008 8.99986 15.0008C9.12119 15.0008 9.2407 14.9713 9.34809 14.9148C9.45549 14.8584 9.54756 14.7767 9.61636 14.6767L16.3664 4.92675C16.4444 4.81434 16.4902 4.68268 16.4986 4.54608C16.5071 4.40949 16.478 4.27319 16.4144 4.152ZM8.99986 12.9322L3.68086 5.25H14.3189L8.99986 12.9322Z"
+                    fill="#83BBFC" />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+        <!-- Building detail -->
+        <div class="bg-white    px-8 py-5 rounded-[10px]">
+          <p class="font-[Lato] block pb-4 font-[600] text-[20px]" for="option">Building Detail :
+          </p>
+          <div class="flex gap-5">
+            <div class="relative">
+              <input
+                class="text-[#656565]  font-[Lato] font-[400] text-[18px] rounded-[5px] border border-[#83BBFC] px-6 py-1 outline-none "
+                type="text" placeholder="Built year
+">
+              <span class="absolute top-2 right-3 border-l cursor-pointer pl-2 border-[#83BBFC]"><svg width="18"
+                  height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.4144 4.152C16.3507 4.03083 16.2552 3.92935 16.1381 3.85851C16.021 3.78766 15.8867 3.75014 15.7499 3.75H2.24986C2.11324 3.75056 1.97936 3.78836 1.86262 3.85932C1.74588 3.93028 1.65069 4.03173 1.58729 4.15274C1.52389 4.27376 1.49467 4.40977 1.50279 4.54615C1.51091 4.68253 1.55605 4.81411 1.63336 4.92675L8.38336 14.6767C8.45217 14.7767 8.54423 14.8584 8.65163 14.9148C8.75903 14.9713 8.87853 15.0008 8.99986 15.0008C9.12119 15.0008 9.2407 14.9713 9.34809 14.9148C9.45549 14.8584 9.54756 14.7767 9.61636 14.6767L16.3664 4.92675C16.4444 4.81434 16.4902 4.68268 16.4986 4.54608C16.5071 4.40949 16.478 4.27319 16.4144 4.152ZM8.99986 12.9322L3.68086 5.25H14.3189L8.99986 12.9322Z"
+                    fill="#83BBFC" />
+                </svg>
+              </span>
+            </div>
+            <div class="relative">
+              <input
+                class="text-[#656565]  font-[Lato] font-[400] text-[18px] rounded-[5px] border border-[#83BBFC] px-6 py-1 outline-none "
+                type="text" placeholder="Total Floors
+">
+              <span class="absolute top-2 right-3 border-l cursor-pointer pl-2 border-[#83BBFC]"><svg width="18"
+                  height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.4144 4.152C16.3507 4.03083 16.2552 3.92935 16.1381 3.85851C16.021 3.78766 15.8867 3.75014 15.7499 3.75H2.24986C2.11324 3.75056 1.97936 3.78836 1.86262 3.85932C1.74588 3.93028 1.65069 4.03173 1.58729 4.15274C1.52389 4.27376 1.49467 4.40977 1.50279 4.54615C1.51091 4.68253 1.55605 4.81411 1.63336 4.92675L8.38336 14.6767C8.45217 14.7767 8.54423 14.8584 8.65163 14.9148C8.75903 14.9713 8.87853 15.0008 8.99986 15.0008C9.12119 15.0008 9.2407 14.9713 9.34809 14.9148C9.45549 14.8584 9.54756 14.7767 9.61636 14.6767L16.3664 4.92675C16.4444 4.81434 16.4902 4.68268 16.4986 4.54608C16.5071 4.40949 16.478 4.27319 16.4144 4.152ZM8.99986 12.9322L3.68086 5.25H14.3189L8.99986 12.9322Z"
+                    fill="#83BBFC" />
+                </svg>
+              </span>
+            </div>
+            <div class="relative">
+              <input
+                class="text-[#656565]  font-[Lato] font-[400] text-[18px] rounded-[5px] border border-[#83BBFC] px-6 py-1 outline-none "
+                type="text" placeholder="
+Furnishing
+">
+              <span class="absolute top-2 right-3 border-l cursor-pointer pl-2 border-[#83BBFC]"><svg width="18"
+                  height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.4144 4.152C16.3507 4.03083 16.2552 3.92935 16.1381 3.85851C16.021 3.78766 15.8867 3.75014 15.7499 3.75H2.24986C2.11324 3.75056 1.97936 3.78836 1.86262 3.85932C1.74588 3.93028 1.65069 4.03173 1.58729 4.15274C1.52389 4.27376 1.49467 4.40977 1.50279 4.54615C1.51091 4.68253 1.55605 4.81411 1.63336 4.92675L8.38336 14.6767C8.45217 14.7767 8.54423 14.8584 8.65163 14.9148C8.75903 14.9713 8.87853 15.0008 8.99986 15.0008C9.12119 15.0008 9.2407 14.9713 9.34809 14.9148C9.45549 14.8584 9.54756 14.7767 9.61636 14.6767L16.3664 4.92675C16.4444 4.81434 16.4902 4.68268 16.4986 4.54608C16.5071 4.40949 16.478 4.27319 16.4144 4.152ZM8.99986 12.9322L3.68086 5.25H14.3189L8.99986 12.9322Z"
+                    fill="#83BBFC" />
+                </svg>
+              </span>
+            </div>
+          </div>
+
+        </div>
+        <!--  kitchen,bedroom bathroom -->
+        <div class="flex bg-white">
+          <!-- kitchen -->
+          <div class="  py-5 px-8   ">
+            <div class="flex items-center gap-5"><label class="font-[lato] font-[600] text-[20px]" for="kitchen">Kitchen
+                :</label>
+              <div class="flex relative py-1 rounded-[5px] border border-[#83BBFC] ">
+                <span class="absolute top-2 left-0 pr-1 cursor-pointer border-r border-[#83BBFC]">
+                  <svg width="30" height="30" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12.5 6.25C12.7072 6.25 12.9059 6.33231 13.0524 6.47882C13.1989 6.62534 13.2812 6.82405 13.2812 7.03125V16.0828L16.6344 12.7281C16.7811 12.5814 16.98 12.499 17.1875 12.499C17.395 12.499 17.5939 12.5814 17.7406 12.7281C17.8873 12.8748 17.9697 13.0738 17.9697 13.2812C17.9697 13.4887 17.8873 13.6877 17.7406 13.8344L13.0531 18.5219C12.9805 18.5946 12.8943 18.6524 12.7994 18.6917C12.7045 18.7311 12.6028 18.7514 12.5 18.7514C12.3972 18.7514 12.2955 18.7311 12.2006 18.6917C12.1056 18.6524 12.0194 18.5946 11.9469 18.5219L7.25936 13.8344C7.11267 13.6877 7.03025 13.4887 7.03025 13.2812C7.03025 13.0738 7.11267 12.8748 7.25936 12.7281C7.40606 12.5814 7.60503 12.499 7.81249 12.499C8.01995 12.499 8.21892 12.5814 8.36561 12.7281L11.7187 16.0828V7.03125C11.7187 6.82405 11.801 6.62534 11.9476 6.47882C12.0941 6.33231 12.2928 6.25 12.5 6.25Z"
+                      fill="#83BBFC" />
+                  </svg>
+
+                </span>
+                <input readonly type="text" placeholder="1" id="kitchen" class="w-[130px] outline-none px-14 py-2">
+                <span class="absolute top-2 cursor-pointer right-0 border-l pl-1 border-[#83BBFC]">
+                  <svg width="30" height="30" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12.5 18.75C12.2928 18.75 12.0941 18.6677 11.9476 18.5212C11.8011 18.3747 11.7188 18.176 11.7188 17.9688V8.91719L8.36564 12.2719C8.21894 12.4186 8.01997 12.501 7.81251 12.501C7.60505 12.501 7.40608 12.4186 7.25939 12.2719C7.11269 12.1252 7.03027 11.9262 7.03027 11.7188C7.03027 11.5113 7.11269 11.3123 7.25939 11.1656L11.9469 6.47812C12.0195 6.40537 12.1057 6.34765 12.2006 6.30826C12.2955 6.26888 12.3972 6.2486 12.5 6.2486C12.6028 6.2486 12.7045 6.26888 12.7994 6.30826C12.8944 6.34765 12.9806 6.40537 13.0531 6.47812L17.7406 11.1656C17.8873 11.3123 17.9697 11.5113 17.9697 11.7188C17.9697 11.9262 17.8873 12.1252 17.7406 12.2719C17.5939 12.4186 17.395 12.501 17.1875 12.501C16.98 12.501 16.7811 12.4186 16.6344 12.2719L13.2813 8.91719V17.9688C13.2813 18.176 13.199 18.3747 13.0524 18.5212C12.9059 18.6677 12.7072 18.75 12.5 18.75Z"
+                      fill="#83BBFC" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+
+          </div>
+          <!-- bedrooms -->
+          <div class=" bg-white py-5 px-8   ">
+            <div class="flex items-center gap-5"><label class="font-[lato] font-[600] text-[20px]" for="kitchen">Bedroom
+
+                :</label>
+              <div class="flex relative py-1 rounded-[5px] border border-[#83BBFC] ">
+                <span class="absolute top-2 left-0 pr-1 cursor-pointer border-r border-[#83BBFC]">
+                  <svg width="30" height="30" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12.5 6.25C12.7072 6.25 12.9059 6.33231 13.0524 6.47882C13.1989 6.62534 13.2812 6.82405 13.2812 7.03125V16.0828L16.6344 12.7281C16.7811 12.5814 16.98 12.499 17.1875 12.499C17.395 12.499 17.5939 12.5814 17.7406 12.7281C17.8873 12.8748 17.9697 13.0738 17.9697 13.2812C17.9697 13.4887 17.8873 13.6877 17.7406 13.8344L13.0531 18.5219C12.9805 18.5946 12.8943 18.6524 12.7994 18.6917C12.7045 18.7311 12.6028 18.7514 12.5 18.7514C12.3972 18.7514 12.2955 18.7311 12.2006 18.6917C12.1056 18.6524 12.0194 18.5946 11.9469 18.5219L7.25936 13.8344C7.11267 13.6877 7.03025 13.4887 7.03025 13.2812C7.03025 13.0738 7.11267 12.8748 7.25936 12.7281C7.40606 12.5814 7.60503 12.499 7.81249 12.499C8.01995 12.499 8.21892 12.5814 8.36561 12.7281L11.7187 16.0828V7.03125C11.7187 6.82405 11.801 6.62534 11.9476 6.47882C12.0941 6.33231 12.2928 6.25 12.5 6.25Z"
+                      fill="#83BBFC" />
+                  </svg>
+
+                </span>
+                <input readonly type="text" placeholder="1" id="kitchen" class="w-[130px] outline-none px-14 py-2">
+                <span class="absolute top-2 cursor-pointer right-0 border-l pl-1 border-[#83BBFC]">
+                  <svg width="30" height="30" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12.5 18.75C12.2928 18.75 12.0941 18.6677 11.9476 18.5212C11.8011 18.3747 11.7188 18.176 11.7188 17.9688V8.91719L8.36564 12.2719C8.21894 12.4186 8.01997 12.501 7.81251 12.501C7.60505 12.501 7.40608 12.4186 7.25939 12.2719C7.11269 12.1252 7.03027 11.9262 7.03027 11.7188C7.03027 11.5113 7.11269 11.3123 7.25939 11.1656L11.9469 6.47812C12.0195 6.40537 12.1057 6.34765 12.2006 6.30826C12.2955 6.26888 12.3972 6.2486 12.5 6.2486C12.6028 6.2486 12.7045 6.26888 12.7994 6.30826C12.8944 6.34765 12.9806 6.40537 13.0531 6.47812L17.7406 11.1656C17.8873 11.3123 17.9697 11.5113 17.9697 11.7188C17.9697 11.9262 17.8873 12.1252 17.7406 12.2719C17.5939 12.4186 17.395 12.501 17.1875 12.501C16.98 12.501 16.7811 12.4186 16.6344 12.2719L13.2813 8.91719V17.9688C13.2813 18.176 13.199 18.3747 13.0524 18.5212C12.9059 18.6677 12.7072 18.75 12.5 18.75Z"
+                      fill="#83BBFC" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+
+          </div>
+          <!-- bathrooms -->
+          <div class=" bg-white py-5 px-8   ">
+            <div class="flex items-center gap-5"><label class="font-[lato] font-[600] text-[20px]"
+                for="kitchen">Bathrooom:</label>
+              <div class="flex relative py-1 rounded-[5px] border border-[#83BBFC] ">
+                <span class="absolute top-2 left-0 pr-1 cursor-pointer border-r border-[#83BBFC]">
+                  <svg width="30" height="30" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12.5 6.25C12.7072 6.25 12.9059 6.33231 13.0524 6.47882C13.1989 6.62534 13.2812 6.82405 13.2812 7.03125V16.0828L16.6344 12.7281C16.7811 12.5814 16.98 12.499 17.1875 12.499C17.395 12.499 17.5939 12.5814 17.7406 12.7281C17.8873 12.8748 17.9697 13.0738 17.9697 13.2812C17.9697 13.4887 17.8873 13.6877 17.7406 13.8344L13.0531 18.5219C12.9805 18.5946 12.8943 18.6524 12.7994 18.6917C12.7045 18.7311 12.6028 18.7514 12.5 18.7514C12.3972 18.7514 12.2955 18.7311 12.2006 18.6917C12.1056 18.6524 12.0194 18.5946 11.9469 18.5219L7.25936 13.8344C7.11267 13.6877 7.03025 13.4887 7.03025 13.2812C7.03025 13.0738 7.11267 12.8748 7.25936 12.7281C7.40606 12.5814 7.60503 12.499 7.81249 12.499C8.01995 12.499 8.21892 12.5814 8.36561 12.7281L11.7187 16.0828V7.03125C11.7187 6.82405 11.801 6.62534 11.9476 6.47882C12.0941 6.33231 12.2928 6.25 12.5 6.25Z"
+                      fill="#83BBFC" />
+                  </svg>
+
+                </span>
+                <input readonly type="text" placeholder="1" id="kitchen" class="w-[130px] outline-none px-14 py-2">
+                <span class="absolute top-2 cursor-pointer right-0 border-l pl-1 border-[#83BBFC]">
+                  <svg width="30" height="30" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12.5 18.75C12.2928 18.75 12.0941 18.6677 11.9476 18.5212C11.8011 18.3747 11.7188 18.176 11.7188 17.9688V8.91719L8.36564 12.2719C8.21894 12.4186 8.01997 12.501 7.81251 12.501C7.60505 12.501 7.40608 12.4186 7.25939 12.2719C7.11269 12.1252 7.03027 11.9262 7.03027 11.7188C7.03027 11.5113 7.11269 11.3123 7.25939 11.1656L11.9469 6.47812C12.0195 6.40537 12.1057 6.34765 12.2006 6.30826C12.2955 6.26888 12.3972 6.2486 12.5 6.2486C12.6028 6.2486 12.7045 6.26888 12.7994 6.30826C12.8944 6.34765 12.9806 6.40537 13.0531 6.47812L17.7406 11.1656C17.8873 11.3123 17.9697 11.5113 17.9697 11.7188C17.9697 11.9262 17.8873 12.1252 17.7406 12.2719C17.5939 12.4186 17.395 12.501 17.1875 12.501C16.98 12.501 16.7811 12.4186 16.6344 12.2719L13.2813 8.91719V17.9688C13.2813 18.176 13.199 18.3747 13.0524 18.5212C12.9059 18.6677 12.7072 18.75 12.5 18.75Z"
+                      fill="#83BBFC" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- parking and living rooms  -->
+        <div class="flex bg-white gap-16 w-full py-5 px-8">
+          <!-- parking -->
+          <div class=" bg-white py-5    ">
+            <div class="flex items-center gap-5"><label class="font-[lato] font-[600] text-[20px]"
+                for="kitchen">Parking:</label>
+              <div class="flex relative py-1 rounded-[5px] border border-[#83BBFC] ">
+                <span class="absolute top-2 left-0 pr-1 cursor-pointer border-r border-[#83BBFC]">
+                  <svg width="30" height="30" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12.5 6.25C12.7072 6.25 12.9059 6.33231 13.0524 6.47882C13.1989 6.62534 13.2812 6.82405 13.2812 7.03125V16.0828L16.6344 12.7281C16.7811 12.5814 16.98 12.499 17.1875 12.499C17.395 12.499 17.5939 12.5814 17.7406 12.7281C17.8873 12.8748 17.9697 13.0738 17.9697 13.2812C17.9697 13.4887 17.8873 13.6877 17.7406 13.8344L13.0531 18.5219C12.9805 18.5946 12.8943 18.6524 12.7994 18.6917C12.7045 18.7311 12.6028 18.7514 12.5 18.7514C12.3972 18.7514 12.2955 18.7311 12.2006 18.6917C12.1056 18.6524 12.0194 18.5946 11.9469 18.5219L7.25936 13.8344C7.11267 13.6877 7.03025 13.4887 7.03025 13.2812C7.03025 13.0738 7.11267 12.8748 7.25936 12.7281C7.40606 12.5814 7.60503 12.499 7.81249 12.499C8.01995 12.499 8.21892 12.5814 8.36561 12.7281L11.7187 16.0828V7.03125C11.7187 6.82405 11.801 6.62534 11.9476 6.47882C12.0941 6.33231 12.2928 6.25 12.5 6.25Z"
+                      fill="#83BBFC" />
+                  </svg>
+
+                </span>
+                <input readonly type="text" placeholder="1" id="kitchen" class="w-[130px] outline-none px-14 py-2">
+                <span class="absolute top-2 cursor-pointer right-0 border-l pl-1 border-[#83BBFC]">
+                  <svg width="30" height="30" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12.5 18.75C12.2928 18.75 12.0941 18.6677 11.9476 18.5212C11.8011 18.3747 11.7188 18.176 11.7188 17.9688V8.91719L8.36564 12.2719C8.21894 12.4186 8.01997 12.501 7.81251 12.501C7.60505 12.501 7.40608 12.4186 7.25939 12.2719C7.11269 12.1252 7.03027 11.9262 7.03027 11.7188C7.03027 11.5113 7.11269 11.3123 7.25939 11.1656L11.9469 6.47812C12.0195 6.40537 12.1057 6.34765 12.2006 6.30826C12.2955 6.26888 12.3972 6.2486 12.5 6.2486C12.6028 6.2486 12.7045 6.26888 12.7994 6.30826C12.8944 6.34765 12.9806 6.40537 13.0531 6.47812L17.7406 11.1656C17.8873 11.3123 17.9697 11.5113 17.9697 11.7188C17.9697 11.9262 17.8873 12.1252 17.7406 12.2719C17.5939 12.4186 17.395 12.501 17.1875 12.501C16.98 12.501 16.7811 12.4186 16.6344 12.2719L13.2813 8.91719V17.9688C13.2813 18.176 13.199 18.3747 13.0524 18.5212C12.9059 18.6677 12.7072 18.75 12.5 18.75Z"
+                      fill="#83BBFC" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+
+          </div>
+          <!-- living rooms -->
+          <div class=" bg-white py-5    ">
+            <div class="flex items-center gap-5"><label class="font-[lato] font-[600] text-[20px]" for="kitchen">Living
+                Room:</label>
+              <div class="flex relative py-1 rounded-[5px] border border-[#83BBFC] ">
+                <span class="absolute top-2 left-0 pr-1 cursor-pointer border-r border-[#83BBFC]">
+                  <svg width="30" height="30" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12.5 6.25C12.7072 6.25 12.9059 6.33231 13.0524 6.47882C13.1989 6.62534 13.2812 6.82405 13.2812 7.03125V16.0828L16.6344 12.7281C16.7811 12.5814 16.98 12.499 17.1875 12.499C17.395 12.499 17.5939 12.5814 17.7406 12.7281C17.8873 12.8748 17.9697 13.0738 17.9697 13.2812C17.9697 13.4887 17.8873 13.6877 17.7406 13.8344L13.0531 18.5219C12.9805 18.5946 12.8943 18.6524 12.7994 18.6917C12.7045 18.7311 12.6028 18.7514 12.5 18.7514C12.3972 18.7514 12.2955 18.7311 12.2006 18.6917C12.1056 18.6524 12.0194 18.5946 11.9469 18.5219L7.25936 13.8344C7.11267 13.6877 7.03025 13.4887 7.03025 13.2812C7.03025 13.0738 7.11267 12.8748 7.25936 12.7281C7.40606 12.5814 7.60503 12.499 7.81249 12.499C8.01995 12.499 8.21892 12.5814 8.36561 12.7281L11.7187 16.0828V7.03125C11.7187 6.82405 11.801 6.62534 11.9476 6.47882C12.0941 6.33231 12.2928 6.25 12.5 6.25Z"
+                      fill="#83BBFC" />
+                  </svg>
+
+                </span>
+                <input readonly type="text" placeholder="1" id="kitchen" class="w-[130px] outline-none px-14 py-2">
+                <span class="absolute top-2 cursor-pointer right-0 border-l pl-1 border-[#83BBFC]">
+                  <svg width="30" height="30" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12.5 18.75C12.2928 18.75 12.0941 18.6677 11.9476 18.5212C11.8011 18.3747 11.7188 18.176 11.7188 17.9688V8.91719L8.36564 12.2719C8.21894 12.4186 8.01997 12.501 7.81251 12.501C7.60505 12.501 7.40608 12.4186 7.25939 12.2719C7.11269 12.1252 7.03027 11.9262 7.03027 11.7188C7.03027 11.5113 7.11269 11.3123 7.25939 11.1656L11.9469 6.47812C12.0195 6.40537 12.1057 6.34765 12.2006 6.30826C12.2955 6.26888 12.3972 6.2486 12.5 6.2486C12.6028 6.2486 12.7045 6.26888 12.7994 6.30826C12.8944 6.34765 12.9806 6.40537 13.0531 6.47812L17.7406 11.1656C17.8873 11.3123 17.9697 11.5113 17.9697 11.7188C17.9697 11.9262 17.8873 12.1252 17.7406 12.2719C17.5939 12.4186 17.395 12.501 17.1875 12.501C16.98 12.501 16.7811 12.4186 16.6344 12.2719L13.2813 8.91719V17.9688C13.2813 18.176 13.199 18.3747 13.0524 18.5212C12.9059 18.6677 12.7072 18.75 12.5 18.75Z"
+                      fill="#83BBFC" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- Amenities -->
+        <div class="bg-white py-5 px-8 rounded-[10px]">
+          <p class="font-[Lato] block pb-4 font-[600] text-[20px]" for="option">Amenities
+            :
+          </p>
+          <div class="font-[Lato] font-[400] text-[19px] text-[#656565] flex flex-wrap gap-6">
+            <p
+              class=" border border-[#83BBFC] hover:text-[#83BBFC] w-[170px] h-[43px] flex items-center justify-center cursor-pointer">
+              Lawn
+            </p>
+            <p
+              class="border border-[#83BBFC] hover:text-[#83BBFC] w-[170px] h-[43px] flex items-center justify-center cursor-pointer">
+              Drainage</p>
+            <p
+              class="border border-[#83BBFC] hover:text-[#83BBFC] w-[170px] h-[43px] flex items-center justify-center cursor-pointer">
+              Jacuzzi</p>
+            <p
+              class="border border-[#83BBFC] hover:text-[#83BBFC] w-[170px] h-[43px] flex items-center justify-center cursor-pointer">
+              Garage
+            </p>
+            <p
+              class="border border-[#83BBFC] hover:text-[#83BBFC] w-[170px] h-[43px] flex items-center justify-center cursor-pointer">
+              Parking</p>
+            <p
+              class="border border-[#83BBFC] hover:text-[#83BBFC] w-[170px] h-[43px] flex items-center justify-center cursor-pointer">
+              Air
+              Condition</p>
+            <p
+              class="border border-[#83BBFC] hover:text-[#83BBFC] w-[170px] h-[43px] flex items-center justify-center cursor-pointer">
+              Balcony</p>
+            <p
+              class="border border-[#83BBFC] hover:text-[#83BBFC] w-[170px] h-[43px] flex items-center justify-center cursor-pointer">
+              Deck
+            </p>
+            <p
+              class="border border-[#83BBFC] hover:text-[#83BBFC] w-[170px] h-[43px] flex items-center justify-center cursor-pointer">
+              Fencing</p>
+            <p
+              class="border border-[#83BBFC] hover:text-[#83BBFC] w-[170px] h-[43px] flex items-center justify-center cursor-pointer">
+              Water
+              Supply</p>
+            <p
+              class="border border-[#83BBFC] hover:text-[#83BBFC] w-[170px] h-[43px] flex items-center justify-center cursor-pointer">
+              Garden
+            </p>
+            <p
+              class="border border-[#83BBFC] hover:text-[#83BBFC] w-[170px] h-[43px] flex items-center justify-center cursor-pointer">
+              CCTV
+            </p>
+            <p
+              class="border border-[#83BBFC] hover:text-[#83BBFC] w-[170px] h-[43px] flex items-center justify-center cursor-pointer">
+              Gym
+            </p>
+            <p
+              class="border border-[#83BBFC] hover:text-[#83BBFC] w-[170px] h-[43px] flex items-center justify-center cursor-pointer">
+              Microwave</p>
+            <p
+              class="border border-[#83BBFC] hover:text-[#83BBFC] w-[170px] h-[43px] flex items-center justify-center cursor-pointer">
+              Modular Kitchen</p>
+
+          </div>
+
+        </div>
+        <!-- picture section -->
+        <div class="bg-white flex justify-between my-5 px-8  pb-6 rounded-[10px]">
+          <!-- picture -->
+          <div>
+            <p class="font-[Lato] font-[600] text-[20px] block py-5 mb-6" for="option">Upload Photos <span
+                class="text-[#FF3600] text-[15px]  ">*</span>
+              :
+            </p>
+            <div id="dropZone"
+              class="border-dashed border border-[#818181] overflow-hidden p-5 h-[421px] w-[507px] rounded-[12px] ">
+              <h1>Drag & Drop</h1>
+              <h3>Your files to Assets, or <a href="#" class="text-[#0063D5] border-b border-[]">Browser</a></h3>
 
             </div>
-            <div></div>
           </div>
+
+          <!-- video -->
+          <div>
+            <p class="font-[Lato] font-[600] text-[20px] block py-5 mb-6" for="option">Upload Videos <span
+                class="text-[#FF3600] text-[15px]  ">*</span>
+              :
+            </p>
+            <div class="border-dashed  border border-[#818181] h-[421px] w-[507px] p-5 rounded-[12px] ">
+              <h1>Drag & Drop</h1>
+              <h3>Your files to Assets, or <a href="#" class="text-[#0063D5] border-b border-[]">Browser</a></h3>
+            </div>
+          </div>
+
+        </div>
+        <!-- last section -->
+        <div class="bg-white my-5 px-8 py-3 rounded-[10px]">
+          <!-- property title -->
+          <div>
+            <label class="font-[Lato] block my-6 font-[600] text-[20px]" for="proptery_title">Property Title <span
+                class="text-[#FF3600] text-[15px] ">*</span>
+              :
+            </label>
+            <input type="text" placeholder="Property Title"
+              class="font-[Lato] font-[400] outline-none text-[19px] text-[#656565] w-[310px] rounded-[5px]  border border-[#83BBFC] py-2 px-6"
+              id="property_title">
+          </div>
+          <!-- Description -->
+          <div>
+            <label class="font-[Lato] block my-6 font-[600] text-[20px]" for="proptery_title">Description <span
+                class="text-[#FF3600] text-[15px] ">*</span>
+              :
+            </label>
+            <textarea
+              class="border font-[Lato] font-[400] text-[19px] text-[#656565] border-[#83BBFC] px-6 py-2 rounded-[5px] outline-none"
+              name="description" id="description" cols="50" rows="10">Write Something about your property</textarea>
+          </div>
+          <!-- price -->
+          <div>
+            <label class="font-[Lato] block my-6 font-[600] text-[20px]" for="proptery_title">Price<span
+                class="text-[#FF3600] text-[15px] px-1 ">*</span>
+              :
+            </label>
+            <div class="flex gap-10">
+              <input
+                class="font-[Lato] font-[400] text-[19px] text-[#656565] w-[310px] rounded-[5px]  border border-[#83BBFC] py-2 px-6 outline-none"
+                type="number" placeholder="Property Price">
+              <div class="relative">
+                <input
+                  class="text-[#656565]  font-[Lato] font-[400] text-[18px] rounded-[5px] border border-[#83BBFC] px-6 py-2 outline-none "
+                  type="text" placeholder="Price Label">
+                <span class="absolute top-3 right-3 border-l cursor-pointer pl-2 border-[#83BBFC]"><svg width="19"
+                    height="19" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M16.4144 4.152C16.3507 4.03083 16.2552 3.92935 16.1381 3.85851C16.021 3.78766 15.8867 3.75014 15.7499 3.75H2.24986C2.11324 3.75056 1.97936 3.78836 1.86262 3.85932C1.74588 3.93028 1.65069 4.03173 1.58729 4.15274C1.52389 4.27376 1.49467 4.40977 1.50279 4.54615C1.51091 4.68253 1.55605 4.81411 1.63336 4.92675L8.38336 14.6767C8.45217 14.7767 8.54423 14.8584 8.65163 14.9148C8.75903 14.9713 8.87853 15.0008 8.99986 15.0008C9.12119 15.0008 9.2407 14.9713 9.34809 14.9148C9.45549 14.8584 9.54756 14.7767 9.61636 14.6767L16.3664 4.92675C16.4444 4.81434 16.4902 4.68268 16.4986 4.54608C16.5071 4.40949 16.478 4.27319 16.4144 4.152ZM8.99986 12.9322L3.68086 5.25H14.3189L8.99986 12.9322Z"
+                      fill="#83BBFC" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
       </form>
     </div>
 
@@ -575,6 +1011,39 @@
     var layer = new L.TileLayer( 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' );
     map.addLayer( layer );
 
+
+
+  </script>
+  <script>
+    const dropZone = document.getElementById( "dropZone" );
+    dropZone.addEventListener( 'dragenter', ( e ) =>
+    {
+      e.preventDefault();
+      dropZone.classList.add( 'active' )
+    } )
+    dropZone.addEventListener( 'dragleave', ( e ) =>
+    {
+      e.preventDefault();
+      dropZone.classList.remove( 'active' )
+    } )
+    dropZone.addEventListener( 'dragover', ( e ) =>
+    {
+      e.preventDefault();
+    } )
+    dropZone.addEventListener( 'drop', ( e ) =>
+    {
+      e.preventDefault();
+      dropZone.classList.remove( 'active' );
+      const file = event.dataTransfer.files[ 0 ];
+      const reader = new FileReader();
+      reader.readAsDataURL( file );
+      reader.addEventListener( 'loadend', () =>
+      {
+        const img = document.createElement( 'img' );
+        img.src = reader.result;
+        dropZone.append( img )
+      } )
+    } )
 
 
   </script>
