@@ -352,64 +352,49 @@
         </div>
       </div>
       <!-- gallery -->
-      <div class="w-full relative">
-        <div class=" grid-container ">
-          <div class="third">
-            <img class="block w-full  h-full  object-cover   " src="/assets/Rectangle 139.jpg" alt="">
-          </div>
+      <div class="md:flex  gap-2">
+        <!-- big image  -->
+        <div class="w-full h-[350px] order-1 lg:h-[539px] xl:h-[639px] mb-2">
+          <img id="image_container" class=" object-fill w-full h-full block " src="/assets/Rectangle 138.jpg" alt="">
+        </div>
+        <!-- small images -->
+        <div class="flex gap-2  change_image">
+          <div class="w-[50%]">
+            <div class="mb-2 cursor-pointer w-full lg:h-[265px] xl:h-[314px] h-[120px] sm:h-[160px] md:max-w-[250px]">
+              <img class="block  w-full h-full   object-cover" onclick="handleClick(event)"
+                src="/assets/Rectangle 139.jpg" alt="">
+            </div>
+            <div class="cursor-pointer w-full xl:h-[314px] lg:h-[265px] h-[120px] sm:h-[160px] md:max-w-[250px]">
+              <img onclick="handleClick(event)" class="block h-full w-full  object-cover "
+                src="/assets/Rectangle 140.jpg" alt="">
+            </div>
 
-          <div class="second">
-            <img class="block w-full  h-full  object-cover " src="/assets/Rectangle 140.jpg" alt="">
           </div>
+          <div class='w-[50%]'>
+            <div class="mb-2 cursor-pointer w-full  md:max-w-[250px] xl:h-[314px] lg:h-[265px] h-[120px] sm:h-[160px]">
+              <img onclick="handleClick(event)" class="  block  w-full h-full  object-cover"
+                src="/assets/Rectangle 141.jpg" alt="">
+            </div>
+            <div id="change_images"
+              class="five w-full md:max-w-[250px] xl:h-[314px] lg:h-[265px] h-[120px] sm:h-[160px] relative  cursor-pointer">
 
+              <span
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  text-white text-3xl ">+4</span>
+              <img class="  block w-full h-full  object-cover" src="/assets/Rectangle 142.jpg" alt="">
+            </div>
+            <!-- extra picture -->
+            <div id="extra_images" class="hidden">
+              <img src="/assets/Property 1=Frame 6.jpg" alt="">
+              <img src="/assets/Property 1=Frame 7.jpg" alt="">
+              <img src="/assets/Property 1=Frame 8.jpg" alt="">
+              <img src="/assets/Rectangle 142.jpg" alt="">
+              <img src="/assets/big-image.jpg" alt="">
+              <img src="/assets/Rectangle 43.jpg" alt="">
+            </div>
 
-          <div class="four">
-            <img class="  block w-full  h-full  object-cover" src="/assets/Rectangle 141.jpg" alt="">
-          </div>
-
-          <div class="five relative  cursor-pointer" onclick="imageSlider()">
-            <!-- add the number of image we have -->
-            <span
-              class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  text-white text-3xl ">+4</span>
-            <img class="  block w-full  h-full object-cover" src="/assets/Rectangle 142.jpg" alt="">
-          </div>
-          <div class="first col-start-3 col-end-7 row-start-1 row-end-3">
-            <img class=" object-cover w-full  block " src="/assets/Rectangle 138.jpg" alt="">
           </div>
         </div>
-        <!-- image show in pop up -->
-        <div class="hidden absolute inset-0 h-screen w-screen overflow-hidden  bg-gray-200 ">
-          <div class="image-slider  flex overflow-x-auto">
-            <div class="h-[600px] w-[900px]">
-              <img class="w-full h-full" src="https://picsum.photos/200/300" alt="">
-            </div>
-            <div>
-              <img class="w-full h-full" src="https://picsum.photos/200/300" alt="">
-            </div>
-            <div>
-              <img class="w-full h-full" src="https://picsum.photos/200/300" alt="">
-            </div>
-            <div>
-              <img class="w-full h-full" src="https://picsum.photos/200/300" alt="">
-            </div>
-            <div>
-              <img class="w-full h-full" src="https://picsum.photos/200/300" alt="">
-            </div>
-            <div>
-              <img class="w-full h-full" src="https://picsum.photos/200/300" alt="">
-            </div>
-            <div>
-              <img class="w-full h-full" src="https://picsum.photos/200/300" alt="">
-            </div>
-            <div>
-              <img class="w-full h-full" src="https://picsum.photos/200/300" alt="">
-            </div>
-            <div>
-              <img class="w-full h-full" src="https://picsum.photos/200/300" alt="">
-            </div>
-          </div>
 
-        </div>
       </div>
       <!-- second section -->
       <div class="flex flex-col md:flex-row  gap-8 py-3">
@@ -1380,16 +1365,36 @@
         class="block text-[12px] font-[500]">All rights
         reserved</span></div>
   </footer>
+
+
+
   <script>
-    function imageSlider ()
+    let i = 0;
+    const image_container = document.querySelector( "#image_container" );
+    let extra_images = document.querySelectorAll( "#extra_images img" )
+    let three_images = document.querySelectorAll( ".change_image .cursor-pointer img" )
+    const change_images = document.querySelector( '#change_images' );
+    extra_images = [ ...extra_images ]
+    three_images = [ ...three_images ]
+
+    function handleClick ( e )
     {
-      var imageSlider = document.querySelector( ".image-slider" );
-      imageSlider.parentNode.style.display = "block";
+      image_container.src = e.target.src;
     }
+
+    change_images.addEventListener( 'click', () =>
+    {
+      three_images.forEach( ( img ) =>
+      {
+
+        img.src = extra_images[ i ].src
+        i++;
+        console.log( i );
+      } )
+    } )
+
+
   </script>
-
-
-
 
   <!-- map -->
   <script>
