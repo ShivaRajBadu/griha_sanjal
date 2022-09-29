@@ -352,31 +352,35 @@
         </div>
       </div>
       <!-- gallery -->
-      <div class="md:flex  gap-2">
+      <div class="md:flex xl:gap-4  gap-2 xl:px-6 ">
         <!-- big image  -->
-        <div class="w-full h-[350px] order-1 lg:h-[539px] xl:h-[639px] mb-2">
+        <div
+          class="xl:w-[1120px] h-[200px] sm:h-[290px] md:w-[600px] lg:w-[950px] order-1  lg:h-[539px] xl:h-[618px] mb-2">
           <img id="image_container" class=" object-fill w-full h-full block " src="/assets/Rectangle 138.jpg" alt="">
         </div>
         <!-- small images -->
-        <div class="flex gap-2  change_image">
+        <div class="flex xl:gap-4 lg:gap-2 gap-2 ">
           <div class="w-[50%]">
-            <div class="mb-2 cursor-pointer w-full lg:h-[265px] xl:h-[314px] h-[120px] sm:h-[160px] md:max-w-[250px]">
+            <div
+              class="mb-2  change_image cursor-pointer w-full md:h-[141px] lg:h-[265px] xl:h-[305px] h-[120px] sm:h-[160px] md:w-[150px] xl:w-[250px]">
               <img class="block  w-full h-full   object-cover" onclick="handleClick(event)"
                 src="/assets/Rectangle 139.jpg" alt="">
             </div>
-            <div class="cursor-pointer w-full xl:h-[314px] lg:h-[265px] h-[120px] sm:h-[160px] md:max-w-[250px]">
+            <div
+              class="cursor-pointer  change_image w-full lg:h-[265px] xl:h-[305px] md:h-[141px] h-[120px] sm:h-[160px] md:w-[150px] xl:w-[250px]">
               <img onclick="handleClick(event)" class="block h-full w-full  object-cover "
                 src="/assets/Rectangle 140.jpg" alt="">
             </div>
 
           </div>
           <div class='w-[50%]'>
-            <div class="mb-2 cursor-pointer w-full  md:max-w-[250px] xl:h-[314px] lg:h-[265px] h-[120px] sm:h-[160px]">
+            <div
+              class="mb-2 cursor-pointer  change_image w-full  md:w-[150px] xl:h-[305px] md:h-[141px] lg:h-[265px] h-[120px] sm:h-[160px] xl:w-[250px]">
               <img onclick="handleClick(event)" class="  block  w-full h-full  object-cover"
                 src="/assets/Rectangle 141.jpg" alt="">
             </div>
-            <div id="change_images"
-              class="five w-full md:max-w-[250px] xl:h-[314px] lg:h-[265px] h-[120px] sm:h-[160px] relative  cursor-pointer">
+            <div id="image_changer"
+              class="five w-full md:w-[150px] xl:h-[305px] xl:w-[250px] md:h-[141px] lg:h-[265px] h-[120px] sm:h-[160px] relative  cursor-pointer">
 
               <span
                 class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  text-white text-3xl ">+4</span>
@@ -387,7 +391,7 @@
               <img src="/assets/Property 1=Frame 6.jpg" alt="">
               <img src="/assets/Property 1=Frame 7.jpg" alt="">
               <img src="/assets/Property 1=Frame 8.jpg" alt="">
-              <img src="/assets/Rectangle 142.jpg" alt="">
+
               <img src="/assets/big-image.jpg" alt="">
               <img src="/assets/Rectangle 43.jpg" alt="">
             </div>
@@ -1372,8 +1376,8 @@
     let i = 0;
     const image_container = document.querySelector( "#image_container" );
     let extra_images = document.querySelectorAll( "#extra_images img" )
-    let three_images = document.querySelectorAll( ".change_image .cursor-pointer img" )
-    const change_images = document.querySelector( '#change_images' );
+    let three_images = document.querySelectorAll( ".change_image  img" )
+    const image_changer = document.querySelector( '#image_changer' );
     extra_images = [ ...extra_images ]
     three_images = [ ...three_images ]
 
@@ -1382,14 +1386,18 @@
       image_container.src = e.target.src;
     }
 
-    change_images.addEventListener( 'click', () =>
+    image_changer.addEventListener( 'click', () =>
     {
       three_images.forEach( ( img ) =>
       {
+        if ( i === extra_images.length )
+        {
+          i = 0
+        }
 
         img.src = extra_images[ i ].src
         i++;
-        console.log( i );
+
       } )
     } )
 

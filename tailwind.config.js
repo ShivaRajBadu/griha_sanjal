@@ -17,9 +17,9 @@ module.exports = {
   ],
   theme: {
     extend: {
-      screens: {
-        lg: { min: "768px", max: "1280px" },
-      },
+      // screens: {
+      //   lg: { min: "768px", max: "1280px" },
+      // },
     },
   },
   plugins: [],
