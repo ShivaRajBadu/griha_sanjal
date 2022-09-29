@@ -49,7 +49,7 @@
   }
 
   .active {
-    border: 1px dashed #0063D5;
+    border: 2px solid #0063D5;
   }
 </style>
 
@@ -241,12 +241,12 @@
   </div>
   <main class="bg-[#EFF7FF]">
     <!-- form -->
-    <div class="w-[90%] mx-auto">
-      <div class="text-center">
+    <div class="w-[90%] mx-auto pb-10 my-6">
+      <div class="text-center py-3">
         <h1 class="font-[Lato] font-[600] text-[25px] text-black p-0"> POST YOUR PROPERTY</h1>
         <p class="font-[Lato] font-[600] text-[20px] p-0">(House Land Rental)</p>
       </div>
-      <form action="" class="bg-[#EFF7FF]">
+      <form action="" class="bg-[#EFF7FF] ">
         <!-- first setion -->
         <div class="bg-white py-3 px-8 rounded-[10px]">
           <p class="font-[Lato] font-[600] text-[20px]" for="option">I want to <span
@@ -272,9 +272,9 @@
               Property Type
               <span class="text-[#FF3600] text-[15px] ">*</span> :
             </p>
-            <div class=" flex gap-5" id="property_type">
+            <div class=" flex flex-wrap justify-center md:justify-start gap-5" id="property_type">
               <p
-                class="flex items-center gap-5 border-[#83BBFC] text-[#656565] text-[18px] font-[Lato] font-[400] border px-6 py-2">
+                class="flex items-center gap-5 border-[#83BBFC] text-[#656565] text-[18px] font-[Lato] font-[400] border px-6 w-[187px] py-2">
                 <span>
                   <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -284,7 +284,7 @@
                 </span> Residental
               </p>
               <p
-                class="flex items-center gap-5 border-[#83BBFC] text-[#83BBFC] text-[18px] font-[Lato] font-[400] border px-6 py-2">
+                class="flex items-center gap-5 border-[#83BBFC] text-[#83BBFC] text-[18px] font-[Lato] font-[400] border w-[187px] px-6 py-2">
                 <span>
                   <svg style="fill:#83BBFC" width="21" height="21" viewBox="0 0 21 21"
                     xmlns="http://www.w3.org/2000/svg">
@@ -294,7 +294,7 @@
                 </span> Commercial
               </p>
               <p
-                class="flex items-center gap-5 border-[#83BBFC] text-[#656565] text-[18px] font-[Lato] font-[400] border px-6 py-2">
+                class="flex items-center w-[187px] gap-5 border-[#83BBFC] text-[#656565] text-[18px] font-[Lato] font-[400] border px-6 py-2">
                 <span>
                   <svg width="12" height="17" viewBox="0 0 12 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -311,7 +311,7 @@
               Property Category
               <span class="text-[#FF3600] text-[15px] ">*</span> :
             </p>
-            <div class="flex gap-6">
+            <div class="flex flex-wrap justify-center md:justify-start gap-6">
               <div
                 class="w-[141px] h-[82px] gap-2 border text-[#656565] border-[#83BBFC] flex justify-center items-center flex-col rounded-[5px]">
 
@@ -422,13 +422,13 @@
               Address
               <span class="text-[#FF3600] text-[15px] ">*</span> :
             </p>
-            <div class="flex gap-5">
+            <div class="flex flex-wrap  gap-5">
               <input
                 class="text-[#656565] font-[Lato] font-[400] text-[18px] rounded-[5px] border border-[#83BBFC] px-6 py-1 outline-none w-[341px]"
                 type="text" placeholder="eg.House number, Street name">
               <div class="relative">
                 <input
-                  class="text-[#656565] font-[Lato] font-[400] text-[18px] rounded-[5px] border border-[#83BBFC] px-6 py-1 outline-none w-[341px]"
+                  class="text-[#656565] font-[Lato] font-[400] text-[18px] rounded-[5px] border border-[#83BBFC] px-6 py-1 outline-none w-[271px] md:w-[341px]"
                   type="text" placeholder="Select a city">
                 <span class="absolute top-2 right-3 border-l cursor-pointer pl-2 border-[#83BBFC]"><svg width="18"
                     height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -441,7 +441,7 @@
               </div>
               <div class="relative">
                 <input
-                  class="text-[#656565] font-[Lato] font-[400] text-[18px] rounded-[5px] border border-[#83BBFC] px-6 py-1 outline-none w-[341px]"
+                  class="text-[#656565] font-[Lato] font-[400] text-[18px] rounded-[5px] border border-[#83BBFC] px-6 py-1 outline-none w-[271px] md:w-[341px]"
                   type="text" placeholder="Select a city">
                 <span class="absolute top-2 right-3 cursor-pointer border-l pl-2 border-[#83BBFC]"><svg width="18"
                     height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -455,7 +455,7 @@
             </div>
           </div>
           <div class="mt-14">
-            <p class="font-[Lato] font-[600] text-[20px] my-6 ">Choose your property location :</p>
+            <p class="font-[Lato] font-[600] text-[18px] md:text-[20px] my-6 ">Choose your property location :</p>
             <!-- map -->
             <div class="h-[163px] w-[225px] py-8" id="map">
 
@@ -464,14 +464,14 @@
 
         </div>
         <!-- fourth section -->
-        <div class="bg-white  px-8 py-3 rounded-[10px] flex  gap-8">
+        <div class="bg-white  px-8 py-3 rounded-[10px] flex flex-wrap  gap-8">
 
           <div>
             <label class="font-[Lato] font-[600] text-[20px] block" for="proptery_type">
               Total Area
               <span class="text-[#FF3600] text-[15px] ">*</span> :
             </label>
-            <div class="flex gap-3 mt-2">
+            <div class="flex flex-wrap gap-3 mt-2">
               <div>
                 <input
                   class="text-[#656565] max-w-[250px] font-[Lato] font-[400] text-[18px] rounded-[5px] border border-[#83BBFC] px-6 py-1 outline-none "
@@ -496,7 +496,7 @@
               Total Area
               <span class="text-[#FF3600] text-[15px] ">*</span> :
             </label>
-            <div class="flex gap-3 mt-2">
+            <div class="flex flex-wrap gap-3 mt-2">
               <div>
                 <input
                   class="text-[#656565] font-[Lato] font-[400] text-[18px] rounded-[5px] border border-[#83BBFC] px-6 py-1 outline-none max-w-[250px]"
@@ -539,14 +539,14 @@
           <p class="font-[Lato] block pb-4 font-[600] text-[20px]" for="option">Road
             :
           </p>
-          <div class="flex gap-5">
+          <div class="flex flex-wrap gap-5">
             <input
               class="text-[#656565] font-[Lato] font-[400] text-[18px] rounded-[5px] border border-[#83BBFC] px-6 py-1 outline-none "
               type="text" placeholder="Road Access (e.g. 14, 26)">
             <div class="relative">
               <input
                 class="text-[#656565]  font-[Lato] font-[400] text-[18px] rounded-[5px] border border-[#83BBFC] px-6 py-1 outline-none "
-                type="text" placeholder="Anna">
+                type="text" placeholder="Feet">
               <span class="absolute top-2 right-3 border-l cursor-pointer pl-2 border-[#83BBFC]"><svg width="18"
                   height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -558,7 +558,7 @@
             <div class="relative">
               <input
                 class="text-[#656565]  font-[Lato] font-[400] text-[18px] rounded-[5px] border border-[#83BBFC] px-6 py-1 outline-none "
-                type="text" placeholder="Anna">
+                type="text" placeholder="Road Type">
               <span class="absolute top-2 right-3 border-l cursor-pointer pl-2 border-[#83BBFC]"><svg width="18"
                   height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -573,12 +573,11 @@
         <div class="bg-white    px-8 py-5 rounded-[10px]">
           <p class="font-[Lato] block pb-4 font-[600] text-[20px]" for="option">Building Detail :
           </p>
-          <div class="flex gap-5">
+          <div class="flex flex-wrap gap-5">
             <div class="relative">
               <input
                 class="text-[#656565]  font-[Lato] font-[400] text-[18px] rounded-[5px] border border-[#83BBFC] px-6 py-1 outline-none "
-                type="text" placeholder="Built year
-">
+                type="text" placeholder="Built year">
               <span class="absolute top-2 right-3 border-l cursor-pointer pl-2 border-[#83BBFC]"><svg width="18"
                   height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -590,8 +589,7 @@
             <div class="relative">
               <input
                 class="text-[#656565]  font-[Lato] font-[400] text-[18px] rounded-[5px] border border-[#83BBFC] px-6 py-1 outline-none "
-                type="text" placeholder="Total Floors
-">
+                type="text" placeholder="Total Floors">
               <span class="absolute top-2 right-3 border-l cursor-pointer pl-2 border-[#83BBFC]"><svg width="18"
                   height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -603,9 +601,7 @@
             <div class="relative">
               <input
                 class="text-[#656565]  font-[Lato] font-[400] text-[18px] rounded-[5px] border border-[#83BBFC] px-6 py-1 outline-none "
-                type="text" placeholder="
-Furnishing
-">
+                type="text" placeholder="Furnishing">
               <span class="absolute top-2 right-3 border-l cursor-pointer pl-2 border-[#83BBFC]"><svg width="18"
                   height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -618,10 +614,11 @@ Furnishing
 
         </div>
         <!--  kitchen,bedroom bathroom -->
-        <div class="flex bg-white">
+        <div class="flex flex-wrap bg-white">
           <!-- kitchen -->
           <div class="  py-5 px-8   ">
-            <div class="flex items-center gap-5"><label class="font-[lato] font-[600] text-[20px]" for="kitchen">Kitchen
+            <div class="flex items-center gap-6">
+              <label class="font-[lato] font-[600] text-[19px] md:text-[20px]" for="kitchen">Kitchen
                 :</label>
               <div class="flex relative py-1 rounded-[5px] border border-[#83BBFC] ">
                 <span class="absolute top-2 left-0 pr-1 cursor-pointer border-r border-[#83BBFC]">
@@ -646,7 +643,8 @@ Furnishing
           </div>
           <!-- bedrooms -->
           <div class=" bg-white py-5 px-8   ">
-            <div class="flex items-center gap-5"><label class="font-[lato] font-[600] text-[20px]" for="kitchen">Bedroom
+            <div class="flex items-center gap-5"><label class="font-[lato] font-[600] text-[18px] md:text-[20px]"
+                for="kitchen">Bedroom
 
                 :</label>
               <div class="flex relative py-1 rounded-[5px] border border-[#83BBFC] ">
@@ -672,7 +670,7 @@ Furnishing
           </div>
           <!-- bathrooms -->
           <div class=" bg-white py-5 px-8   ">
-            <div class="flex items-center gap-5"><label class="font-[lato] font-[600] text-[20px]"
+            <div class="flex items-center gap-3"><label class="font-[lato] font-[600] text-[18px] md:text-[20px]"
                 for="kitchen">Bathrooom:</label>
               <div class="flex relative py-1 rounded-[5px] border border-[#83BBFC] ">
                 <span class="absolute top-2 left-0 pr-1 cursor-pointer border-r border-[#83BBFC]">
@@ -697,10 +695,10 @@ Furnishing
           </div>
         </div>
         <!-- parking and living rooms  -->
-        <div class="flex bg-white gap-16 w-full py-5 px-8">
+        <div class="flex flex-wrap  bg-white gap-8 md:gap-16 w-full py-5 px-8">
           <!-- parking -->
           <div class=" bg-white py-5    ">
-            <div class="flex items-center gap-5"><label class="font-[lato] font-[600] text-[20px]"
+            <div class="flex items-center gap-8"><label class="font-[lato] font-[600] text-[19px] md:text-[20px]"
                 for="kitchen">Parking:</label>
               <div class="flex relative py-1 rounded-[5px] border border-[#83BBFC] ">
                 <span class="absolute top-2 left-0 pr-1 cursor-pointer border-r border-[#83BBFC]">
@@ -725,7 +723,8 @@ Furnishing
           </div>
           <!-- living rooms -->
           <div class=" bg-white py-5    ">
-            <div class="flex items-center gap-5"><label class="font-[lato] font-[600] text-[20px]" for="kitchen">Living
+            <div class="flex items-center gap-3"><label class="font-[lato] font-[600] text-[18px] md:text-[20px]"
+                for="kitchen">Living
                 Room:</label>
               <div class="flex relative py-1 rounded-[5px] border border-[#83BBFC] ">
                 <span class="absolute top-2 left-0 pr-1 cursor-pointer border-r border-[#83BBFC]">
@@ -754,7 +753,8 @@ Furnishing
           <p class="font-[Lato] block pb-4 font-[600] text-[20px]" for="option">Amenities
             :
           </p>
-          <div class="font-[Lato] font-[400] text-[19px] text-[#656565] flex flex-wrap gap-6">
+          <div
+            class="font-[Lato] font-[400] text-[19px] text-[#656565] flex justify-center md:justify-start flex-wrap gap-6">
             <p
               class=" border border-[#83BBFC] hover:text-[#83BBFC] w-[170px] h-[43px] flex items-center justify-center cursor-pointer">
               Lawn
@@ -812,37 +812,179 @@ Furnishing
           </div>
 
         </div>
-        <!-- picture section -->
-        <div class="bg-white flex justify-between my-5 px-8  pb-6 rounded-[10px]">
-          <!-- picture -->
-          <div>
-            <p class="font-[Lato] font-[600] text-[20px] block py-5 mb-6" for="option">Upload Photos <span
-                class="text-[#FF3600] text-[15px]  ">*</span>
-              :
-            </p>
-            <div id="dropZone"
-              class="border-dashed border border-[#818181] overflow-hidden p-5 h-[421px] w-[507px] rounded-[12px] ">
-              <h1>Drag & Drop</h1>
-              <h3>Your files to Assets, or <a href="#" class="text-[#0063D5] border-b border-[]">Browser</a></h3>
+        <!-- picture, video section -->
+        <div class="bg-white my-5 px-8  pb-6 rounded-[10px]">
+          <div class=" flex flex-wrap justify-around my-5 ">
+            <!-- picture -->
+            <div class="">
+              <p class="font-[Lato] font-[600] text-[20px] block py-5 mb-6" for="option">Upload Photos <span
+                  class="text-[#FF3600] text-[15px]  ">*</span>
+                :
+              </p>
+              <div id="picture_dropZone"
+                class="border-dashed border-2 border-[#818181] overflow-hidden p-5 h-[210px] w-[300px] md:h-[421px] md:w-[507px] rounded-[12px] flex flex-col justify-center items-center">
+                <div id="picture_icons" class="flex flex-col items-center justify-center">
+                  <div class="flex gap-8 ml-4 items-center">
+                    <span>
+                      <svg class="md:w-16 md:h-16 h-9 w-9" viewBox="0 0 51 52" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M27.9312 14.2656L27.9525 14.2561" stroke="#CECECE" stroke-width="2.81497"
+                          stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                          d="M28.409 3.59351L6.58935 13.3082C2.97415 14.9178 1.34829 19.1534 2.95788 22.7685L12.6726 44.5882C14.2822 48.2034 18.5177 49.8292 22.1329 48.2197L43.9526 38.5049C47.5677 36.8953 49.1936 32.6598 47.584 29.0446L37.8693 7.22498C36.2597 3.60979 32.0242 1.98392 28.409 3.59351Z"
+                          stroke="#CECECE" stroke-width="2.81497" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                          d="M10.7295 40.2237L15.5715 27.6099C16.1403 26.2093 17.0446 25.2027 18.1937 24.6911C19.3427 24.1795 20.696 24.181 22.1174 24.6955L37.8846 30.748"
+                          stroke="#CECECE" stroke-width="2.81497" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                          d="M31.5778 28.3272L32.7883 25.1738C33.3571 23.7732 34.2614 22.7665 35.4105 22.2549C36.5595 21.7433 37.9128 21.7449 39.3342 22.2593L45.6411 24.6803"
+                          stroke="#CECECE" stroke-width="2.81497" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
 
+                    </span>
+                    <span>
+                      <svg class="md:w-24 md:h-24 h-14 w-14" viewBox="0 0 69 78" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_605_3879)">
+                          <path
+                            d="M60.6678 25.5566L57.9196 22.8084L54.4844 26.2436L54.4844 17.999L64.1031 17.999L64.1031 25.5566M59.2937 24.1825L61.3549 22.1213L64.1031 24.8695L64.1031 27.6177L54.4844 27.6177L54.4844 25.5566"
+                            stroke="white" stroke-width="0.687051" stroke-linecap="round" stroke-linejoin="round" />
+                          <path
+                            d="M57.2327 21.4342C57.8019 21.4342 58.2633 20.9728 58.2633 20.4036C58.2633 19.8345 57.8019 19.373 57.2327 19.373C56.6636 19.373 56.2021 19.8345 56.2021 20.4036C56.2021 20.9728 56.6636 21.4342 57.2327 21.4342Z"
+                            stroke="white" stroke-width="0.687051" stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                        <path
+                          d="M22.7743 54.9247C22.6172 55.2696 22.3294 55.5379 21.9744 55.6706C21.6194 55.8034 21.2262 55.7896 20.8813 55.6325C20.5364 55.4753 20.2681 55.1876 20.1354 54.8325C20.0026 54.4775 20.0164 54.0843 20.1735 53.7394L24.6692 43.8746L20.3292 45.4995C19.9737 45.6324 19.58 45.6186 19.2347 45.4612C18.8894 45.3039 18.6207 45.0158 18.4878 44.6603C18.3549 44.3048 18.3687 43.9111 18.5261 43.5658C18.6834 43.2205 18.9715 42.9518 19.327 42.8189L26.8991 39.9879C27.0751 39.9218 27.2623 39.8911 27.4502 39.8976C27.6381 39.904 27.8228 39.9474 27.9939 40.0254C28.1649 40.1033 28.3189 40.2143 28.447 40.3518C28.5751 40.4894 28.6748 40.6509 28.7404 40.827L31.5715 48.3991C31.7044 48.7546 31.6907 49.1482 31.5333 49.4936C31.3759 49.8389 31.0878 50.1076 30.7324 50.2405C30.3769 50.3734 29.9832 50.3596 29.6379 50.2022C29.2926 50.0449 29.0239 49.7568 28.891 49.4013L27.27 45.0599L22.7743 54.9247Z"
+                          fill="#CECECE" />
+                        <path
+                          d="M34.1155 67.9466L45.3754 43.2391L39.0054 26.2019L24.7011 19.683C23.3215 19.0543 21.7488 18.9994 20.3287 19.5303C18.9087 20.0612 17.7577 21.1345 17.129 22.5141L2.90603 53.7236C2.27733 55.1031 2.22241 56.6759 2.75334 58.096C3.28427 59.516 4.35756 60.667 5.73711 61.2957L26.5434 70.7777C27.923 71.4064 29.4958 71.4613 30.9158 70.9303C32.3359 70.3994 33.4868 69.3261 34.1155 67.9466ZM35.4497 34.0042C34.9782 35.0389 34.937 36.2185 35.3352 37.2835C35.7334 38.3486 36.5384 39.2118 37.573 39.6833L42.7746 42.0538L31.5147 66.7613C31.2004 67.4511 30.6249 67.9877 29.9149 68.2532C29.2049 68.5187 28.4185 68.4912 27.7287 68.1769L6.92236 58.6949C6.23259 58.3805 5.69594 57.805 5.43047 57.095C5.16501 56.385 5.19247 55.5986 5.50682 54.9088L19.7298 23.6993C20.0442 23.0096 20.6196 22.4729 21.3297 22.2074C22.0397 21.942 22.8261 21.9694 23.5158 22.2838L37.8202 28.8027L35.4497 34.0042Z"
+                          fill="#CECECE" />
+                        <defs>
+                          <clipPath id="clip0_605_3879">
+                            <rect width="10.9928" height="10.9928" fill="white"
+                              transform="translate(53.7974 17.3125)" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+
+                    </span>
+                  </div>
+
+                  <span>
+                    <svg class="w-16 h-16 md:h-24 md:w-24" viewBox="0 0 114 114" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M77.2623 63.3863L57.3467 43.4707L37.4312 63.3863L42.4275 68.3826L53.8137 56.9964V110.034H60.8797V56.9964L72.2659 68.3826L77.2623 63.3863Z"
+                        fill="#717171" />
+                      <path
+                        d="M89.1359 36.1619V35.841C89.1359 18.3085 74.8714 4.04395 57.3389 4.04395C39.8063 4.04395 25.5418 18.3085 25.5418 35.841V36.3911C20.3088 37.3786 15.4846 39.8915 11.6761 43.6136C9.35835 45.8632 7.51528 48.5546 6.25586 51.5289C4.99644 54.5031 4.34625 57.6997 4.34375 60.9296C4.34375 67.8011 7.16751 74.3466 12.2952 79.3606C17.3055 84.2598 24.0707 87.0696 30.8568 87.0696H44.9733V80.0036H30.8568C20.4971 80.0036 11.4098 71.0905 11.4098 60.9296C11.4098 51.5962 19.2795 43.7247 29.3259 43.0095L32.6078 42.7757V35.841C32.6078 29.2819 35.2134 22.9915 39.8514 18.3535C44.4893 13.7155 50.7798 11.11 57.3389 11.11C63.898 11.11 70.1884 13.7155 74.8264 18.3535C79.4643 22.9915 82.0699 29.2819 82.0699 35.841V42.9159L85.5588 42.96C95.8204 43.0899 103.268 50.6472 103.268 60.9296C103.268 71.6253 95.3951 80.0036 85.3446 80.0036H69.7044V87.0696H85.3446C88.711 87.0807 92.0428 86.3903 95.1276 85.0424C98.2123 83.6945 100.982 81.7187 103.261 79.2409C107.822 74.3373 110.334 67.8344 110.334 60.9296C110.334 48.0259 101.439 37.9149 89.1359 36.1619Z"
+                        fill="#717171" />
+                    </svg>
+
+                  </span>
+                </div>
+                <div class="picture_context flex flex-col justify-center items-center">
+                  <h1 class="text-[#717171] font-[Lato] font-[600] text-[20px] sm:text-[26px] md:text-[31px]">Drag &
+                    Drop</h1>
+                  <h3 class="text-[#717171] font-[Lato ] font-[400] text-[8px] sm:text-[10px] md:text-[14px]">Your files
+                    to Assets, or <a href="#" class="text-[#0063D5] border-b border-[]">Browser</a></h3>
+                </div>
+
+              </div>
             </div>
-          </div>
 
-          <!-- video -->
-          <div>
-            <p class="font-[Lato] font-[600] text-[20px] block py-5 mb-6" for="option">Upload Videos <span
-                class="text-[#FF3600] text-[15px]  ">*</span>
-              :
-            </p>
-            <div class="border-dashed  border border-[#818181] h-[421px] w-[507px] p-5 rounded-[12px] ">
-              <h1>Drag & Drop</h1>
-              <h3>Your files to Assets, or <a href="#" class="text-[#0063D5] border-b border-[]">Browser</a></h3>
+            <!-- video -->
+            <div>
+              <p class="font-[Lato] font-[600] text-[20px] block py-5 mb-6" for="option">Upload Videos <span
+                  class="text-[#FF3600] text-[15px]  ">*</span>
+                :
+              </p>
+              <div id="video_dropZone"
+                class="border-dashed border-2 border-[#818181] overflow-hidden p-5 h-[210px] w-[300px] md:h-[421px] md:w-[507px] rounded-[12px] flex flex-col items-center justify-center">
+                <div id="video_icons" class="flex flex-col justify-center items-center">
+                  <div class="flex md:gap-8 gap-6  items-center">
+                    <span>
+                      <svg class="w-12 h-12 md:h-28 md:w-28" viewBox="0 0 92 92" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_712_9266)">
+                          <path
+                            d="M61.2052 17.7323C60.794 17.1502 60.2282 16.6947 59.5717 16.4172C58.9153 16.1396 58.1944 16.0511 57.4903 16.1616C56.8114 16.2503 56.1714 16.5295 55.6447 16.9669C55.1179 17.4043 54.7258 17.982 54.5139 18.6331L50.7624 28.0401L46.9584 22.7417C46.3979 21.961 45.5503 21.4349 44.6019 21.2792C43.6536 21.1236 42.6822 21.351 41.9015 21.9115L15.4096 40.9315C13.8482 42.0525 12.7961 43.7478 12.4847 45.6445C12.1733 47.5412 12.6282 49.4839 13.7491 51.0453L30.6559 74.5937C31.7769 76.1551 33.4722 77.2072 35.3689 77.5185C37.2656 77.8299 39.2083 77.3751 40.7696 76.2541L67.2616 57.2341C68.0423 56.6736 68.5683 55.8259 68.724 54.8776C68.8797 53.9292 68.6523 52.9578 68.0918 52.1772L64.2878 46.8788L74.2869 46.3912C74.9948 46.413 75.6945 46.2339 76.3049 45.8746C76.9154 45.5153 77.4116 44.9904 77.7361 44.3608C78.0719 43.7181 78.218 42.9932 78.1573 42.2706C78.0966 41.548 77.8317 40.8576 77.3934 40.2799L61.2052 17.7323ZM74.4631 42.6291C74.3748 42.6925 74.3012 42.7453 74.12 42.7415L57.5085 43.6496L65.1483 54.2905L38.6563 73.3106C37.8756 73.8711 36.9043 74.0985 35.9559 73.9428C35.0076 73.7871 34.1599 73.261 33.5994 72.4804L16.6927 48.932C16.1322 48.1513 15.9048 47.1799 16.0605 46.2316C16.2162 45.2832 16.7422 44.4356 17.5229 43.8751L44.0149 24.855L51.6546 35.4959L57.8511 19.895C57.8642 19.8548 57.8899 19.8198 57.9243 19.7951C57.9587 19.7704 58.0001 19.7573 58.0424 19.7577C58.0836 19.747 58.127 19.7498 58.1665 19.7656C58.2059 19.7815 58.2393 19.8095 58.2617 19.8456L74.4499 42.3932C74.4769 42.426 74.4928 42.4665 74.4952 42.509C74.4976 42.5514 74.4863 42.5935 74.4631 42.6291Z"
+                            fill="#CECECE" />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_712_9266">
+                            <rect width="65.2253" height="65.2253" fill="white"
+                              transform="translate(0.239258 38.4414) rotate(-35.6767)" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+
+
+                    </span>
+                    <span>
+                      <svg class="w-14 h-14 md:w-24 md:h-24" viewBox="0 0 69 78" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_605_3879)">
+                          <path
+                            d="M60.6678 25.5566L57.9196 22.8084L54.4844 26.2436L54.4844 17.999L64.1031 17.999L64.1031 25.5566M59.2937 24.1825L61.3549 22.1213L64.1031 24.8695L64.1031 27.6177L54.4844 27.6177L54.4844 25.5566"
+                            stroke="white" stroke-width="0.687051" stroke-linecap="round" stroke-linejoin="round" />
+                          <path
+                            d="M57.2327 21.4342C57.8019 21.4342 58.2633 20.9728 58.2633 20.4036C58.2633 19.8345 57.8019 19.373 57.2327 19.373C56.6636 19.373 56.2021 19.8345 56.2021 20.4036C56.2021 20.9728 56.6636 21.4342 57.2327 21.4342Z"
+                            stroke="white" stroke-width="0.687051" stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                        <path
+                          d="M22.7743 54.9247C22.6172 55.2696 22.3294 55.5379 21.9744 55.6706C21.6194 55.8034 21.2262 55.7896 20.8813 55.6325C20.5364 55.4753 20.2681 55.1876 20.1354 54.8325C20.0026 54.4775 20.0164 54.0843 20.1735 53.7394L24.6692 43.8746L20.3292 45.4995C19.9737 45.6324 19.58 45.6186 19.2347 45.4612C18.8894 45.3039 18.6207 45.0158 18.4878 44.6603C18.3549 44.3048 18.3687 43.9111 18.5261 43.5658C18.6834 43.2205 18.9715 42.9518 19.327 42.8189L26.8991 39.9879C27.0751 39.9218 27.2623 39.8911 27.4502 39.8976C27.6381 39.904 27.8228 39.9474 27.9939 40.0254C28.1649 40.1033 28.3189 40.2143 28.447 40.3518C28.5751 40.4894 28.6748 40.6509 28.7404 40.827L31.5715 48.3991C31.7044 48.7546 31.6907 49.1482 31.5333 49.4936C31.3759 49.8389 31.0878 50.1076 30.7324 50.2405C30.3769 50.3734 29.9832 50.3596 29.6379 50.2022C29.2926 50.0449 29.0239 49.7568 28.891 49.4013L27.27 45.0599L22.7743 54.9247Z"
+                          fill="#CECECE" />
+                        <path
+                          d="M34.1155 67.9466L45.3754 43.2391L39.0054 26.2019L24.7011 19.683C23.3215 19.0543 21.7488 18.9994 20.3287 19.5303C18.9087 20.0612 17.7577 21.1345 17.129 22.5141L2.90603 53.7236C2.27733 55.1031 2.22241 56.6759 2.75334 58.096C3.28427 59.516 4.35756 60.667 5.73711 61.2957L26.5434 70.7777C27.923 71.4064 29.4958 71.4613 30.9158 70.9303C32.3359 70.3994 33.4868 69.3261 34.1155 67.9466ZM35.4497 34.0042C34.9782 35.0389 34.937 36.2185 35.3352 37.2835C35.7334 38.3486 36.5384 39.2118 37.573 39.6833L42.7746 42.0538L31.5147 66.7613C31.2004 67.4511 30.6249 67.9877 29.9149 68.2532C29.2049 68.5187 28.4185 68.4912 27.7287 68.1769L6.92236 58.6949C6.23259 58.3805 5.69594 57.805 5.43047 57.095C5.16501 56.385 5.19247 55.5986 5.50682 54.9088L19.7298 23.6993C20.0442 23.0096 20.6196 22.4729 21.3297 22.2074C22.0397 21.942 22.8261 21.9694 23.5158 22.2838L37.8202 28.8027L35.4497 34.0042Z"
+                          fill="#CECECE" />
+                        <defs>
+                          <clipPath id="clip0_605_3879">
+                            <rect width="10.9928" height="10.9928" fill="white"
+                              transform="translate(53.7974 17.3125)" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+
+                    </span>
+                  </div>
+
+                  <span>
+                    <svg class="w-16 h-16 md:h-24 md:w-24" viewBox="0 0 114 114" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M77.2623 63.3863L57.3467 43.4707L37.4312 63.3863L42.4275 68.3826L53.8137 56.9964V110.034H60.8797V56.9964L72.2659 68.3826L77.2623 63.3863Z"
+                        fill="#717171" />
+                      <path
+                        d="M89.1359 36.1619V35.841C89.1359 18.3085 74.8714 4.04395 57.3389 4.04395C39.8063 4.04395 25.5418 18.3085 25.5418 35.841V36.3911C20.3088 37.3786 15.4846 39.8915 11.6761 43.6136C9.35835 45.8632 7.51528 48.5546 6.25586 51.5289C4.99644 54.5031 4.34625 57.6997 4.34375 60.9296C4.34375 67.8011 7.16751 74.3466 12.2952 79.3606C17.3055 84.2598 24.0707 87.0696 30.8568 87.0696H44.9733V80.0036H30.8568C20.4971 80.0036 11.4098 71.0905 11.4098 60.9296C11.4098 51.5962 19.2795 43.7247 29.3259 43.0095L32.6078 42.7757V35.841C32.6078 29.2819 35.2134 22.9915 39.8514 18.3535C44.4893 13.7155 50.7798 11.11 57.3389 11.11C63.898 11.11 70.1884 13.7155 74.8264 18.3535C79.4643 22.9915 82.0699 29.2819 82.0699 35.841V42.9159L85.5588 42.96C95.8204 43.0899 103.268 50.6472 103.268 60.9296C103.268 71.6253 95.3951 80.0036 85.3446 80.0036H69.7044V87.0696H85.3446C88.711 87.0807 92.0428 86.3903 95.1276 85.0424C98.2123 83.6945 100.982 81.7187 103.261 79.2409C107.822 74.3373 110.334 67.8344 110.334 60.9296C110.334 48.0259 101.439 37.9149 89.1359 36.1619Z"
+                        fill="#717171" />
+                    </svg>
+
+                  </span>
+                </div>
+                <div class="picture_context flex flex-col justify-center items-center">
+                  <h1 class="text-[#717171] font-[Lato] font-[600] text-[20px] sm:text-[26px] md:text-[31px]">Drag &
+                    Drop</h1>
+                  <h3 class="text-[#717171] font-[Lato ] font-[400] text-[8px] sm:text-[10px] md:text-[14px]">Your files
+                    to Assets, or <a href="#" class="text-[#0063D5] border-b border-[]">Browser</a></h3>
+                </div>
+
+              </div>
             </div>
-          </div>
 
+          </div>
+          <!-- youtube video  -->
+          <div class=" md:px-10 my-4 mt-10">
+            <h2 class="font-[Lato] font-[600] text-[20px]">Youtube Video Id :</h2>
+            <p class="font-[Lato] font-[400] text-[12px] md:text-[16px]">https://www.youtube.com/watch?v=<span
+                class="text-[#FA0000]">36WS1zML7Jo</span> </p>
+            <input class="border border-[#83BBFC] py-1 md:w-[300px] w-[250px] px-6 rounded-[5px] my-3" type="text"
+              placeholder="eg. 36WS1zML7Jo">
+          </div>
         </div>
+
         <!-- last section -->
-        <div class="bg-white my-5 px-8 py-3 rounded-[10px]">
+        <div class="bg-white my-5 px-8 py-3 pb-10 rounded-[10px]">
           <!-- property title -->
           <div>
             <label class="font-[Lato] block my-6 font-[600] text-[20px]" for="proptery_title">Property Title <span
@@ -850,7 +992,7 @@ Furnishing
               :
             </label>
             <input type="text" placeholder="Property Title"
-              class="font-[Lato] font-[400] outline-none text-[19px] text-[#656565] w-[310px] rounded-[5px]  border border-[#83BBFC] py-2 px-6"
+              class="font-[Lato] font-[400] outline-none text-[19px] text-[#656565] w-[250px] sm:w-[280px] md:w-[310px] rounded-[5px]  border border-[#83BBFC] py-2 px-6"
               id="property_title">
           </div>
           <!-- Description -->
@@ -859,9 +1001,11 @@ Furnishing
                 class="text-[#FF3600] text-[15px] ">*</span>
               :
             </label>
-            <textarea
-              class="border font-[Lato] font-[400] text-[19px] text-[#656565] border-[#83BBFC] px-6 py-2 rounded-[5px] outline-none"
-              name="description" id="description" cols="50" rows="10">Write Something about your property</textarea>
+            <div class="max-w-[533px]"><textarea
+                class="border font-[Lato] font-[400] text-[19px] text-[#656565] border-[#83BBFC] px-6 py-2 rounded-[5px] outline-none w-full "
+                name="description" id="description" cols="20" rows="10">Write Something about your property</textarea>
+            </div>
+
           </div>
           <!-- price -->
           <div>
@@ -869,16 +1013,16 @@ Furnishing
                 class="text-[#FF3600] text-[15px] px-1 ">*</span>
               :
             </label>
-            <div class="flex gap-10">
+            <div class="flex flex-wrap gap-10">
               <input
                 class="font-[Lato] font-[400] text-[19px] text-[#656565] w-[310px] rounded-[5px]  border border-[#83BBFC] py-2 px-6 outline-none"
                 type="number" placeholder="Property Price">
               <div class="relative">
                 <input
-                  class="text-[#656565]  font-[Lato] font-[400] text-[18px] rounded-[5px] border border-[#83BBFC] px-6 py-2 outline-none "
+                  class="text-[#656565]  font-[Lato] font-[400] w-[285px] text-[18px] rounded-[5px] border border-[#83BBFC] px-6 py-2 outline-none "
                   type="text" placeholder="Price Label">
-                <span class="absolute top-3 right-3 border-l cursor-pointer pl-2 border-[#83BBFC]"><svg width="19"
-                    height="19" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <span class="absolute top-3 right-3 border-l cursor-pointer pl-2 border-[#83BBFC]">
+                  <svg width="19" height="19" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M16.4144 4.152C16.3507 4.03083 16.2552 3.92935 16.1381 3.85851C16.021 3.78766 15.8867 3.75014 15.7499 3.75H2.24986C2.11324 3.75056 1.97936 3.78836 1.86262 3.85932C1.74588 3.93028 1.65069 4.03173 1.58729 4.15274C1.52389 4.27376 1.49467 4.40977 1.50279 4.54615C1.51091 4.68253 1.55605 4.81411 1.63336 4.92675L8.38336 14.6767C8.45217 14.7767 8.54423 14.8584 8.65163 14.9148C8.75903 14.9713 8.87853 15.0008 8.99986 15.0008C9.12119 15.0008 9.2407 14.9713 9.34809 14.9148C9.45549 14.8584 9.54756 14.7767 9.61636 14.6767L16.3664 4.92675C16.4444 4.81434 16.4902 4.68268 16.4986 4.54608C16.5071 4.40949 16.478 4.27319 16.4144 4.152ZM8.99986 12.9322L3.68086 5.25H14.3189L8.99986 12.9322Z"
                       fill="#83BBFC" />
@@ -888,6 +1032,8 @@ Furnishing
             </div>
           </div>
         </div>
+        <input style="background: linear-gradient(180deg, #0259BF 0%, #003D83 100%);" type="submit" value="SUBMIT"
+          class="font-[Lato] text-white py-1 px-10 ml-8 rounded-[5px] font-[600] text-[19px] my-3">
       </form>
     </div>
 
@@ -1015,34 +1161,100 @@ Furnishing
 
   </script>
   <script>
-    const dropZone = document.getElementById( "dropZone" );
-    dropZone.addEventListener( 'dragenter', ( e ) =>
+    // picture
+    const picture_dropZone = document.getElementById( "picture_dropZone" );
+
+    const picture_icons = document.getElementById( "picture_icons" )
+    const picture_context = document.querySelector( '.picture_context' )
+
+    picture_dropZone.addEventListener( 'dragenter', ( e ) =>
     {
       e.preventDefault();
-      dropZone.classList.add( 'active' )
+      picture_dropZone.classList.add( 'active' )
     } )
-    dropZone.addEventListener( 'dragleave', ( e ) =>
+    picture_dropZone.addEventListener( 'dragleave', ( e ) =>
     {
       e.preventDefault();
-      dropZone.classList.remove( 'active' )
+      picture_dropZone.classList.remove( 'active' )
     } )
-    dropZone.addEventListener( 'dragover', ( e ) =>
+    picture_dropZone.addEventListener( 'dragover', ( e ) =>
     {
       e.preventDefault();
     } )
-    dropZone.addEventListener( 'drop', ( e ) =>
+    picture_dropZone.addEventListener( 'drop', ( e ) =>
     {
       e.preventDefault();
-      dropZone.classList.remove( 'active' );
-      const file = event.dataTransfer.files[ 0 ];
-      const reader = new FileReader();
-      reader.readAsDataURL( file );
-      reader.addEventListener( 'loadend', () =>
+      picture_dropZone.classList.remove( 'active' );
+      const file = e.dataTransfer.files[ 0 ].name;
+
+      const p = document.createElement( 'p' );
+      p.textContent = e.dataTransfer.files[ 0 ].name;
+      picture_icons.style.display = "none";
+      picture_context.style.display = "none"
+      picture_dropZone.append( p )
+
+      // const file = event.dataTransfer.files[ 0 ];
+      //const reader = new FileReader();
+      //reader.readAsDataURL( file );
+      // reader.addEventListener( 'loadend', () =>
+      // {
+      //   const img = document.createElement( 'img' );
+      //   img.src = reader.result;
+      //   dropZone.append( img )
+      // } )
+    } )
+
+    // videos
+
+    const video_dropZone = document.getElementById( "video_dropZone" );
+
+    const video_icons = document.getElementById( "video_icons" )
+    const video_context = document.querySelector( '.video_context' )
+    video_dropZone.addEventListener( 'dragenter', ( e ) =>
+    {
+      e.preventDefault();
+      video_dropZone.classList.add( 'active' )
+    } )
+    video_dropZone.addEventListener( 'dragleave', ( e ) =>
+    {
+      e.preventDefault();
+      video_dropZone.classList.remove( 'active' )
+    } )
+    video_dropZone.addEventListener( 'dragover', ( e ) =>
+    {
+      e.preventDefault();
+    } )
+    video_dropZone.addEventListener( 'drop', ( e ) =>
+    {
+      e.preventDefault();
+      video_dropZone.classList.remove( 'active' );
+      const file = e.dataTransfer.files[ 0 ];
+      const video = document.createElement( 'video' );
+      video.addEventListener( "loadedmetadata", () =>
       {
-        const img = document.createElement( 'img' );
-        img.src = reader.result;
-        dropZone.append( img )
+        video_icons.style.display = "none"
+        video_context.style.display = "none"
+        console.log( video.videoWidth, video.videoHeight );
       } )
+      video.src = URL.createObjectURL( file )
+      video.autoplay = true;
+      video.controls = false
+      video.style.objectFit = "cover"
+      video.style.height = "100%"
+      video.style.width = "100%"
+      video.style.borderRadius = "10px"
+      video_dropZone.append( video )
+
+
+      // const file = event.dataTransfer.files[ 0 ];
+      //const reader = new FileReader();
+      //reader.readAsDataURL( file );
+      // reader.addEventListener( 'loadend', () =>
+      // {
+      //   const img = document.createElement( 'img' );
+      //   img.src = reader.result;
+      //   dropZone.append( img )
+      // } )
     } )
 
 
